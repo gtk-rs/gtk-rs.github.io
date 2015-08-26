@@ -107,6 +107,35 @@
     margin-left: 0;
 }
 
+.intro-col-wrapper {
+    margin-left: -$spacing-unit / 2;
+    @extend %clearfix;
+}
+
+.intro-col {
+    float: left;
+    margin-bottom: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+}
+
+.intro-col-1 {
+    width: -webkit-calc(60% - (#{$spacing-unit} / 2));
+    width:         calc(60% - (#{$spacing-unit} / 2));
+}
+
+.intro-col-2 {
+    width: -webkit-calc(40% - (#{$spacing-unit} / 2));
+    width:         calc(40% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-laptop) {
+    .intro-col {
+        float: none;
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
 .footer-col-wrapper {
     font-size: 15px;
     color: $grey-color;

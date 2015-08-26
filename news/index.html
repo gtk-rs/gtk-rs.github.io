@@ -1,0 +1,35 @@
+---
+layout: default
+title: News
+---
+
+<div class="home">
+
+  <h1 class="page-heading">
+    News
+    <a href="{{ "feed.xml" | prepend: site.baseurl }}">
+      <span class="icon">
+        <svg viewBox="0 0 16 16">
+          <rect width="16" height="16" x="0" y="0" rx="3" ry="3"/>
+          <g>
+            <circle class="inverse" cx="4" cy="12" r="1.5"/>
+            <path class="inverse" d="M10,13H8c0-3-3-5-5-5l0,0V6C7,6,10,9,10,13z"/>
+            <path class="inverse" d="M11.5,13c0-5-4-9-9-9V2c6,0,11,5,11,11H11.5z"/>
+          </g>
+        </svg>
+      </span>
+    </a>
+  </h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

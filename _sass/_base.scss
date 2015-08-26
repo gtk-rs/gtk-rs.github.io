@@ -23,6 +23,14 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+strong {
+    font-weight: bold;
+}
+
+div.footnotes {
+    font-size: $base-font-size * 0.8;
+}
+
 
 
 /**
@@ -102,6 +110,10 @@ a {
     }
 }
 
+a.badge {
+    text-decoration: none;
+}
+
 
 
 /**
@@ -170,6 +182,11 @@ pre {
     }
 }
 
+.wide-wrapper {
+    max-width: -webkit-calc(1000px - (#{$spacing-unit} * 2));
+    max-width:         calc(1000px - (#{$spacing-unit} * 2));
+}
+
 
 
 /**
@@ -197,8 +214,20 @@ pre {
         height: 16px;
         vertical-align: middle;
 
-        path {
+        path, rect {
             fill: $grey-color;
         }
+
+        circle.inverse, path.inverse {
+            fill: #ffffff;
+        }
+    }
+}
+
+.icon-crate {
+    > svg {
+        width: 112px;
+        height: 20px;
+        font-weight: normal;
     }
 }
