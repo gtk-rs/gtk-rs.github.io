@@ -8,6 +8,7 @@
 
     // Positioning context for the mobile navigation icon
     position: relative;
+    background-color: $back-color;
 }
 
 .site-title {
@@ -21,6 +22,11 @@
     &:visited {
         color: $grey-color-dark;
     }
+}
+
+.news {
+    background-color: #DAF7FF;
+    border-radius: 5px;
 }
 
 .site-nav {
@@ -93,7 +99,8 @@
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    padding-top: 15px;
+    background-color: $back-color;
 }
 
 .footer-heading {
@@ -145,7 +152,6 @@
 
 .footer-col {
     float: left;
-    margin-bottom: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
 }
 
@@ -192,6 +198,10 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+}
+.page-content>div {
+    background-color: $back-color;
+    border-radius: 5px;
 }
 
 .page-heading {

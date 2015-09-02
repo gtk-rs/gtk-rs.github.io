@@ -151,7 +151,7 @@ code {
 
 pre {
     padding: 8px 12px;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     > code {
         border: 0;
@@ -183,8 +183,8 @@ pre {
 }
 
 .wide-wrapper {
-    max-width: -webkit-calc(1000px - (#{$spacing-unit} * 2));
-    max-width:         calc(1000px - (#{$spacing-unit} * 2));
+    max-width: -webkit-calc(900px - (#{$spacing-unit} * 2));
+    max-width:         calc(900px - (#{$spacing-unit} * 2));
 }
 
 
