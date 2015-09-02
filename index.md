@@ -3,9 +3,12 @@ layout: wide
 ---
 
 <div class="intro-col-wrapper">
-  <div class="intro-col" markdown="1">
+  <div class="intro-col intro-col-1" markdown="1">
 
-#[Rust] bindings and wrappers for [GLib], [GDK and GTK+ 3][GTK] and [Cairo].
+###[Rust] bindings and wrappers for [GLib], [GDK and GTK+ 3][GTK] and [Cairo].
+
+[![GTK screenshot](gtk.png)](gtk.png)
+
 [Rust]: https://www.rust-lang.org/
 [GLib]: https://developer.gnome.org/glib/stable/
 [GTK]: https://developer.gnome.org/gtk3/stable/
@@ -25,10 +28,9 @@ layout: wide
       <p>
         <a href="{{ pages.news.url | prepend: site.baseurl }}">All news</a>
       </p>
+    </div>
   </div>
 </div>
-
-[![GTK screenshot](gtk.png)](gtk.png)
 
 ## Using
 
@@ -49,7 +51,7 @@ extern crate gtk;
 use gtk::traits::*;
 {% endhighlight %}
 
-And create a window with some options:
+A create a window, etc.
 
 {% highlight rust %}
 use gtk::signal::Inhibit;
@@ -79,4 +81,5 @@ fn main() {
 * [rrun](https://github.com/buster/rrun)
 * [process-viewer](https://github.com/GuillaumeGomez/process-viewer)
 
-If you want yours to be added to this list, just create a Pull Request for it!
+If you want yours to be added to this list, please create a Pull Request for it!
+
