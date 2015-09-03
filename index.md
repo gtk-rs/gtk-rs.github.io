@@ -18,31 +18,7 @@ layout: wide
 
   <div class="intro-col intro-col-2">
     <p class="page-heading"> Crates </p>
-    {% for crate in site.data.crates %}
-      <a class="badge" href="https://crates.io/crates/{{crate.name}}">
-        <span class="icon-crate">
-          <svg xmlns="http://www.w3.org/2000/svg">
-            <linearGradient id="b" x2="0" y2="100%">
-              <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
-              <stop offset="1" stop-opacity=".1"/>
-            </linearGradient>
-            <mask id="a"><rect width="112" height="20" rx="3" fill="#fff"/></mask>
-            <g mask="url(#a)">
-              <path fill="#555" d="M0 0h59v20H0z"/><path fill="#fe7d37" d="M59 0h53v20H59z"/>
-              <path fill="url(#b)" d="M0 0h112v20H0z"/>
-            </g>
-            <g fill="#fff" text-anchor="middle" font-size="11"
-              font-family="DejaVu Sans,Verdana,Geneva,sans-serif">
-              <text x="29.5" y="15" fill="#010101" fill-opacity=".3">{{crate.name}}</text>
-              <text x="29.5" y="14">{{crate.name}}</text>
-              <text x="84.5" y="15" fill="#010101" fill-opacity=".3">v{{crate.max_version}}</text>
-              <text x="84.5" y="14">v{{crate.max_version}}</text>
-            </g>
-          </svg>
-        </span>
-      </a>
-    {% endfor %}
-
+    {% include badges.html %}
     <p class="page-heading"> Announcements </p>
     {% for post in site.categories.front limit:3 %}
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
