@@ -20,7 +20,7 @@ layout: wide
       <p class="page-heading"> Crates </p>
       {% include badges.html %}
     </div>
-    <div class="news">
+    <div class="blog">
       <p class="page-heading"> Announcements </p>
       {% for post in site.categories.front limit:3 %}
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -28,9 +28,6 @@ layout: wide
           <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </p>
       {% endfor %}
-      <p>
-        <a href="{{ pages.news.url | prepend: site.baseurl }}">All news</a>
-      </p>
     </div>
   </div>
 </div>
