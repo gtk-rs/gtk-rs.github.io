@@ -15,20 +15,23 @@ layout: wide
 [Cairo]: http://cairographics.org/documentation/
 
   </div>
-
   <div class="intro-col intro-col-2">
-    <p class="page-heading"> Crates </p>
-    {% include badges.html %}
-    <p class="page-heading"> Announcements </p>
-    {% for post in site.categories.front limit:3 %}
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <p>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </p>
-    {% endfor %}
+    <div class="crates">
+      <p class="page-heading"> Crates </p>
+      {% include badges.html %}
+    </div>
+    <div class="news">
+      <p class="page-heading"> Announcements </p>
+      {% for post in site.categories.front limit:3 %}
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <p>
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </p>
+      {% endfor %}
       <p>
         <a href="{{ pages.news.url | prepend: site.baseurl }}">All news</a>
       </p>
+    </div>
   </div>
 </div>
 

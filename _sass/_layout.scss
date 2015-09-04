@@ -8,6 +8,7 @@
 
     // Positioning context for the mobile navigation icon
     position: relative;
+    background-color: $elem-background;
 }
 
 .site-title {
@@ -93,7 +94,8 @@
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    padding-top: 12px;
+    background-color: $elem-background;
 }
 
 .footer-heading {
@@ -145,7 +147,6 @@
 
 .footer-col {
     float: left;
-    margin-bottom: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
 }
 
@@ -191,7 +192,7 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    padding: 10px 0;
 }
 
 .page-heading {
@@ -262,4 +263,17 @@
             font-size: 18px;
         }
     }
+}
+
+.news {
+    background-color: #F7F5D7;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.crates {
+    background-color: #E6F5F9;
+    border-radius: 5px;
+    padding: 7px;
+    margin-bottom: 7px;
 }

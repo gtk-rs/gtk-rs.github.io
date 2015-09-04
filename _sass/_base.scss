@@ -151,7 +151,7 @@ code {
 
 pre {
     padding: 8px 12px;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     > code {
         border: 0;
@@ -173,6 +173,8 @@ pre {
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
     @extend %clearfix;
+    border-radius: 5px;
+    background-color: $elem-background;
 
     @include media-query($on-laptop) {
         max-width: -webkit-calc(800px - (#{$spacing-unit}));
@@ -185,6 +187,7 @@ pre {
 .wide-wrapper {
     max-width: -webkit-calc(1000px - (#{$spacing-unit} * 2));
     max-width:         calc(1000px - (#{$spacing-unit} * 2));
+    padding-top: 10px;
 }
 
 
