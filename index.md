@@ -23,7 +23,7 @@ layout: wide
     <div class="blog">
       <p class="page-heading"> Announcements </p>
       {% for post in site.categories.front limit:3 %}
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-meta">{{ post.date | date: "%-d %b %Y" }}</span>
         <p>
           <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </p>
