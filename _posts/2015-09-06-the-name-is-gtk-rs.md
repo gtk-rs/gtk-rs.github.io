@@ -2,6 +2,7 @@
 layout: post
 author: gkoz
 title: The name is Gtk-rs. Update your git urls!
+date: 2015-09-06 18:00:00 +0300
 categories: [front, org]
 ---
 
