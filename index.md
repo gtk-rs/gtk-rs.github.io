@@ -51,7 +51,7 @@ extern crate gtk;
 use gtk::traits::*;
 {% endhighlight %}
 
-A create a window, etc.
+Create a window, etc.
 
 {% highlight rust %}
 use gtk::signal::Inhibit;
