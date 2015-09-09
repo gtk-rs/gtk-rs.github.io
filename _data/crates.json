@@ -1,22 +1,22 @@
 [
   {
-    "max_version": "0.0.4",
+    "max_version": "0.0.5",
     "name": "cairo-rs"
   },
   {
-    "max_version": "0.1.1",
+    "max_version": "0.1.3",
     "name": "gdk"
   },
   {
-    "max_version": "0.0.3",
+    "max_version": "0.0.4",
     "name": "glib"
   },
   {
-    "max_version": "0.0.3",
+    "max_version": "0.0.4",
     "name": "gtk"
   },
   {
-    "max_version": "0.0.3",
+    "max_version": "0.0.4",
     "name": "pango"
   }
 ]
