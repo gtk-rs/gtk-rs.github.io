@@ -35,10 +35,11 @@ layout: wide
 ## Using
 
 Include `gtk` in your `Cargo.toml`:
+{% assign gtk = site.data.crates | where: "name", "gtk" %}
 
 {% highlight toml %}
 [dependencies]
-gtk = "0.0.3"
+gtk = "{{ gtk[0].max_version }}"
 {% endhighlight %}
 
 __The APIs aren't stable yet. Watch the Announcements box above for breaking changes to the crates!__
