@@ -3,6 +3,7 @@ layout: post
 author: gkoz
 title: Crates meet automation
 categories: [front, crates]
+date: 2015-09-10 02:00:00 +0300
 ---
 
 What's new with the latest batch of crates and the reason for some
