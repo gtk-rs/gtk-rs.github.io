@@ -60,4 +60,4 @@ These regular expressions should take care of renaming:
 
 [cargo-issue]: https://github.com/rust-lang/cargo/issues/1980
 [GI]: https://wiki.gnome.org/Projects/GObjectIntrospection
-[sys]: https://guthub.com/gtk-rs/sys
+[sys]: https://github.com/gtk-rs/sys
