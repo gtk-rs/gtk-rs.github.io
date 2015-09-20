@@ -8,6 +8,7 @@ github_username: gtk-rs
 permalink: /blog/:year/:month/:day/:title.html
 authors:
   gkoz: '<a href="https://github.com/gkoz">Gleb Kozyrev</a>'
+  imperio: '<a href="https://github.com/GuillaumeGomez">Guillaume Gomez</a>'
 
 # Build settings
 markdown: kramdown

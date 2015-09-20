@@ -2,13 +2,13 @@
 layout: post
 author: imperio
 title: Contributor's story
-categories: [front, crates]
-date: 2015-09-20 01:00:00 +0100
+categories: [front, org]
+date: 2015-09-21 01:00:00 +0100
 ---
 
 The previous posts were about `Gtk-rs` libraries and issues we encountered. We decided to changed a bit the theme by talking about `Gtk-rs` most valuable resource: its __contributors__.
 
-#Story of imperio (GuillaumeGomez on github)
+#Story of imperio
 
 At first, `Gtk-rs` organization didn't exist. It was a project to provide `gtk` binding for `Rust`, started by jeremyletang. I joined him to fasten up the development.
 
@@ -28,6 +28,6 @@ The `Gtk-rs` organization was created just after this (it was called `rust-gnome
 
 This is also around this time that jeremyletang left the project and I became the current "leader" (I don't find better word so this one will be fine I guess?). I finished my work on `pango` and `gdk` bindings and started to add the biggest missing part of this project: documentation!
 
-As the time passed, gkoz became my second on `Gtk-rs` (congrats to him \o/). He started a big refactoring of all the code structure. We also decided to create a website to allow users of `Gtk-rs` to follow changes (and breaking changes) more easily. For some reasons detailed in a previous post, the organization's name change from `rust-gnome` to `Gtk-rs`.
+As the time passed, gkoz became my second on `Gtk-rs` (congrats to him \o/). He started a big refactoring of all the code structure. We decided then to create a website to allow users of `Gtk-rs` to follow changes (and breaking changes) more easily. For some reasons detailed in a previous post, the organization's name change from `rust-gnome` to `Gtk-rs`.
 
 To resume all this post, I must say that I never thought I would take the leadership of this project and that I would get the help of such amazing people (contributors and users!). It was for me a way to learn a new part of `Rust` and I hope I'll be able to contribute to it a lot in the future!
