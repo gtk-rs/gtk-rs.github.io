@@ -26,8 +26,8 @@ Around that time, we created new repositories to split out other library binding
 
 The `Gtk-rs` organization was created shortly after this (it was called `rust-gnome`).
 
-Around this time jeremyletang left the project and I became the current "leader" (I don't find better word so this one will be fine I guess?). I finished my work on `pango` and `gdk` bindings and started to add the biggest missing part of this project: documentation!
+Around this time jeremyletang left the project and I became the only one in charge of the project. I finished my work on `pango` and `gdk` bindings and started to add the biggest missing part of this project: documentation!
 
-As the time passed, gkoz became my second on `Gtk-rs` (congrats to him \o/). He started a big refactoring of all the code structure. We decided then to create a website to let the users of `Gtk-rs` follow changes (and breaking changes) more easily. For some reasons detailed in a previous post, the organization's name was changed from `rust-gnome` to `Gtk-rs`.
+As the time passed, gkoz joined me and we created (unnofficialy) the core team for `Gtk-rs` (congrats to him \o/). He started a big refactoring of all the code structure. We decided then to create a website to let the users of `Gtk-rs` follow changes (and breaking changes) more easily. For some reasons detailed in a previous post, the organization's name was changed from `rust-gnome` to `Gtk-rs`.
 
-To conclude this post, I must say that I never thought I would take the leadership of this project and that I would get the help of such amazing people (contributors and users!). For me it was a way to learn a new part of `Rust` and I hope I'll be able to contribute to it a lot in the future!
+To conclude this post, I must say that I never thought I would take the leadership of this project and that I would get the help of such amazing people (contributors and users!). For me it was a way to learn a new part of `Rust` and I hope I'll be able to continue contributing to it a lot in the future!
