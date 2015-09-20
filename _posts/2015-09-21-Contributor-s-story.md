@@ -3,10 +3,10 @@ layout: post
 author: imperio
 title: Contributor's story
 categories: [front, org]
-date: 2015-09-21 01:00:00 +0100
+date: 2015-09-21 20:00:00 +0100
 ---
 
-The previous posts were about the `Gtk-rs` libraries and issues we encountered. We decided to change the theme a bit by talking about `Gtk-rs`' most valuable resource: its __contributors__.
+The previous posts were about the `Gtk-rs` libraries and issues we encountered. We decided to change the theme a bit by adding posts about `Gtk-rs`' most valuable resource: its __contributors__. I'll start myself and tell you my story inside the `Gtk-rs` organization.
 
 ### Story of imperio
 
