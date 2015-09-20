@@ -18,9 +18,9 @@ At the beginnings, I mostly worked on adding new objects and structures to provi
 
 #Rust 1.0 release
 
-The 1.0 release of `Rust` finally came out. Now I guess all of you must be thinking: "nice! Now you don't have to update your code anymore, so no more problem!". Well, this brought a new issue: some functionalities we used in our project weren't available on the `stable` version. So we had to keep an "actual" version with missing functionalities to allow people with stable versions of `Rust` to use `gtk`.
+The 1.0 release of `Rust` finally came out. Now I guess all of you must be thinking: "nice! Now you don't have to update your code anymore, so no more problem!". Well, this brought a new issue: some functionalities we used in our project weren't available on the `stable` version. So we had to keep an "actual" version with missing functionalities to allow people with stable versions of `Rust` to use `gtk`. It was (at least for me!) a big fight between adding new stuff and finding a workaround to make them compile on `rust` stable version.
 
-Around that time, we created new repositories to split out other libraries bindings (`cairo`, `glib`, `gdk` and `pango`) and then, I created their crates on [crates.io](https://crates.io/). The little `gtk` project (which wasn't little anymore at all) just made a very big step by getting available for every users by simply adding a dependency in Cargo!
+Around that time, we created new repositories to split out other libraries bindings (`cairo`, `glib`, `gdk` and `pango`) and then, I created their crates on [crates.io](https://crates.io/). The little `gtk` project (which wasn't little anymore at all) just made a very big step by getting available for every users by simply adding a dependency in Cargo! It was for me a way to "officialize" our project.
 
 #Big changes
 
