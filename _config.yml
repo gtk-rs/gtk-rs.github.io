@@ -9,6 +9,11 @@ permalink: /blog/:year/:month/:day/:title.html
 authors:
   gkoz: '<a href="https://github.com/gkoz">Gleb Kozyrev</a>'
   imperio: '<a href="https://github.com/GuillaumeGomez">Guillaume Gomez</a>'
+exclude:
+  - CNAME
+  - README.md
+  - "Gemfile*"
+  - "*.sh"
 
 # Build settings
 markdown: kramdown
