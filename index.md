@@ -40,7 +40,7 @@ Include `gtk` in your `Cargo.toml` and set the minimal GTK version required by y
 ~~~toml
 [dependencies]
 gtk = "{{ gtk[0].max_version }}"
-features = "3.10"
+features = "v3_10"
 ~~~
 
 __The APIs aren't stable yet. Watch the Announcements box above for breaking changes to the crates!__
