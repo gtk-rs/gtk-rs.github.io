@@ -1,7 +1,7 @@
 ---
 layout: post
 author: gkoz
-title: Safety first
+title: Safety first (gtk 0.0.6)
 categories: [front, crates]
 date: 2015-11-28 01:30:00 +0200
 ---

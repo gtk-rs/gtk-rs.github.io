@@ -34,51 +34,55 @@ layout: wide
 
 ## Using
 
-Include `gtk` in your `Cargo.toml`:
+Include `gtk` in your `Cargo.toml` and set the minimal GTK version required by your project:
 {% assign gtk = site.data.crates | where: "name", "gtk" %}
 
-{% highlight toml %}
+~~~toml
 [dependencies]
 gtk = "{{ gtk[0].max_version }}"
-{% endhighlight %}
+features = "3.10"
+~~~
 
 __The APIs aren't stable yet. Watch the Announcements box above for breaking changes to the crates!__
 
 Import the `gtk` crate and its traits:
 
-{% highlight rust %}
+~~~rust
 extern crate gtk;
 
-use gtk::traits::*;
-{% endhighlight %}
+use gtk::prelude::*;
+~~~
 
 Create a window, etc.
 
-{% highlight rust %}
-use gtk::signal::Inhibit;
+~~~rust
+use gtk::{Button, Window, WindowType};
 
 fn main() {
     if gtk::init().is_err() {
         println!("Failed to initialize GTK.");
         return;
     }
-    let window = gtk::Window::new(gtk::WindowType::Toplevel).unwrap();
+
+    let window = Window::new(WindowType::Toplevel);
     window.set_title("First GTK+ Program");
     window.set_default_size(350, 70);
+    let button = Button::new_with_label("Click me!");
+    window.add(&button);
+    window.show_all();
 
     window.connect_delete_event(|_, _| {
         gtk::main_quit();
         Inhibit(false)
     });
 
-    let button = gtk::Button::new_with_label("Click me!").unwrap();
+    button.connect_clicked(|_| {
+        println!("Clicked!");
+    });
 
-    window.add(&button);
-
-    window.show_all();
     gtk::main();
 }
-{% endhighlight %}
+~~~
 
 ## Projects using gtk
 * [SolidOak](https://github.com/oakes/SolidOak)

@@ -1,7 +1,7 @@
 ---
 layout: post
 author: gkoz
-title: Crates meet automation
+title: Crates meet automation (gtk 0.0.4)
 categories: [front, crates]
 date: 2015-09-10 02:00:00 +0300
 ---
