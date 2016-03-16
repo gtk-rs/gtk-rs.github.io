@@ -77,14 +77,14 @@ conscious and in control of their project's requirements.
     ~~~toml
     [dependencies.gtk]
     version = "0.0.7"
-    features = ["3.8"]
+    features = ["v3_8"]
     ~~~
 
     or
 
     ~~~
     [dependencies]
-    gtk = { version = "0.0.7", features = ["3.8"] }
+    gtk = { version = "0.0.7", features = ["v3_8"] }
     ~~~
 
 * `cairo-rs` [has got][cairo60] a non-version feature `png`.
