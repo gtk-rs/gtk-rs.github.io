@@ -29,53 +29,87 @@ The __gtk__ crate expects __GTK+__, __GLib__ and __Cairo__ development files to 
 
 ## Windows
 
-Make sure you have the [GNU
-ABI](https://www.rust-lang.org/downloads.html#win-foot) version of the rust
-compiler installed. Since we need our own toolchain make sure to uncheck
-"Linker and platform libraries" in the Rust setup.
-![Screenshot](rust_setup.png)
+Make sure you have the [GNU ABI] version of the rust compiler installed.
+Contrary to earlier instructions, **you don't need to uncheck "Linker and
+platform libraries" in the Rust setup or delete `gcc.exe` and `ld.exe` in Rust's
+`bin` directory.**
 
-If you already have installed Rust, check if your Rust installation has
-`gcc.exe` and `ld.exe` in its `bin` directory. In that case remove those
-executables, they will be provided by mingw instead. If you won't you'll
-probably get a linking error `ld: cannot find -limm32`.
+[GNU ABI]: https://www.rust-lang.org/downloads.html#win-foot
 
-For the toolchain one has two possibilities:
+### Getting the GTK+ SDK
 
- - Install msys2 with a mingw toolchain and the gtk3 package
+The GTK+ Project [recommends][gtk-download] using the GTK+ SDK provided by [MSYS2]:
 
- - Install the mingw-w64 toolchain separately and then install a GTK+ SDK
+[gtk-download]: http://www.gtk.org/download/windows.php
+[MSYS2]: https://msys2.github.io/
 
-### msys2 toolchain
+ *  [Install MSYS2](https://sourceforge.net/p/msys2/wiki/MSYS2%20installation/).
+    We're going to assume it's installed in `C:\msys2`. Adjust the path in the
+    following steps if necessary.
 
-This method is recommended according to the [GTK+ project]
-(http://www.gtk.org/download/windows.php). You can follow [this guide]
-(https://blogs.gnome.org/nacho/2014/08/01/how-to-build-your-gtk-application-on-windows/)
-or follow these steps:
+ *  In the "MSYS2 Shell" install `libgtk3`.
 
- - Install and update [msys2](https://msys2.github.io/)
- - Install the mingw toolchain:
+     -    32-bit targets:
 
-{% highlight bash %}
-$ pacman -S mingw-w64-x86_64-toolchain
-{% endhighlight %}
+          ~~~bash
+          > pacman -S mingw-w64-i686-gtk3
+          ~~~
 
- - Install the gtk3 package:
+     -    64-bit targets:
 
-{% highlight bash %}
-$ pacman -S mingw-w64-x86_64-gtk3
-{% endhighlight %}
- 
-Make sure that either `<your msys installation folder>\mingw32\bin` or `<your msys installation folder>\mingw64\bin` is in your `PATH` e.g. (if you have msys32 installed at `c:\msys32`, add `c:\msys32\mingw32\bin` or `c:\msys32\mingw64\bin` to your `PATH`).
+          ~~~bash
+          > pacman -S mingw-w64-x86_64-gtk3
+          ~~~
 
-### Separate mingw toolchain
+If you prefer getting the SDK from [gtk-win64] or building it from source, set
+the variables in the next section accordingly.
 
-Install [mingw-w64](http://mingw-w64.yaxm.org/) (select the win32 threading model) and download a __GTK+__ SDK:
- * The GNOME project hosts [distributions](http://win32builder.gnome.org/) of GTK+ 3.4 upto 3.10
- * [GTK+ for Windows Runtime Environment Installer: 64-bit](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer) supports GTK+ 3.14, its SDK download links can currently be found [here](http://lvserver.ugent.be/gtk-win64/sdk/).
+[gtk-win64]: https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer
 
-Make sure both mingw's and the sdk's `bin` directories are in your `PATH` e.g. (assuming mingw is installed in `C:\mingw-w64` and the SDK unpacked into `C:\gtk`)
+### Using the native Windows shell
 
-{% highlight bat %}
-C:\> set PATH="C:\mingw-w64\bin;C:\gtk\bin;%PATH%"
-{% endhighlight %}
+Back in the `cmd.exe` shell set the `GTK_LIB_DIR` and `PATH` environment
+variables.
+
+ *    32-bit targets:
+
+      ~~~cmd
+      C:\> SET GTK_LIB_DIR=C:\msys2\mingw32\lib
+      C:\> SET PATH=%PATH%;C:\msys2\mingw32\bin
+      ~~~
+
+ *    64-bit targets:
+
+      ~~~bat
+      C:\> SET GTK_LIB_DIR=C:\msys2\mingw64\lib
+      C:\> SET PATH=%PATH%;C:\msys2\mingw64\bin
+      ~~~
+
+If you're happy with these changes, make them permanent with
+[`SETX`](https://technet.microsoft.com/en-us/library/cc755104.aspx):
+
+~~~cmd
+C:\> SETX GTK_LIB_DIR %GTK_LIB_DIR%
+C:\> SETX PATH %PATH%
+~~~
+
+### Using the MSYS2 MinGW shell
+
+Instead of setting the environment variables manually, you can let `pkg-config`
+sort the paths out for you.
+
+ *  In the "MSYS2 Shell" install the `mingw-w64` toolchain.
+
+     -    32-bit targets:
+
+          ~~~bash
+          > pacman -S mingw-w64-i686-toolchain
+          ~~~
+
+     -    64-bit targets:
+
+          ~~~bash
+          > pacman -S mingw-w64-x86_64-toolchain
+          ~~~
+
+ *  Start the "MSYS2 MinGW Shell" (not to be confused with "MSYS2 Shell").
