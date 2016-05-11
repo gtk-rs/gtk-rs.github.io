@@ -88,6 +88,8 @@ fn main() {
 * [SolidOak](https://github.com/oakes/SolidOak)
 * [rrun](https://github.com/buster/rrun)
 * [process-viewer](https://github.com/GuillaumeGomez/process-viewer)
+* [systemd-manager](https://github.com/mmstick/systemd-manager) 
+* [tv-renamer](https://github.com/mmstick/tv-renamer)
 
 If you want yours to be added to this list, please create a Pull Request for it!
 
