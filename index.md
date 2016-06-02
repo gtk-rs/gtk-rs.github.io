@@ -86,9 +86,9 @@ fn main() {
 
 ## Projects using gtk
 * [Gattii](https://gitlab.com/susurrus/gattii)
-* [SolidOak](https://github.com/oakes/SolidOak)
-* [rrun](https://github.com/buster/rrun)
 * [process-viewer](https://github.com/GuillaumeGomez/process-viewer)
+* [rrun](https://github.com/buster/rrun)
+* [SolidOak](https://github.com/oakes/SolidOak)
 * [systemd-manager](https://github.com/mmstick/systemd-manager) 
 * [tv-renamer](https://github.com/mmstick/tv-renamer)
 
