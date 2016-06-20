@@ -9,19 +9,28 @@ layout: default
 
  - [**cairo**](cairo/)
  - [**gdk**](gdk/)
+ - [**gio**](gio/)
  - [**glib**](glib/)
  - [**gtk**](gtk/)
  - [**pango**](pango/)
 
 ### Versions
 
-The build script will query the installed library versions from `pkg-config`
-and instruct `rustc` via `cfg` arguments to compile the appropriate set of APIs.
+By default the `gtk` crate provides only GTK+ 3.4 APIs. You can access more
+modern APIs by selecting one of the following features: `v3_6`, `v3_8`,
+`v3_10`, `v3_12`, `v3_14`, `v3_16`.
 
-All the APIs available in the installed library will just work but if you
-attempt to use newer ones, the build will fail. Presently, Rust doesn't allow
-to generate custom error messages so there doesn't appear to be a way to make
-such errors more friendly.
+`Cargo.toml` example:
+
+~~~toml
+[dependencies.gtk]
+version = "0.1.0"
+features = ["v3_16"]
+~~~
+
+**Take care when choosing the version to target: some of your users might
+not have easy access to the latest ones.** The higher the version, the fewer
+users will have it installed.
 
 ### Examples
 
