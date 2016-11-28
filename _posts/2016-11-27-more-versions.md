@@ -2,7 +2,7 @@
 layout: post
 author: GuillaumeGomez
 title: More versions!
-categories: [crates, update]
+categories: [front, crates]
 date: 2016-11-27 20:00:00 +0000
 ---
 
