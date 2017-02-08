@@ -85,6 +85,7 @@ fn main() {
 ~~~
 
 ## Projects using gtk
+* [Garta](https://github.com/zaari/garta)
 * [Gattii](https://gitlab.com/susurrus/gattii)
 * [process-viewer](https://github.com/GuillaumeGomez/process-viewer)
 * [rrun](https://github.com/buster/rrun)
