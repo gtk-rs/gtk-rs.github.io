@@ -7,12 +7,12 @@ layout: default
 
 ### Crate API docs
 
- - [**cairo**](cairo/)
- - [**gdk**](gdk/)
- - [**gio**](gio/)
- - [**glib**](glib/)
- - [**gtk**](gtk/)
- - [**pango**](pango/)
+ - [**cairo**](../docs/cairo/)
+ - [**gdk**](../docs/gdk/)
+ - [**gio**](../docs/gio/)
+ - [**glib**](../docs/glib/)
+ - [**gtk**](../docs/gtk/)
+ - [**pango**](../docs/pango/)
 
 ### Versions
 
