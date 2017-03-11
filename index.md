@@ -84,6 +84,20 @@ fn main() {
 }
 ~~~
 
+## Using latest, not published version
+
+Include `gtk` in your `Cargo.toml` and add `replace` ([see more about it](http://doc.crates.io/specifying-dependencies.html#overriding-dependencies)):
+{% assign gtk = site.data.crates | where: "name", "gtk" %}
+
+~~~toml
+[dependencies.gtk]
+version = "{{ gtk[0].max_version }}"
+features = ["v3_10"]
+
+[replace]
+"gtk:{{ gtk[0].max_version }}" = { git = 'https://github.com/gtk-rs/gtk' }
+~~~
+
 ## Projects using gtk
 * [Garta](https://github.com/zaari/garta)
 * [Gattii](https://gitlab.com/susurrus/gattii)
