@@ -19,13 +19,12 @@ layout: default
 By default the `gtk` crate provides only GTK+ 3.4 APIs. You can access more
 modern APIs by selecting one of the following features: `v3_6`, `v3_8`,
 `v3_10`, `v3_12`, `v3_14`, `v3_16`.
-{% assign gtk = site.data.crates | where: "name", "gtk" %}
 
 `Cargo.toml` example:
 
 ~~~toml
 [dependencies.gtk]
-version = "{{ gtk[0].max_version }}"
+version = "0.1.0"
 features = ["v3_16"]
 ~~~
 
