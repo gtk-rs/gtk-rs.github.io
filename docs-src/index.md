@@ -18,7 +18,7 @@ layout: default
 
 By default the `gtk` crate provides only GTK+ 3.4 APIs. You can access more
 modern APIs by selecting one of the following features: `v3_6`, `v3_8`,
-`v3_10`, `v3_12`, `v3_14`, `v3_16`.
+`v3_10`, `v3_12`, `v3_14`, `v3_16`, `v3_18`, `v3_20`, `v3_22`.
 
 `Cargo.toml` example:
 
