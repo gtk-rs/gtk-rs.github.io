@@ -24,8 +24,8 @@ Let's see now a more global usage.
 Let's say you want to write a generic function and want to check if a `Widget` is actually a `Box`. First, let's see a bit of code:
 
 ```rust
-fn is_a_box<W: IsA<gtk::Object> + IsA<gtk::Widget>>(widget: W) -> bool {
-    widget.upcast::<gtk::Widget>().downcast::<gtk::Box>().is_ok()
+fn is_a_box<W: IsA<gtk::Object> + IsA<gtk::Widget> + Clone>(widget: &W) -> bool {
+    widget.clone().upcast::<gtk::Widget>().is::<gtk::Box>()
 }
 ```
 
@@ -38,9 +38,9 @@ We don't really need our widget to be a [`Widget`](http://gtk-rs.org/docs/gtk/st
 So the point of this function is to upcast the widget to the highest widget type and then try downcasting it into the wanted object. We could make even more generic like this:
 
 ```rust
-fn is_a<W: IsA<gtk::Object> + IsA<gtk::Widget>,
-        T: IsA<gtk::Object> + IsA<gtk::Widget>>(widget: W) -> bool {
-    widget.upcast::<gtk::Widget>().downcast::<T>().is_ok()
+fn is_a<W: IsA<gtk::Object> + IsA<gtk::Widget> + Clone,
+        T: IsA<gtk::Object> + IsA<gtk::Widget>>(widget: &W) -> bool {
+    widget.clone().upcast::<gtk::Widget>().downcast::<T>().is_ok()
 }
 ```
 
@@ -49,8 +49,8 @@ Then let's test it:
 ```rust
 let button = gtk::Button::new_with_label("Click me!");
 
-is_a::<gtk::Button, gtk::Container>(button.clone()); // Returns true.
-is_a::<gtk::Button, gtk::Label>(button.clone());     // Returns false.
+is_a::<gtk::Button, gtk::Container>(&button); // Returns true.
+is_a::<gtk::Button, gtk::Label>(&button);     // Returns false.
 ```
 
 <div style="width:100%">
