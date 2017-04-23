@@ -49,8 +49,8 @@ Then let's test it:
 ```rust
 let button = gtk::Button::new_with_label("Click me!");
 
-assert!(is_a::<_, gtk::Container>(&button)); // Won't fail.
-assert!(is_a::<_, gtk::Label>(&button));     // Will fail.
+assert_eq!(is_a::<_, gtk::Container>(&button), true);
+assert_eq!(is_a::<_, gtk::Label>(&button), false);
 ```
 
 <div style="width:100%">
