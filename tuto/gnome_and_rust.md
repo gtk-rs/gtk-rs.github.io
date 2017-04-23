@@ -18,11 +18,11 @@ The goal is to provide a safe abstraction using Rust paradigms.
 
 ## Objects
 
-First thing to note (it's very important!) is that the `Gtk-rs` objects can be cloned and it costs **nothing** more than copying a pointer, so basically nothing. The reason is quite simple (and I suppose you already guessed it): it's simply because `Gtk-rs` structs only contains a pointer to the corresponding Gnome objects.
+First thing to note (it's very important!) is that the `Gtk-rs` objects can be cloned and it costs **nothing** more than copying a pointer, so basically nothing. The reason is quite simple (and I suppose you already guessed it): it's simply because `Gtk-rs` structs only contains a pointer to the corresponding `Gnome` objects.
 
-Now: why cloning is safe? One thing to note before going any further: it's not thread safe. If you want to handle an object in different threads, you'll have to use lockers or equivalent to avoid data racing. Otherwise, when a struct is dropped, it calls internally the [`g_object_unref`](http://gtk-rs.org/docs/gobject_sys/fn.g_object_unref.html) function and calls the [`g_object_ref`](http://gtk-rs.org/docs/gobject_sys/fn.g_object_ref.html) function when you call `clone()`.
+Now: why is cloning safe? One thing to note before going any further: it's not thread safe (and you shouldn't try to call a `Gnome` library function inside another thread). Otherwise, when a struct is dropped, it calls internally the [`g_object_unref`](http://gtk-rs.org/docs/gobject_sys/fn.g_object_unref.html) function and calls the [`g_object_ref`](http://gtk-rs.org/docs/gobject_sys/fn.g_object_ref.html) function when you call `clone()`.
 
-To put it simply: Gnome handles the resources allocation/removal for us.
+To put it simply: `Gnome` handles the resources allocation/removal for us.
 
 ## Trait hierarchy
 

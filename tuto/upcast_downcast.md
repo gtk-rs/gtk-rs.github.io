@@ -6,7 +6,20 @@ layout: default
 
 Since there is an inheritance system in Gtk, it's only logical to have one as well in `Gtk-rs`. Normally, most people won't need this, but it's always nice to understand how things work.
 
-## Checking if a `Widget` is another `Widget`
+## Upcasting
+
+This is actually quite simple:
+
+```rust
+let button = gtk::Button::new_with_label("Click me!");
+let widget = button.upcast::<gtk::Widget>();
+```
+
+Since the [`Button`](http://gtk-rs.org/docs/gtk/struct.Button.html) struct implements `IsA<Widget>`, we can upcast into a [`Widget`](http://gtk-rs.org/docs/gtk/struct.Widget.html). It's important to note that the [`IsA`](http://gtk-rs.org/docs/gtk/trait.IsA.html) trait is implemented on every widget for every of its parents, which, in here, allows to [`upcast`](http://gtk-rs.org/docs/gtk/trait.Cast.html#method.upcast) the [`Button`](http://gtk-rs.org/docs/gtk/struct.Button.html) into a [`Widget`](http://gtk-rs.org/docs/gtk/struct.Widget.html).
+
+Let's see now a more global usage.
+
+## Checking if a widget is another widget
 
 Let's say you want to write a generic function and want to check if a `Widget` is actually a `Box`. First, let's see a bit of code:
 
@@ -16,7 +29,7 @@ fn is_a_box<W: IsA<gtk::Object> + IsA<gtk::Widget>>(widget: W) -> bool {
 }
 ```
 
-Ok, so what's happening in there? First, you'll note the usage of the [`IsA`](http://gtk-rs.org/docs/gtk/trait.IsA.html) trait. It is implemented on every widget for every of its parents. Secondly, all widgets implement the [`Object`](http://gtk-rs.org/docs/gtk/struct.Object.html) trait.
+Ok, so what's happening in there? First, you'll note the usage of the [`IsA`](http://gtk-rs.org/docs/gtk/trait.IsA.html) trait. The received `widget` needs to implement both `IsA<Widget>` and `IsA<Object>`.
 
 We need the [`Object`](http://gtk-rs.org/docs/gtk/struct.Object.html) to be able to use the [`Cast`](http://gtk-rs.org/docs/gtk/trait.Cast.html) trait which contains both [`upcast`](http://gtk-rs.org/docs/gtk/trait.Cast.html#method.upcast) and [`downcast`](http://gtk-rs.org/docs/gtk/trait.Cast.html#method.downcast) methods (take a look to it for other methods as well).
 
@@ -36,8 +49,8 @@ Then let's test it:
 ```rust
 let button = gtk::Button::new_with_label("Click me!");
 
-is_a::<gtk::Button, gtk::Container>(button); // Returns true.
-is_a::<gtk::Button, gtk::Label>(button);     // Returns false.
+is_a::<gtk::Button, gtk::Container>(button.clone()); // Returns true.
+is_a::<gtk::Button, gtk::Label>(button.clone());     // Returns false.
 ```
 
 <div style="width:100%">
