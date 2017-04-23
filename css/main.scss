@@ -48,3 +48,14 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+div.footer {
+    width:100%;
+}
+
+div.footer > div {
+    float: left;
+    margin: 0;
+    width: 33.3%;
+    text-align: center;
+}

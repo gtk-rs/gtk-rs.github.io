@@ -149,8 +149,8 @@ button.connect_clicked(clone!(windows => move |_| {
 }));
 ```
 
-<div style="width:100%">
-<div style="width:33%;display:block;text-align:center;"><a href="/tuto/version">Specifying version</a>.</div>
-<div style="width:34%;display:block;text-align:center;"><a href="/docs-src/tutorial">Going back to summary</a>.</div>
-<div style="width:33%;display:block;text-align:center;"><a href="/tuto/upcast_downcast">Upcast and downcast</a>.</div>
+<div class="footer">
+<div><a href="/tuto/version">Specifying version</a>.</div>
+<div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
+<div><a href="/tuto/upcast_downcast">Upcast and downcast</a>.</div>
 </div>

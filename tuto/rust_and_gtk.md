@@ -52,8 +52,8 @@ Then just compile normally, `cargo` will update the dependency by itself.
 
 Now that you know how to import `Gtk-rs` crates into your code, looking at the [examples repository](https://github.com/gtk-rs/examples/) could be a great idea!
 
-<div style="width:100%">
-<div style="width:33%;display:block;text-align:center;"></div>
-<div style="width:34%;display:block;text-align:center;"><a href="/docs-src/tutorial">Going back to summary</a>.</div>
-<div style="width:33%;display:block;text-align:center;"><a href="/tuto/gnome_and_rust">Gnome libraries and Rust</a>.</div>
+<div class="footer">
+<div></div>
+<div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
+<div><a href="/tuto/gnome_and_rust">Gnome libraries and Rust</a>.</div>
 </div>

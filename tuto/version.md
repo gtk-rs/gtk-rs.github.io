@@ -55,8 +55,8 @@ So when someone has a new enough version of Gtk, it'll be able to build your cra
 > cargo build --features gtk_3_14
 ```
 
-<div style="width:100%">
-<div style="width:33%;display:block;text-align:center;"><a href="/tuto/gnome_and_rust">Gnome libraries and Rust</a>.</div>
-<div style="width:34%;display:block;text-align:center;"><a href="/docs-src/tutorial">Going back to summary</a>.</div>
-<div style="width:33%;display:block;text-align:center;"><a href="/tuto/closures">Callbacks and closures</a>.</div>
+<div class="footer">
+<div><a href="/tuto/gnome_and_rust">Gnome libraries and Rust</a>.</div>
+<div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
+<div><a href="/tuto/closures">Callbacks and closures</a>.</div>
 </div>

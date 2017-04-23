@@ -53,8 +53,8 @@ assert_eq!(is_a::<_, gtk::Container>(&button), true);
 assert_eq!(is_a::<_, gtk::Label>(&button), false);
 ```
 
-<div style="width:100%">
-<div style="width:33%;display:block;text-align:center;"><a href="/tuto/closures">Callbacks and closures</a>.</div>
-<div style="width:34%;display:block;text-align:center;"><a href="/docs-src/tutorial">Going back to summary</a>.</div>
-<div style="width:33%;display:block;text-align:center;"><a href="/tuto/glade">Glade</a>.</div>
+<div class="footer">
+<div><a href="/tuto/closures">Callbacks and closures</a>.</div>
+<div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
+<div><a href="/tuto/glade">Glade</a>.</div>
 </div>
