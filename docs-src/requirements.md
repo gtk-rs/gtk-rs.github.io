@@ -24,7 +24,7 @@ The __gtk__ crate expects __GTK+__, __GLib__ and __Cairo__ development files to 
 ## OS X
 
 ~~~bash
-> brew install gtk+3
+> brew install gtk+3 atk cairo gdk-pixbuf pango
 ~~~
 
 ## Windows
