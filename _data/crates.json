@@ -26,5 +26,9 @@
   {
     "name": "pango",
     "max_version": "0.1.3"
+  },
+  {
+    "name": "sourceview",
+    "max_version": "0.1.3"
   }
 ]
