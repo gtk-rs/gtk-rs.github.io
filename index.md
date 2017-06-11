@@ -13,6 +13,7 @@ layout: wide
 [GLib]: https://developer.gnome.org/glib/stable/
 [GTK]: https://developer.gnome.org/gtk3/stable/
 [Cairo]: http://cairographics.org/documentation/
+[GtkSourceView]: https://wiki.gnome.org/Projects/GtkSourceView
 
   </div>
   <div class="intro-col intro-col-2">
