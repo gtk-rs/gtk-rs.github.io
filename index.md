@@ -5,7 +5,7 @@ layout: wide
 <div class="intro-col-wrapper">
   <div class="intro-col intro-col-1" markdown="1">
 
-### [Rust] bindings for [GTK+ 3][GTK], [Cairo] and other [GLib]-compatible libraries
+### [Rust] bindings for [GTK+ 3][GTK], [Cairo], [GtkSourceView] and other [GLib]-compatible libraries
 
 [![GTK screenshot](gtk.png)](gtk.png)
 

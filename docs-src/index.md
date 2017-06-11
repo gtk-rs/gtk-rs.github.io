@@ -13,6 +13,7 @@ layout: default
  - [**glib**](../docs/glib/)
  - [**gtk**](../docs/gtk/)
  - [**pango**](../docs/pango/)
+ - [**sourceview**](../docs/sourceview/)
 
 ### Versions
 
