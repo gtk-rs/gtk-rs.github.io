@@ -99,6 +99,7 @@ features = ["v3_10"]
 * [Garta](https://github.com/zaari/garta)
 * [Gattii](https://gitlab.com/susurrus/gattii)
 * [gpsami](https://github.com/hfiguiere/gpsami)
+* [Marmoset](https://github.com/sprang/marmoset)
 * [process-viewer](https://github.com/GuillaumeGomez/process-viewer)
 * [rrun](https://github.com/buster/rrun)
 * [SolidOak](https://github.com/oakes/SolidOak)
