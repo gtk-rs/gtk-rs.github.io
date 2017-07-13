@@ -105,6 +105,7 @@ features = ["v3_10"]
 * [SolidOak](https://github.com/oakes/SolidOak)
 * [systemd-manager](https://github.com/mmstick/systemd-manager) 
 * [tv-renamer](https://github.com/mmstick/tv-renamer)
+* [PNMixer-rs](https://github.com/hasufell/pnmixer-rust)
 
 If you want yours to be added to this list, please create a Pull Request for it!
 
