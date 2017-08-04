@@ -26,3 +26,4 @@ In this part we'll go deeper into the mechanisms of the `Gtk-rs` crates. If you'
  * [Callbacks and closures](/tuto/closures).
  * [Upcast and downcast](/tuto/upcast_downcast).
  * [Glade](/tuto/glade).
+ * [Cross compiling from linux to windows](/tuto/cross).
