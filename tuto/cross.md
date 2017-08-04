@@ -99,17 +99,17 @@ then in your build.rs
     fn main() {
         let out_dir = env::var("OUT_DIR").unwrap();
         Command::new("x86_64-w64-mingw32-windres")
-            .args(&["whatever.rc"])
-            .arg(&format!("{}/whatever.o", out_dir))
+            .args(&["src/program.rc"])
+            .arg(&format!("{}/program.o", out_dir))
             .status().unwrap();
         
         Command::new("x86_64-w64-mingw32-gcc-ar")
-            .args(&["crus", "libwhatever.a", "whatever.o"])
+            .args(&["crus", "libprogram.a", "program.o"])
             .current_dir(&Path::new(&out_dir))
             .status().unwrap();
 
         println!("cargo:rustc-link-search=native={}", out_dir);
-        println!("cargo:rustc-link-lib=static=whatever");
+        println!("cargo:rustc-link-lib=static=program");
     }
 
 You'll need to comment out both prints when building for linux.
