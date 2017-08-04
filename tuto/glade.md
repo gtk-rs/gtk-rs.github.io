@@ -135,5 +135,6 @@ gtk::main();
 <div class="footer">
 <div><a href="/tuto/upcast_downcast">Upcast and downcast</a>.</div>
 <div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
+<div><a href="/tuto/cross">Cross compiling from linux to windows</a>.</div>
 <div></div>
 </div>

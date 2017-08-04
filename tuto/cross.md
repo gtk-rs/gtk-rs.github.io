@@ -1,4 +1,4 @@
-The package installation steps are for arch, but should be similar for other distros.
+The package installation steps are for Arch Linux, but should be similar for other distros.
 
 First install rust normally with rustup. The next step will install the windows toolchain.
 
@@ -39,3 +39,9 @@ Lastly to package it up.
     cp -r /usr/x86_64-w64-mingw32/share/icons/* /wherever/release/share/icons
 
 After that you can zip up the contents of the /wherever/release folder and distribute it.
+
+<div class="footer">
+<div><a href="/tuto/glade">Glade</a>.</div>
+<div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
+<div></div>
+</div>
