@@ -1,34 +1,34 @@
 [
   {
     "name": "cairo-rs",
-    "max_version": "0.1.3"
+    "max_version": "0.2.0"
   },
   {
     "name": "gdk",
-    "max_version": "0.5.3"
+    "max_version": "0.6.0"
   },
   {
     "name": "gdk-pixbuf",
-    "max_version": "0.1.3"
+    "max_version": "0.2.0"
   },
   {
     "name": "gio",
-    "max_version": "0.1.3"
+    "max_version": "0.2.0"
   },
   {
     "name": "glib",
-    "max_version": "0.1.3"
+    "max_version": "0.2.0"
   },
   {
     "name": "gtk",
-    "max_version": "0.1.3"
+    "max_version": "0.2.0"
   },
   {
     "name": "pango",
-    "max_version": "0.1.3"
+    "max_version": "0.2.0"
   },
   {
     "name": "sourceview",
-    "max_version": "0.1.3"
+    "max_version": "0.2.1"
   }
 ]
