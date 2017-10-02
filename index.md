@@ -103,9 +103,10 @@ features = ["v3_10"]
 * [process-viewer](https://github.com/GuillaumeGomez/process-viewer)
 * [rrun](https://github.com/buster/rrun)
 * [SolidOak](https://github.com/oakes/SolidOak)
-* [systemd-manager](https://github.com/mmstick/systemd-manager) 
+* [systemd-manager](https://github.com/mmstick/systemd-manager)
 * [tv-renamer](https://github.com/mmstick/tv-renamer)
 * [PNMixer-rs](https://github.com/hasufell/pnmixer-rust)
+* [BrewStillery](https://github.com/MonkeyLog/BrewStillery)
 
 If you want yours to be added to this list, please create a Pull Request for it!
 
