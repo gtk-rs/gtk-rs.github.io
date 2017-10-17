@@ -107,5 +107,6 @@ features = ["v3_10"]
 * [tv-renamer](https://github.com/mmstick/tv-renamer)
 * [PNMixer-rs](https://github.com/hasufell/pnmixer-rust)
 * [BrewStillery](https://github.com/MonkeyLog/BrewStillery)
+* [Way Cooler](https://github.com/way-cooler)
 
 If you want yours to be added to this list, please create a [Pull Request](https://github.com/gtk-rs/gtk-rs.github.io/compare?expand=1) for it!
