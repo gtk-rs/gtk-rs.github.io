@@ -34,20 +34,20 @@ Contrary to earlier instructions, **you don't need to uncheck "Linker and
 platform libraries" in the Rust setup or delete `gcc.exe` and `ld.exe` in Rust's
 `bin` directory.**
 
-[GNU ABI]: https://www.rust-lang.org/downloads.html#win-foot
+[GNU ABI]: https://github.com/rust-lang-nursery/rustup.rs/blob/master/README.md#working-with-rust-on-windows
 
 ### Getting the GTK+ SDK
 
 The GTK+ Project [recommends][gtk-download] using the GTK+ SDK provided by [MSYS2]:
 
 [gtk-download]: http://www.gtk.org/download/windows.php
-[MSYS2]: https://msys2.github.io/
+[MSYS2]: http://www.msys2.org/
 
- *  [Install MSYS2](https://sourceforge.net/p/msys2/wiki/MSYS2%20installation/).
-    We're going to assume it's installed in `C:\msys2`. Adjust the path in the
-    following steps if necessary.
+ *  [Install MSYS2](http://www.msys2.org/).
+    We're going to assume it's installed in `C:\msys64` on 64-bit systems and `C:\msys32`
+    on 32-bit ones. Adjust the paths in the following steps if necessary.
 
- *  In the "MSYS2 Shell" install `libgtk3`.
+ *  In the "MSYS2 MSYS Shell" install `libgtk3`.
 
      -    32-bit targets:
 
@@ -69,20 +69,20 @@ the variables in the next section accordingly.
 ### Using the native Windows shell
 
 Back in the `cmd.exe` shell set the `GTK_LIB_DIR` and `PATH` environment
-variables.
+variables:
 
  *    32-bit targets:
 
       ~~~cmd
-      C:\> SET GTK_LIB_DIR=C:\msys2\mingw32\lib
-      C:\> SET PATH=%PATH%;C:\msys2\mingw32\bin
+      C:\> SET GTK_LIB_DIR=C:\msys32\mingw32\lib
+      C:\> SET PATH=%PATH%;C:\msys32\mingw32\bin
       ~~~
 
  *    64-bit targets:
 
-      ~~~bat
-      C:\> SET GTK_LIB_DIR=C:\msys2\mingw64\lib
-      C:\> SET PATH=%PATH%;C:\msys2\mingw64\bin
+      ~~~cmd
+      C:\> SET GTK_LIB_DIR=C:\msys64\mingw64\lib
+      C:\> SET PATH=%PATH%;C:\msys64\mingw64\bin
       ~~~
 
 If you're happy with these changes, make them permanent with
@@ -98,7 +98,7 @@ C:\> SETX PATH %PATH%
 Instead of setting the environment variables manually, you can let `pkg-config`
 sort the paths out for you.
 
- *  In the "MSYS2 Shell" install the `mingw-w64` toolchain.
+ *  In the "MSYS2 MSYS Shell" install the `mingw-w64` toolchain:
 
      -    32-bit targets:
 
@@ -112,4 +112,4 @@ sort the paths out for you.
           > pacman -S mingw-w64-x86_64-toolchain
           ~~~
 
- *  Start the "MSYS2 MinGW Shell" (not to be confused with "MSYS2 Shell").
+ *  Start the "MSYS2 MinGW Shell" (not to be confused with "MSYS2 MSYS Shell").
