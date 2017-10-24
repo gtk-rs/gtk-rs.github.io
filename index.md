@@ -108,5 +108,6 @@ features = ["v3_10"]
 * [PNMixer-rs](https://github.com/hasufell/pnmixer-rust)
 * [BrewStillery](https://github.com/MonkeyLog/BrewStillery)
 * [Way Cooler](https://github.com/way-cooler)
+* [Hammond](https://gitlab.gnome.org/alatiera/Hammond)
 
 If you want yours to be added to this list, please create a [Pull Request](https://github.com/gtk-rs/gtk-rs.github.io/compare?expand=1) for it!
