@@ -109,5 +109,6 @@ features = ["v3_10"]
 * [BrewStillery](https://github.com/MonkeyLog/BrewStillery)
 * [Way Cooler](https://github.com/way-cooler)
 * [Hammond](https://gitlab.gnome.org/alatiera/Hammond)
+* [Font Finder](https://github.com/mmstick/fontfinder)
 
 If you want yours to be added to this list, please create a [Pull Request](https://github.com/gtk-rs/gtk-rs.github.io/compare?expand=1) for it!
