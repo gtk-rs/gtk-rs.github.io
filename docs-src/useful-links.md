@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Useless links
+# Useful links
 
 Here is a list of useful external resources talking about `Gtk-rs`. If you want to go deeper in the project's mechanisms or if you're just curious, it's the place to look at!
 
