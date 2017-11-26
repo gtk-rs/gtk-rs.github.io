@@ -2,20 +2,58 @@
 layout: post
 author: GuillaumeGomez
 title: New release and always more functionalities (like async!)
-categories: [front, crates]
+categories: [front, crates, release]
 date: 2017-11-26 16:00:00 +0000
 ---
 
-* Write intro here *
+Hi everyone!
+
+This release was supposed to be a minor one and to be released a lot sooner. However, as the time passed, `gtk-rs` developers weren't happy with what they had. There was always that little (but still wonderful) thing missing that we absolutely wanted to have. Suddenly, huges improvements came in and breaking changes as well. And this, is exactly how you end up from some very little and quicky release to medium and huge one.
+
+So what took us so long to add? A lot of things, the list is quite long. You can check the pull requests below. Let's just focus on the main ones.
+
+First, a small one: the `dox` feature: now, when building documentation, whatever platform you're on or library version you have, you'll be able to generate documentation for **everything** and have access to it locally. So to build your documentation locally, you just need to run:
+
+```
+cargo doc --features "dox embed-lgpl-docs"
+# this second command removes the generated doc comments from the crate's code
+cargo build --features "purge-lgpl-docs"
+```
+
+Pretty easy, right?
+
+Now, secondly, [@antoyo](https://github.com/antoyo) added async support. You'll now be able to call API functions without blocking the GUI. You'll also be able to control those with the `Cancellable` type. He also said that he would add the async functions/methods support in [`relm`](https://github.com/antoyo/relm) as soon as possible, no more details in there haha.
+
+Ok, now take a deep breath, the list for [@sdroege](https://github.com/sdroege)'s changes is quite long:
+
+ * `SignalHandlerId` and `SourceId` are now newtype wrappers instead of integers and can't be copy/clone anymore. It prevents to reuse of them or the usage of arbitrary numbers.
+ * Arguments in signal trampolines are borrowed now, which prevents some copy and unneeded refcounting.
+ * `GHookList` is generated in the -sys bindings.
+ * Enums have been updated in order to avoid unwanted soundless bugs appearing in case of C API update between two versions.
+ * Emitter functions for action signals are now generated.
+ * Panics from signal callbacks print something meaningful now instead of just exiting silently.
+ * Various new impls for the translation traits to make everything more complete.
+ * `ObjectExt::set_value()` / `emit()` now take a &ToValue instead of Value, making it easier to use.
+ * `Closure::invoke()` / `ObjectExt::emit()` don't allocate anything now if the number of arguments is < 10 (it's placed on the heap).
+ * Removed implementation of `DerefMut` for `TypedValue`. This allowed to store wrongly typed values inside `TypedValue`, e.g. an `u32` in a `TypedValue<String>`.
+ * `Value` is not `Send + Sync` anymore and a `SendValue` that only allows `Send` types to be stored was added. Previously `Value` allowed to store non-`Send` types but could be sent to another thread due to being `Send` itself independent of the content.
+ * `IsA` is an unsafe trait now, as otherwise safe code could implement the `IsA` relationship between incompatible types which would result in memory unsafety.
+ * Added `AnyValue` / `AnySendValue` that allows storing any Rust value that is `Any + Clone + 'static` to be stored in a `glib::Value`.
+ * Added support for storing/retrieving a (NULL-terminated) array of strings in/from `glib::Value`.
+ * Added some new API for working with `Type` such `is_a()`, `parent()`, etc...
+ * `ObjectExt::connect()` now panics if the callback return value is incompatible with signal's, and allow return values that are a subtype of the signal's return value.
+
+[@Epashkin](https://github.com/EPashkin)'s changes are less visible but just as important. As always, he made of very important fixes, adds and reviews but since they're very [`gir`](https://github.com/gtk-rs/gir) specific, I invite you to check them directly into the [`gir`](https://github.com/gtk-rs/gir) repository.
+
+Lastly, a little change that'll only impact people using `gtk-rs` sys crates: all sys types now have a `Debug` implementation. We hope it'll make debugging much easier in order to help expanding the `gtk-rs` crates environment.
+
+That's it! (Yes, it was quite long.)
+
+Hope you'll enjoy this new version and see you next time!
 
 ### Changes
 
 For the interested ones, here is the list of the (major) changes:
-
-[sys](https://github.com/gtk-rs/sys):
-
- * [Regen](https://github.com/gtk-rs/sys/pull/70)
- * [Update GIR to the latest version and regenerate everything](https://github.com/gtk-rs/sys/pull/69)
 
 [cairo](https://github.com/gtk-rs/cairo):
 
@@ -32,8 +70,6 @@ For the interested ones, here is the list of the (major) changes:
  * [Implement FromGlibPtrBorrow for all relevant types](https://github.com/gtk-rs/cairo/pull/155)
  * [Get latest rust version via rustup](https://github.com/gtk-rs/cairo/pull/152)
  * [Fix glib version](https://github.com/gtk-rs/cairo/pull/151)
- * [[release] merging master-release-update into master](https://github.com/gtk-rs/cairo/pull/149)
- * [[release] merging crate-release-update into crate](https://github.com/gtk-rs/cairo/pull/150)
  * [Add README for crates.io](https://github.com/gtk-rs/cairo/pull/148)
  * [Add Format::stride_for_width() as a wrapper for cairo_format_stride_f…](https://github.com/gtk-rs/cairo/pull/147)
  * [ImageSurface: return a Result<ImageSurface, Status> from the creation functions](https://github.com/gtk-rs/cairo/pull/146)
@@ -114,13 +150,8 @@ For the interested ones, here is the list of the (major) changes:
 
 [sourceview](https://github.com/gtk-rs/sourceview):
 
- * [Regen](https://github.com/gtk-rs/sourceview/pull/25)
- * [Regen](https://github.com/gtk-rs/sourceview/pull/23)
- * [Regen](https://github.com/gtk-rs/sourceview/pull/22)
  * [Fix dox](https://github.com/gtk-rs/sourceview/pull/21)
  * [Fix invalid gio::InputStream generation](https://github.com/gtk-rs/sourceview/pull/20)
- * [Regen](https://github.com/gtk-rs/sourceview/pull/19)
- * [Regen](https://github.com/gtk-rs/sourceview/pull/18)
 
 [glib](https://github.com/gtk-rs/glib):
 
@@ -134,33 +165,25 @@ For the interested ones, here is the list of the (major) changes:
  * [Don't implement DerefMut on TypedValue](https://github.com/gtk-rs/glib/pull/255)
  * [Useless version bumping to help @meh](https://github.com/gtk-rs/glib/pull/245)
  * [Allow specifying class struct to glib_wrapper!() macro](https://github.com/gtk-rs/glib/pull/234)
- * [Regen](https://github.com/gtk-rs/glib/pull/241)
  * [Some fixes in the Signals handling](https://github.com/gtk-rs/glib/pull/240)
- * [Regenerate with latest GIR](https://github.com/gtk-rs/glib/pull/239)
  * [Value usage improvements](https://github.com/gtk-rs/glib/pull/238)
  * [Dox](https://github.com/gtk-rs/glib/pull/237)
  * [Use a newtype wrapper around the signal handler IDs](https://github.com/gtk-rs/glib/pull/231)
  * [Implement FromGlibPtrBorrow for Option<FromGlibPtrBorrow>](https://github.com/gtk-rs/glib/pull/232)
  * [Add version for Sha384](https://github.com/gtk-rs/glib/pull/227)
- * [Regen](https://github.com/gtk-rs/glib/pull/226)
  * [For the CallbackGuard, print something to stderr and use abort() inst…](https://github.com/gtk-rs/glib/pull/225)
  * [Fix versioning](https://github.com/gtk-rs/glib/pull/221)
  * [Fix versionning](https://github.com/gtk-rs/glib/pull/220)
  * [Fix crates version](https://github.com/gtk-rs/glib/pull/218)
- * [[release] merging master-release-update into master](https://github.com/gtk-rs/glib/pull/216)
- * [[release] merging crate-release-update into crate](https://github.com/gtk-rs/glib/pull/217)
  * [Add README for crates.io](https://github.com/gtk-rs/glib/pull/215)
  * [Be more precise when setting a property with invalid type](https://github.com/gtk-rs/glib/pull/214)
- * [Regen](https://github.com/gtk-rs/glib/pull/213)
  * [Add GDate & GDateTime (and related) bindings](https://github.com/gtk-rs/glib/pull/208)
- * [Regen](https://github.com/gtk-rs/glib/pull/209)
  * [Some helper API to dynamically work with GLib enums/flags](https://github.com/gtk-rs/glib/pull/207)
  * [Implement Display/Debug for Type, and Type::name()](https://github.com/gtk-rs/glib/pull/210)
  * [Add Cast::dynamic_cast()](https://github.com/gtk-rs/glib/pull/206)
  * [Add WeakRef support to glib::Object](https://github.com/gtk-rs/glib/pull/204)
  * [Make glib::Error Send/Sync](https://github.com/gtk-rs/glib/pull/203)
  * [Implement public ObjectExt::get_property_type()](https://github.com/gtk-rs/glib/pull/202)
- * [Regenerate with latest gir](https://github.com/gtk-rs/glib/pull/201)
  * [Fix transfer full conversion of pointer arrays](https://github.com/gtk-rs/glib/pull/200)
  * [Implement StaticType and GValue traits for boxed/shared types too](https://github.com/gtk-rs/glib/pull/199)
  * [Remove generic pointer array impls of ToGlibPtr and FromGlibContainer](https://github.com/gtk-rs/glib/pull/198)
@@ -173,7 +196,6 @@ For the interested ones, here is the list of the (major) changes:
  * [Various GObject property changes](https://github.com/gtk-rs/glib/pull/190)
  * [Implement public ObjectExt::set_property() and ::get_property()](https://github.com/gtk-rs/glib/pull/189)
  * [Update gir submodule](https://github.com/gtk-rs/glib/pull/185)
- * [Regenerate with latest gir](https://github.com/gtk-rs/glib/pull/184)
  * [Generate functions that uses gsize/gusize](https://github.com/gtk-rs/glib/pull/183)
  * [Update to bitflags 0.9](https://github.com/gtk-rs/glib/pull/181)
  * [Add signal::signal_handler_disconnect()](https://github.com/gtk-rs/glib/pull/180)
@@ -187,11 +209,8 @@ For the interested ones, here is the list of the (major) changes:
  * [Generate global functions](https://github.com/gtk-rs/glib/pull/170)
  * [Use g_object_ref_sink() instead of g_object_ref() everywhere](https://github.com/gtk-rs/glib/pull/167)
  * [Update version](https://github.com/gtk-rs/glib/pull/165)
- * [Crate](https://github.com/gtk-rs/glib/pull/164)
- * [Regen](https://github.com/gtk-rs/glib/pull/163)
  * [Add support for getting a &str from a GValue without copying](https://github.com/gtk-rs/glib/pull/162)
  * [Fix FromGlibContainer double freeing](https://github.com/gtk-rs/glib/pull/160)
- * [Regen](https://github.com/gtk-rs/glib/pull/161)
  * [Replace `g_list_reverse` with `rev`](https://github.com/gtk-rs/glib/pull/159)
  * [Directly access the GType in the GValue instead of doing raw pointer …](https://github.com/gtk-rs/glib/pull/156)
  * [Rewrite string consts](https://github.com/gtk-rs/glib/pull/155)
@@ -226,39 +245,22 @@ For the interested ones, here is the list of the (major) changes:
 [gio](https://github.com/gtk-rs/gio):
 
  * [Async code generation](https://github.com/gtk-rs/gio/pull/63)
- * [Regen](https://github.com/gtk-rs/gio/pull/61)
  * [Create a copy of the Bytes passed to Resource::new_from_data() if it'…](https://github.com/gtk-rs/gio/pull/60)
- * [Regen](https://github.com/gtk-rs/gio/pull/59)
 
 [pango](https://github.com/gtk-rs/pango):
 
- * [Regen](https://github.com/gtk-rs/pango/pull/97)
- * [Regen](https://github.com/gtk-rs/pango/pull/96)
- * [Add missed dox usage](https://github.com/gtk-rs/pango/pull/95)
+ * [Add missing dox usage](https://github.com/gtk-rs/pango/pull/95)
 
 [gdk](https://github.com/gtk-rs/gdk):
 
- * [Regen](https://github.com/gtk-rs/gdk/pull/196)
- * [Update GIR and regenerate/fixup everything](https://github.com/gtk-rs/gdk/pull/195)
  * [Add `dox` feature](https://github.com/gtk-rs/gdk/pull/193)
- * [Regen](https://github.com/gtk-rs/gdk/pull/192)
- * [Regenerate with latest GIR](https://github.com/gtk-rs/gdk/pull/191)
  * [Fix glib version](https://github.com/gtk-rs/gdk/pull/190)
- * [[release] merging master-release-update into master](https://github.com/gtk-rs/gdk/pull/188)
- * [[release] merging crate-release-update into crate](https://github.com/gtk-rs/gdk/pull/189)
  * [Fix Cargo.toml feature indent](https://github.com/gtk-rs/gdk/pull/187)
  * [Add README for crates.io](https://github.com/gtk-rs/gdk/pull/186)
- * [Regen](https://github.com/gtk-rs/gdk/pull/185)
- * [Regen](https://github.com/gtk-rs/gdk/pull/184)
- * [Regen](https://github.com/gtk-rs/gdk/pull/183)
- * [Regenerate with latest gir](https://github.com/gtk-rs/gdk/pull/181)
  * [Fix transfer full conversion of Atom arrays](https://github.com/gtk-rs/gdk/pull/180)
  * [Update for non-generic pointer array impls](https://github.com/gtk-rs/gdk/pull/179)
- * [Regenerate with latest gir](https://github.com/gtk-rs/gdk/pull/177)
- * [Update](https://github.com/gtk-rs/gdk/pull/176)
  * [gdk_window_fullscreen_on_monitor available since 3.18](https://github.com/gtk-rs/gdk/pull/172)
  * [Add missing getters for EventScroll](https://github.com/gtk-rs/gdk/pull/174)
- * [Regenerate with latest GIR and enable Display::store_clipboard()](https://github.com/gtk-rs/gdk/pull/171)
  * [Add remaining GdkAtom constants](https://github.com/gtk-rs/gdk/pull/170)
  * [Update to bitflags 0.9](https://github.com/gtk-rs/gdk/pull/169)
  * [Update lgpl dependency version](https://github.com/gtk-rs/gdk/pull/168)
@@ -266,14 +268,9 @@ For the interested ones, here is the list of the (major) changes:
  * [Deignore](https://github.com/gtk-rs/gdk/pull/166)
  * [Reexport global function and remove duplicates](https://github.com/gtk-rs/gdk/pull/165)
  * [Generate global functions](https://github.com/gtk-rs/gdk/pull/164)
- * [Regenerate autogenerated bindings with latest GIR](https://github.com/gtk-rs/gdk/pull/163)
  * [Update version](https://github.com/gtk-rs/gdk/pull/161)
  * [Add missing dependencies](https://github.com/gtk-rs/gdk/pull/160)
- * [Crate](https://github.com/gtk-rs/gdk/pull/159)
- * [Regen](https://github.com/gtk-rs/gdk/pull/158)
  * [Update RGBA/Rectangle FromValueOptional impls for newly added lifetim…](https://github.com/gtk-rs/gdk/pull/157)
- * [Regen](https://github.com/gtk-rs/gdk/pull/155)
- * [Regen](https://github.com/gtk-rs/gdk/pull/153)
  * [Add FromGlibFull and GValue support to Rectangle](https://github.com/gtk-rs/gdk/pull/151)
  * [Fixed Atom container conversion](https://github.com/gtk-rs/gdk/pull/150)
  * [Add missing impls for Atom](https://github.com/gtk-rs/gdk/pull/148)
@@ -321,7 +318,6 @@ For the interested ones, here is the list of the (major) changes:
  * [s/Upcast/IsA/](https://github.com/gtk-rs/gdk/pull/92)
  * [Add `GdkRGBA` reexport](https://github.com/gtk-rs/gdk/pull/91)
  * [Appveyor update](https://github.com/gtk-rs/gdk/pull/90)
- * [Crate](https://github.com/gtk-rs/gdk/pull/89)
  * [Bump appveyor to 1.4](https://github.com/gtk-rs/gdk/pull/88)
  * [Fix the copyright line](https://github.com/gtk-rs/gdk/pull/87)
  * [Remove rustdoc comments](https://github.com/gtk-rs/gdk/pull/86)
@@ -336,40 +332,27 @@ For the interested ones, here is the list of the (major) changes:
 [gtk](https://github.com/gtk-rs/gtk):
 
  * [Print operation](https://github.com/gtk-rs/gtk/pull/596)
- * [Regen](https://github.com/gtk-rs/gtk/pull/594)
  * [Add Buildable interface](https://github.com/gtk-rs/gtk/pull/568)
- * [Regen](https://github.com/gtk-rs/gtk/pull/589)
- * [Regen](https://github.com/gtk-rs/gtk/pull/588)
  * [Update CIs](https://github.com/gtk-rs/gtk/pull/585)
  * [Fix dox](https://github.com/gtk-rs/gtk/pull/583)
  * [Add RadioToolButton](https://github.com/gtk-rs/gtk/pull/584)
  * [Fix internal panic on Image::get_icon_image for images without names](https://github.com/gtk-rs/gtk/pull/577)
- * [Regen](https://github.com/gtk-rs/gtk/pull/576)
  * [Add dox feature](https://github.com/gtk-rs/gtk/pull/575)
  * [Remove useless manual implementation](https://github.com/gtk-rs/gtk/pull/571)
- * [Regenerate with latest GIR](https://github.com/gtk-rs/gtk/pull/572)
  * [Adding TreeRowReference](https://github.com/gtk-rs/gtk/pull/387)
  * [Rename trait WindowExt to GtkWindowExt](https://github.com/gtk-rs/gtk/pull/562)
  * [Fix typo in prelude.rs documentation](https://github.com/gtk-rs/gtk/pull/569)
  * [Check fixed](https://github.com/gtk-rs/gtk/pull/566)
  * [Fix glib version](https://github.com/gtk-rs/gtk/pull/560)
- * [[release] merging master-release-update into master](https://github.com/gtk-rs/gtk/pull/558)
- * [[release] merging crate-release-update into crate](https://github.com/gtk-rs/gtk/pull/559)
  * [Add README for crates.io](https://github.com/gtk-rs/gtk/pull/557)
- * [Regen](https://github.com/gtk-rs/gtk/pull/556)
  * [Fix clippy warnings](https://github.com/gtk-rs/gtk/pull/552)
- * [Regenerate with latest gir, rename ApplicationExt to GtkApplicationEx…](https://github.com/gtk-rs/gtk/pull/551)
- * [Regen](https://github.com/gtk-rs/gtk/pull/549)
  * [Fix getting stable version for Appveyor](https://github.com/gtk-rs/gtk/pull/548)
  * [Calculate lengths parameters](https://github.com/gtk-rs/gtk/pull/546)
- * [Regenerate with latest gir](https://github.com/gtk-rs/gtk/pull/545)
  * [Update for non-generic pointer array impls](https://github.com/gtk-rs/gtk/pull/544)
- * [Regenerate with latest gir](https://github.com/gtk-rs/gtk/pull/543)
  * [Use more pango objects](https://github.com/gtk-rs/gtk/pull/541)
  * [New types](https://github.com/gtk-rs/gtk/pull/538)
  * [Generate IconTheme](https://github.com/gtk-rs/gtk/pull/537)
  * [ShortcutsWindow available since 3.20](https://github.com/gtk-rs/gtk/pull/535)
- * [Regenerate with latest GIR](https://github.com/gtk-rs/gtk/pull/533)
  * [Replace functions for RadioButton and RadioMenuItem](https://github.com/gtk-rs/gtk/pull/529)
  * [Generate IconSet](https://github.com/gtk-rs/gtk/pull/530)
  * [Update to bitflags 0.9](https://github.com/gtk-rs/gtk/pull/528)
@@ -380,22 +363,16 @@ For the interested ones, here is the list of the (major) changes:
  * [Update release_process.md](https://github.com/gtk-rs/gtk/pull/521)
  * [Add PrintContext](https://github.com/gtk-rs/gtk/pull/519)
  * [Add GtkIMMulticontext and GtkIMContext](https://github.com/gtk-rs/gtk/pull/518)
- * [Regen](https://github.com/gtk-rs/gtk/pull/516)
  * [Deignore](https://github.com/gtk-rs/gtk/pull/513)
  * [Reexport global function and remove duplicates](https://github.com/gtk-rs/gtk/pull/512)
  * [Update release_process.md](https://github.com/gtk-rs/gtk/pull/504)
  * [Generate global functions](https://github.com/gtk-rs/gtk/pull/510)
- * [Regenerate autogenerated bindings with latest GIR](https://github.com/gtk-rs/gtk/pull/509)
  * [Fix object properties](https://github.com/gtk-rs/gtk/pull/507)
  * [Update version](https://github.com/gtk-rs/gtk/pull/506)
- * [Crate](https://github.com/gtk-rs/gtk/pull/503)
- * [Regen](https://github.com/gtk-rs/gtk/pull/502)
- * [Regen](https://github.com/gtk-rs/gtk/pull/499)
  * [Add child properties for gtk::Notebook](https://github.com/gtk-rs/gtk/pull/496)
  * [Use pango objects](https://github.com/gtk-rs/gtk/pull/498)
  * [Added Switch::connect_changed_active](https://github.com/gtk-rs/gtk/pull/492)
  * [Switch CI to build master branch of examples](https://github.com/gtk-rs/gtk/pull/490)
- * [Partial regen](https://github.com/gtk-rs/gtk/pull/486)
  * [Update release_process.md](https://github.com/gtk-rs/gtk/pull/485)
  * [Drag targets](https://github.com/gtk-rs/gtk/pull/472)
  * [Add missing child properties for Box](https://github.com/gtk-rs/gtk/pull/481)
@@ -410,10 +387,8 @@ For the interested ones, here is the list of the (major) changes:
  * [Implement StyleContext::{get_color, lookup_color}](https://github.com/gtk-rs/gtk/pull/462)
  * [Use crates in master, update versions](https://github.com/gtk-rs/gtk/pull/464)
  * [Add release process explanation](https://github.com/gtk-rs/gtk/pull/461)
- * [Crate](https://github.com/gtk-rs/gtk/pull/459)
  * [Apply last gir](https://github.com/gtk-rs/gtk/pull/458)
  * [RadioButton & RadioMenuItem](https://github.com/gtk-rs/gtk/pull/452)
- * [Regen](https://github.com/gtk-rs/gtk/pull/449)
  * [Into option str](https://github.com/gtk-rs/gtk/pull/447)
  * [Add to categories for crates.io](https://github.com/gtk-rs/gtk/pull/445)
  * [Add badges for crates.io](https://github.com/gtk-rs/gtk/pull/448)
@@ -430,12 +405,11 @@ For the interested ones, here is the list of the (major) changes:
 
 Thanks to all of our contributors for their (awesome!) work for this release:
 
- * [@GuillaumeGomez](https://github.com/GuillaumeGomez)
  * [@sdroege](https://github.com/sdroege)
  * [@Luke-Nukem](https://github.com/Luke-Nukem)
  * [@EPashkin](https://github.com/EPashkin)
+ * [@GuillaumeGomez](https://github.com/GuillaumeGomez)
  * [@fengalin](https://github.com/fengalin)
- * [@ironman-machine](https://github.com/ironman-machine)
  * [@federicomenaquintero](https://github.com/federicomenaquintero)
  * [@evmar](https://github.com/evmar)
  * [@savage13](https://github.com/savage13)
