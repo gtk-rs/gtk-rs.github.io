@@ -17,7 +17,7 @@
   },
   {
     "name": "glib",
-    "max_version": "0.4.0"
+    "max_version": "0.4.1"
   },
   {
     "name": "gtk",
@@ -29,7 +29,7 @@
   },
   {
     "name": "sourceview",
-    "max_version": "0.3.0"
+    "max_version": "0.3.1"
   }
 ]
 
