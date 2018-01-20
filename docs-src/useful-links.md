@@ -6,7 +6,7 @@ layout: default
 
 Here is a list of useful external resources talking about `Gtk-rs`. If you want to go deeper in the project's mechanisms or if you're just curious, it's the place to look at!
 
-Of course, I you want to add other links as well, just make a [Pull Request](https://github.com/gtk-rs/gtk-rs.github.io/compare?expand=1) for it!
+Of course, if you want to add other links as well, just make a [Pull Request](https://github.com/gtk-rs/gtk-rs.github.io/compare?expand=1) for it!
 
  * [Initial posts about librsvg's C to Rust conversion](https://people.gnome.org/~federico/blog/librsvg-posts.html)
  * [How Glib-rs works, part 1: Type conversions](https://people.gnome.org/~federico/blog/how-glib-rs-works-part-1.html)
