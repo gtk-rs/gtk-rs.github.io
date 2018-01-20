@@ -95,7 +95,7 @@ git = "https://github.com/gtk-rs/gtk"
 features = ["v3_10"]
 ~~~
 
-## Projects using gtk
+## Projects using gtk-rs
 * [Garta](https://github.com/zaari/garta)
 * [Gattii](https://gitlab.com/susurrus/gattii)
 * [gpsami](https://github.com/hfiguiere/gpsami)
