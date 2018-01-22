@@ -110,5 +110,6 @@ features = ["v3_10"]
 * [Way Cooler](https://github.com/way-cooler)
 * [Hammond](https://gitlab.gnome.org/alatiera/Hammond)
 * [Font Finder](https://github.com/mmstick/fontfinder)
+* [Fractal](https://gitlab.gnome.org/danigm/fractal)
 
 If you want yours to be added to this list, please create a [Pull Request](https://github.com/gtk-rs/gtk-rs.github.io/compare?expand=1) for it!
