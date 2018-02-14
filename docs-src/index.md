@@ -9,10 +9,12 @@ layout: default
 
  - [**cairo**](../docs/cairo/)
  - [**gdk**](../docs/gdk/)
+ - [**gdk-pixbuf**](../docs/gdk_pixbuf/)
  - [**gio**](../docs/gio/)
  - [**glib**](../docs/glib/)
  - [**gtk**](../docs/gtk/)
  - [**pango**](../docs/pango/)
+ - [**pangocairo**](../docs/pangocairo/)
  - [**sourceview**](../docs/sourceview/)
 
 ### Versions
