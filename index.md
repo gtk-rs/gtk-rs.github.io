@@ -112,5 +112,6 @@ features = ["v3_10"]
 * [Font Finder](https://github.com/mmstick/fontfinder)
 * [Fractal](https://gitlab.gnome.org/danigm/fractal)
 * [Epicwar Downloader](https://github.com/ab0v3g4me/epicwar-downloader)
+* [Whatschanging](https://github.com/mothsART/whatschanging)
 
 If you want yours to be added to this list, please create a [Pull Request](https://github.com/gtk-rs/gtk-rs.github.io/compare?expand=1) for it!
