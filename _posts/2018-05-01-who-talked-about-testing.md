@@ -53,7 +53,7 @@ extern crate gtk;
 #[macro_use]
 extern crate gtk_test;
 
-use gtk::{Button, ButtonExt, ContainerExt, GtkWindowExt, Window, WindowType};
+use gtk::{Button, ButtonExt, ContainerExt, GtkWindowExt, Window, WindowType, WidgetExt};
 
 fn main() {
     gtk::init().expect("GTK init failed");
@@ -61,7 +61,7 @@ fn main() {
     let window = Window::new(WindowType::Toplevel);
     let but = Button::new();
     but.set_label("button");
-    let observer = observer_new!(button, connect_clicked, |b| {
+    let observer = observer_new!(but, connect_clicked, |b| {
         b.set_label("clicked!");
     });
     window.add(&but);
