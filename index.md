@@ -114,5 +114,6 @@ features = ["v3_10"]
 * [Epicwar Downloader](https://github.com/ab0v3g4me/epicwar-downloader)
 * [Whatschanging](https://github.com/mothsART/whatschanging)
 * [Popsicle](https://github.com/pop-os/popsicle/)
+* [media-toc](https://github.com/fengalin/media-toc)
 
 If you want yours to be added to this list, please create a [Pull Request](https://github.com/gtk-rs/gtk-rs.github.io/compare?expand=1) for it!
