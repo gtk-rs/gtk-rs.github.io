@@ -80,7 +80,7 @@ container.add(&button);
 container.add(&label);
 ```
 
-Now it works, as simple as that! Remember: cloning a `Gtk-rs` object only cost a pointer copy, so it's not a problem.
+Now it works, as simple as that! Remember: cloning a `Gtk-rs` object only costs a pointer copy, so it's not a problem.
 
 ## Using non-`Gtk-rs` object into a `Gtk-rs` closure
 
