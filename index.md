@@ -106,7 +106,7 @@ features = ["v3_10"]
 * [systemd-manager](https://github.com/mmstick/systemd-manager)
 * [tv-renamer](https://github.com/mmstick/tv-renamer)
 * [PNMixer-rs](https://github.com/hasufell/pnmixer-rust)
-* [BrewStillery](https://github.com/MonkeyLog/BrewStillery)
+* [BrewStillery](https://gitlab.com/MonkeyLog/BrewStillery)
 * [Way Cooler](https://github.com/way-cooler)
 * [Hammond](https://gitlab.gnome.org/alatiera/Hammond)
 * [Font Finder](https://github.com/mmstick/fontfinder)
