@@ -115,5 +115,6 @@ features = ["v3_10"]
 * [Whatschanging](https://github.com/mothsART/whatschanging)
 * [Popsicle](https://github.com/pop-os/popsicle/)
 * [media-toc](https://github.com/fengalin/media-toc)
+* [glide](https://github.com/philn/glide)
 
 If you want yours to be added to this list, please create a [Pull Request](https://github.com/gtk-rs/gtk-rs.github.io/compare?expand=1) for it!
