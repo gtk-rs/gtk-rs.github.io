@@ -13,7 +13,7 @@
   },
   {
     "name": "gio",
-    "max_version": "0.4.0"
+    "max_version": "0.4.1"
   },
   {
     "name": "glib",
@@ -21,7 +21,7 @@
   },
   {
     "name": "gtk",
-    "max_version": "0.4.0"
+    "max_version": "0.4.1"
   },
   {
     "name": "pango",
