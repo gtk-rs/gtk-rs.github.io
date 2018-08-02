@@ -121,5 +121,6 @@ features = ["v3_10"]
 * [relm](https://github.com/antoyo/relm)
 * [mcmmtk](https://github.com/pwil3058/mcmmtk)
 * [pcatk](https://github.com/pwil3058/pcatk)
+* [Podcasts](https://gitlab.gnome.org/World/podcasts)
 
 If you want yours to be added to this list, please create a [Pull Request](https://github.com/gtk-rs/gtk-rs.github.io/compare?expand=1) for it!
