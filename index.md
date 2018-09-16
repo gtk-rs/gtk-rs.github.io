@@ -110,7 +110,6 @@ features = ["v3_10"]
 * [PNMixer-rs](https://github.com/hasufell/pnmixer-rust)
 * [BrewStillery](https://gitlab.com/MonkeyLog/BrewStillery)
 * [Way Cooler](https://github.com/way-cooler)
-* [Hammond](https://gitlab.gnome.org/alatiera/Hammond)
 * [Font Finder](https://github.com/mmstick/fontfinder)
 * [Fractal](https://gitlab.gnome.org/danigm/fractal)
 * [Epicwar Downloader](https://github.com/ab0v3g4me/epicwar-downloader)
