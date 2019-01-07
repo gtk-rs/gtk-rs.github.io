@@ -40,7 +40,7 @@ Considering the massive amount of documentation that would need to be written if
 
 ## Why isn't documentation directly into the source files and how can I have it locally?
 
-Simple answer: because of license issues.
+Simple answer: because of license issues. **GNOME** is under **LGPL** whereas **Gtk-rs** is under **MIT**. If we included **GNOME** docs directly into the source code, we'd have to switch the license to match the **GNOME** one.
 
 Currently, documentation is generated as follows:
 
