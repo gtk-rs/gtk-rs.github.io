@@ -106,6 +106,7 @@ features = ["v3_10"]
 * [Gattii](https://gitlab.com/susurrus/gattii)
 * [glide](https://github.com/philn/glide)
 * [gpsami](https://github.com/hfiguiere/gpsami)
+* [gxi](https://github.com/Cogitri/gxi)
 * [Marmoset](https://github.com/sprang/marmoset)
 * [mcmmtk](https://github.com/pwil3058/mcmmtk)
 * [media-toc](https://github.com/fengalin/media-toc)
