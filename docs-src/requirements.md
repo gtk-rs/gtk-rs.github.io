@@ -113,3 +113,14 @@ sort the paths out for you.
           ~~~
 
  *  Start the "MSYS2 MinGW Shell" (not to be confused with "MSYS2 MSYS Shell").
+
+### Possible problems
+
+#### Error on linking on Windows MSYS2: undefined reference to `__imp___acrt_iob_func'
+
+Download these packages and install it with `pacman -U <path>`:
+
+* http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-crt-git-5.0.0.5002.34a7c1c0-1-any.pkg.tar.xz
+* http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-headers-git-5.0.0.5002.34a7c1c0-1-any.pkg.tar.xz
+
+Also pkg-config better ignore these packages on updating, add "IgnorePkg = mingw-w64-x86_64-crt-git mingw-w64-x86_64-headers-git" to /etc/pacman.conf 
