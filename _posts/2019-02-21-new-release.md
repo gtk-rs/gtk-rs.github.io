@@ -15,15 +15,20 @@ It's time for a new release! Main adds/changes this time are:
  * We improved the channels handling in `GLib`.
  * The whole new `GString` type!
  * The minimum Rust version supported is now the `1.31`.
+ * The minimum version of all libraries has been changed to GNOME `3.14`.
+ * The maximum version of all libraries has been upgraded to GNOME `3.30`.
+ * Added subclassing support in GLib.
  * Even more bindings generated.
 
 Let's see those in details.
 
 #### Atk
 
-The Atk crate is about accessibility. We thought it was a miss not having it considering how important accessibility is, now it's fixed. You can see more information directly on the `Atk` repository: https://github.com/gtk-rs/atk
+The Atk crate is about accessibility. We thought it was a miss not having it considering how important accessibility is. Now it's fixed! You can find more information directly on the [`Atk` repository](https://github.com/gtk-rs/atk) or in the [accessibility example](https://github.com/gtk-rs/examples/blob/master/src/bin/accessibility.rs).
 
 #### Callbacks?
+
+We already implemented by hand a lot of these functions but the big new thing in here is that they're now automatically generated.
 
 To present this, let's use the `foreach` method of `TreeModel`:
 
@@ -87,13 +92,17 @@ receiver.attach(None, move |msg| {
 
 #### `GString` type?
 
-This type has been created in order to prevent some useless copies to improve performances. For example, if you want to get a button label, you don't ownership over it, you just "get" it. Before the `GString` type, we'd clone the returned string and gave it back to the user. Now, we just hold a temporary reference over it, no more copy!
+This type has been created in order to prevent some useless copies to improve performances. It's used in case a function returns a `String` while fully transferring it. In such cases, we now just wrap it instead of cloning it.
 
 This is part of our performance focus. More to come in the next release!
 
 #### Minimum Rust version supported
 
-We moved it to `1.31.0` mainly because imports handling is much easier starting this version.
+We moved it to `1.31.0` mainly because imports handling is much easier starting this version. We still need to update macros though (an issue about it is already [open](https://github.com/gtk-rs/glib/issues/420)).
+
+#### subclassing support in GLib
+
+This is a strongly asked feature and we now have it in GLib. A lot of work remains to be done, but it's mostly polishing. At its current state, it can be used already. Take a look at the [listbox_model](https://github.com/gtk-rs/examples/blob/master/src/bin/listbox_model.rs) if you want to see how it works.
 
 #### Even more bindings generated
 
@@ -107,7 +116,7 @@ And again: thanks **a lot** to all of our contributors! This project lives thank
 
 ### Changes
 
-For the interested ones, here is the list of the (major) changes:
+For the interested ones, here is the list of the merged pull requests:
 
 [sys](https://github.com/gtk-rs/sys):
 
