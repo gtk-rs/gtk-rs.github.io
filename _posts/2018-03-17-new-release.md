@@ -59,7 +59,7 @@ For the interested ones, here is the list of the (major) changes:
  * [Const override](https://github.com/gtk-rs/glib/pull/278)
  * [Char wrapper 2](https://github.com/gtk-rs/glib/pull/274)
  * [Allow FnOnce for MainContext::invoke()](https://github.com/gtk-rs/glib/pull/277)
- * [Allow creating Bytes from any AsRef<[u8]> by copying or taking ownership of it](https://github.com/gtk-rs/glib/pull/276)
+ * [Allow creating Bytes from any AsRef&lt;[u8]&gt; by copying or taking ownership of it](https://github.com/gtk-rs/glib/pull/276)
  * [Add bindings for g_file_test() and make use of it in the Path transla…](https://github.com/gtk-rs/glib/pull/273)
  * [Add Char wrapper; implement KeyFile::set_list_separator() with it](https://github.com/gtk-rs/glib/pull/248)
  * [Don't call g_value_unset() on zeroed GValues](https://github.com/gtk-rs/glib/pull/272)
@@ -68,7 +68,7 @@ For the interested ones, here is the list of the (major) changes:
  * [Various Path FFI improvements](https://github.com/gtk-rs/glib/pull/269)
  * [bump lazy_static to 1.0](https://github.com/gtk-rs/glib/pull/268)
  * [Add Value::from_type() to initialize an empty value from a Type](https://github.com/gtk-rs/glib/pull/266)
- * [Implement Value traits for Vec<String> more consistently](https://github.com/gtk-rs/glib/pull/264)
+ * [Implement Value traits for Vec&lt;String&gt; more consistently](https://github.com/gtk-rs/glib/pull/264)
  * [Add ToGlibContainerFromSlice impls for *const GList / GSList](https://github.com/gtk-rs/glib/pull/261)
 
 [gio](https://github.com/gtk-rs/gio):
@@ -96,7 +96,7 @@ For the interested ones, here is the list of the (major) changes:
 
 [pango](https://github.com/gtk-rs/pango):
 
- * [Remove manual FromGlibPtrNone<*const  implementations](https://github.com/gtk-rs/pango/pull/101)
+ * [Remove manual FromGlibPtrNone&lt;*const&gt; implementations](https://github.com/gtk-rs/pango/pull/101)
 
 [gdk-pixbuf](https://github.com/gtk-rs/gdk-pixbuf):
 
