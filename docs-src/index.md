@@ -7,6 +7,7 @@ layout: default
 
 ### Crate API docs
 
+ - [**atk**](../docs/atk/)
  - [**cairo**](../docs/cairo/)
  - [**gdk**](../docs/gdk/)
  - [**gdk-pixbuf**](../docs/gdk_pixbuf/)
@@ -19,9 +20,8 @@ layout: default
 
 ### Versions
 
-By default the `gtk` crate provides only GTK+ 3.4 APIs. You can access more
-modern APIs by selecting one of the following features: `v3_6`, `v3_8`,
-`v3_10`, `v3_12`, `v3_14`, `v3_16`, `v3_18`, `v3_20`, `v3_22`.
+By default the `gtk` crate provides only GTK+ 3.14 APIs. You can access more
+modern APIs by selecting one of the following features: `v3_16`, `v3_18`, `v3_20`, `v3_22`, `v3_24`, `v3_26`, `v3_28`, `v3_30`.
 
 `Cargo.toml` example:
 
