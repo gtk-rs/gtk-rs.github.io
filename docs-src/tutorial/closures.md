@@ -150,7 +150,7 @@ button.connect_clicked(clone!(windows => move |_| {
 ```
 
 <div class="footer">
-<div><a href="/tuto/version">Specifying version</a>.</div>
+<div><a href="./version">Specifying version</a>.</div>
 <div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
-<div><a href="/tuto/upcast_downcast">Upcast and downcast</a>.</div>
+<div><a href="./upcast_downcast">Upcast and downcast</a>.</div>
 </div>
