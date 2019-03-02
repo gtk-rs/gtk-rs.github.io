@@ -4,23 +4,16 @@ layout: default
 
 # Tutorial
 
-Here's an introduction to `Gtk-rs` crates. For the users who already know Rust and Gtk, just skip the two first parts.
+## Introduction
 
-## Rust and `Gtk-rs`
+Here's an introduction to `Gtk-rs` crates. For the users who already know Rust and Gtk, just skip this part.
 
-This part explains how to add dependencies on the `Gtk-rs` crates, depending on your needs.
-
-[Read it here](./rust_and_gtk).
-
-## Gnome libraries and Rust
-
-This part explains a bit how the bindings of the Gnome libraries work in Rust.
-
-[Read it here](./gnome_and_rust).
+ * [Rust and `Gtk-rs`](./rust_and_gtk): This part explains how to add dependencies on the `Gtk-rs` crates, depending on your needs.
+ * [Gnome libraries and Rust](./gnome_and_rust): This part explains a bit how the bindings of the Gnome libraries work in Rust.
 
 ## Full usage of `Gtk-rs` crates
 
-In this part we'll go deeper into the mechanisms of the `Gtk-rs` crates. If you're not sure about your Rust or Gnome libraries knowledge, we recommend you to take a look at the previous parts first.
+In this part we'll go deeper into the mechanisms of the `Gtk-rs` crates. If you're not sure about your Rust or Gnome libraries knowledge, we recommend you to take a look at the previous tutorials first.
 
  * [Specifying version](./version).
  * [Callbacks and closures](./closures).
