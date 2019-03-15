@@ -6,7 +6,7 @@ layout: default
 
 Before going any further, if you don't know Rust at all, we recommend you to read the official [Rust Book](https://doc.rust-lang.org/book/).
 
-Then we recommend you to learn a bit about [Cargo](http://doc.crates.io/index.html).
+Then we recommend you to learn a bit about [Cargo](http://doc.crates.io/index.html) and check the [GTK requirements](/docs-src/requirements).
 
 All done? Perfect!
 
@@ -55,5 +55,5 @@ Now that you know how to import `Gtk-rs` crates into your code, looking at the [
 <div class="footer">
 <div></div>
 <div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
-<div><a href="/tuto/gnome_and_rust">Gnome libraries and Rust</a>.</div>
+<div><a href="./gnome_and_rust">Gnome libraries and Rust</a>.</div>
 </div>

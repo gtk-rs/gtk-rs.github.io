@@ -157,7 +157,7 @@ then download the windows 10 them from http://b00merang.weebly.com/windows-10.ht
     mv Windows-10-master /wherever/release/share/themes/Windows10
 
 <div class="footer">
-<div><a href="/tuto/glade">Glade</a>.</div>
+<div><a href="./glade">Glade</a>.</div>
 <div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
 <div></div>
 </div>

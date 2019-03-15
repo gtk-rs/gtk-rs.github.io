@@ -3,9 +3,9 @@ layout: default
 ---
 # Gtk-rs documentation
 
-### [Requirements](requirements.html)
+## [Requirements](requirements.html)
 
-### Crate API docs
+## Crate API docs
 
  - [**atk**](../docs/atk/)
  - [**cairo**](../docs/cairo/)
@@ -18,7 +18,9 @@ layout: default
  - [**pangocairo**](../docs/pangocairo/)
  - [**sourceview**](../docs/sourceview/)
 
-### Versions
+## [The GTK+ Project documentation](http://www.gtk.org/documentation.php)
+
+## Versions
 
 By default the `gtk` crate provides only GTK+ 3.14 APIs. You can access more
 modern APIs by selecting one of the following features: `v3_16`, `v3_18`, `v3_20`, `v3_22`, `v3_24`, `v3_26`, `v3_28`, `v3_30`.
@@ -35,8 +37,8 @@ features = ["v3_16"]
 not have easy access to the latest ones.** The higher the version, the fewer
 users will have it installed.
 
-### Examples
+## Tutorials and examples
 
-See the [examples repository](https://github.com/gtk-rs/examples).
-
-### [The GTK+ Project documentation](http://www.gtk.org/documentation.php)
+ * [Tutorials](/docs-src/tutorial).
+ * [Examples repository](https://github.com/gtk-rs/examples).
+ * [Projects using `gtk-rs`](/#projects-using-gtk-rs).
