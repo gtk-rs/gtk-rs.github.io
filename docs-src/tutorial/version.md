@@ -56,7 +56,7 @@ So when someone has a new enough version of Gtk, it'll be able to build your cra
 ```
 
 <div class="footer">
-<div><a href="./gnome_and_rust">Gnome libraries and Rust</a>.</div>
+<div><a href="gnome_and_rust">Gnome libraries and Rust</a>.</div>
 <div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
-<div><a href="./closures">Callbacks and closures</a>.</div>
+<div><a href="closures">Callbacks and closures</a>.</div>
 </div>
