@@ -62,7 +62,7 @@ The same goes for interfaces. The [gnome documentation](https://developer.gnome.
 I think that with this, you'll be able to write anything you want without too much difficulties. Now it's time to go deeper into `Gtk-rs` usage!
 
 <div class="footer">
-<div><a href="./rust_and_gtk">Rust and <code>Gtk-rs</code></a>.</div>
+<div><a href="rust_and_gtk">Rust and <code>Gtk-rs</code></a>.</div>
 <div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
-<div><a href="./version">Specifying version</a>.</div>
+<div><a href="version">Specifying version</a>.</div>
 </div>

@@ -55,5 +55,5 @@ Now that you know how to import `Gtk-rs` crates into your code, looking at the [
 <div class="footer">
 <div></div>
 <div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
-<div><a href="./gnome_and_rust">Gnome libraries and Rust</a>.</div>
+<div><a href="gnome_and_rust">Gnome libraries and Rust</a>.</div>
 </div>
