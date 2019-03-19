@@ -29,7 +29,7 @@ modern APIs by selecting one of the following features: `v3_16`, `v3_18`, `v3_20
 
 ~~~toml
 [dependencies.gtk]
-version = "0.1.0"
+version = "{{ gtk[0].max_version }}"
 features = ["v3_16"]
 ~~~
 
