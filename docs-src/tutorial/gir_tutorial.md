@@ -554,5 +554,5 @@ That's it, with this we should be able to generate any GNOME crate you want. Hap
 [gir]: https://github.com/gtk-rs/gir
 
 <div class="footer">
-<div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
+<div style="text-align:center;width:100%;"><a href="/docs-src/tutorial">Going back to summary</a>.</div>
 </div>
