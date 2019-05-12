@@ -21,6 +21,10 @@ In this part we'll go deeper into the mechanisms of the `Gtk-rs` crates. If you'
  * [Glade](glade).
  * [Cross compiling from linux to windows](cross).
 
+## Generating GNOME crate Rust API using `gir`
+
+A tutorial is available [here](gir_tutorial) if you want to generate your own GNOME crate binding.
+
 ## Going further
 
 Make sure to check the [examples repository](https://github.com/gtk-rs/examples). Also you can take a look at the source code of [projects using `gtk-rs`](/#projects-using-gtk-rs).
