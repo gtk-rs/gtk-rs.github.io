@@ -56,34 +56,30 @@ extern crate gtk;
 use gtk::prelude::*;
 ~~~
 
-Create a window, etc.
+Create an application, etc.
 
 ~~~rust
-use gtk::{Button, Window, WindowType};
+use gtk::{Application, ApplicationWindow, Button};
 
 fn main() {
-    if gtk::init().is_err() {
-        println!("Failed to initialize GTK.");
-        return;
-    }
+    let application = Application::new("com.github.gtk-rs.examples.basic", Default::default()))
+        .expect("failed to initialize GTK application");
 
-    let window = Window::new(WindowType::Toplevel);
-    window.set_title("First GTK+ Program");
-    window.set_default_size(350, 70);
-    let button = Button::new_with_label("Click me!");
-    window.add(&button);
-    window.show_all();
+    application.connect_activate(|app| {
+        let window = ApplicationWindow::new();
+        window.set_title("First GTK+ Program");
+        window.set_default_size(350, 70);
 
-    window.connect_delete_event(|_, _| {
-        gtk::main_quit();
-        Inhibit(false)
+        let button = Button::new_with_label("Click me!");
+        button.connect_clicked(|_| {
+            println!("Clicked!");
+        });
+        window.add(&button);
+
+        window.show_all();
     });
 
-    button.connect_clicked(|_| {
-        println!("Clicked!");
-    });
-
-    gtk::main();
+    application.run(&[]);
 }
 ~~~
 
@@ -94,7 +90,7 @@ Include `gtk` in your `Cargo.toml` not as crate but from git:
 ~~~toml
 [dependencies.gtk]
 git = "https://github.com/gtk-rs/gtk"
-features = ["v3_10"]
+features = ["v3_16"]
 ~~~
 
 ## Projects using gtk-rs
