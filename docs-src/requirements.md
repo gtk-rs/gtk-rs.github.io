@@ -29,6 +29,45 @@ The __gtk__ crate expects __GTK+__, __GLib__ and __Cairo__ development files to 
 
 ## Windows
 
+On Windows Rust can use either the MSVC toolchain or the GNU toolchain. The latter is easier to
+install, but the former provides a better overall experience and allows interfacing with other
+Windows libraries.
+
+### MSVC toolchain
+
+1. Install GTK using [the instructions on the GTK website](https://www.gtk.org/download/windows.php).
+   This will take some time. Once it's finished, make a note of the folder `installed\x86-windows`
+   (32-bit)/`installed\x64-windows` (64-bit); these instructions will refer to it as `%VCPKGDIR%`.
+2. Add `%VCPKGDIR%\bin` to the beginning of your `PATH` environment variable.
+3. Set the `GTK_LIB_DIR` environment variable to `%VCPKGDIR%\lib`.
+4. Create the following symlinks. (NTFS has supported symlinks since Windows Vista, but prior to the
+   Windows 10 Creators Update it required elevated privileges. Copying the files also works, but
+   you'll need to do it again when GTK is updated.)
+    * `%VCPKGDIR%\lib\gtk-3.0.lib` points to `%VCPKGDIR%\lib\gtk-3.lib`.
+    * `%VCPKGDIR%\lib\gdk-3.0.lib` points to `%VCPKGDIR%\lib\gdk-3.lib`.
+    * `%VCPKGDIR%\bin\gtk-3.0.dll` points to `%VCPKGDIR%\bin\gtk-3.dll`.
+    * `%VCPKGDIR%\bin\gdk-3.0.dll` points to `%VCPKGDIR%\bin\gdk-3.dll`.
+5. Create the folder `%VCPKGDIR%\etc\gtk-3.0`. Inside it, create the file `settings.ini`:
+
+```ini
+[Settings]
+gtk-theme-name=win32
+```
+
+#### Possible problems
+
+##### `unresolved external symbol gtk_font_chooser_level_get_type`
+
+This is [a bug](https://github.com/gtk-rs/gtk/issues/794) in version 0.6 of gtk-rs with versions of
+GTK prior to 3.22.30; either use gtk-rs from Git directly or backport [the fix](https://github.com/gtk-rs/gtk/pull/804)
+into the copy of gtk-rs in your Cargo registry.
+
+##### `process didn't exit successfully (exit code: 0xc0000139, STATUS_ENTRYPOINT_NOT_FOUND)`
+
+`%VCPKGDIR%\bin` is too late in the `PATH` environment variable, and DLLs for other programs are being found before the ones installed alongside GTK.  Move `%VCPKGDIR%\bin` earlier in your `PATH` and try again.
+
+### GNU toolchain
+
 Make sure you have the [GNU ABI] version of the rust compiler installed.
 Contrary to earlier instructions, **you don't need to uncheck "Linker and
 platform libraries" in the Rust setup or delete `gcc.exe` and `ld.exe` in Rust's
