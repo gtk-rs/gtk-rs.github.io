@@ -20,6 +20,7 @@ In this part we'll go deeper into the mechanisms of the `Gtk-rs` crates. If you'
  * [Upcast and downcast](upcast_downcast).
  * [Glade](glade).
  * [Cross compiling from linux to windows](cross).
+ * [Cross compiling to different arches on linux](cross-linux-arch).
 
 ## Generating GNOME crate Rust API using `gir`
 
