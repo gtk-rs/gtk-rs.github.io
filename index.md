@@ -37,23 +37,29 @@ layout: wide
 
 Prepare your system: [Requirements](http://gtk-rs.org/docs-src/requirements.html)
 
-Include `gtk` in your `Cargo.toml` and set the minimal GTK version required by your project:
+Include `gtk` and `gio` in your `Cargo.toml` and set the minimal GTK version required by your project:
 {% assign gtk = site.data.crates | where: "name", "gtk" %}
 
 ~~~toml
 [dependencies.gtk]
 version = "{{ gtk[0].max_version }}"
 features = ["v3_16"]
+
+[dependencies.gio]
+version = "{{ gio[0].max_version }}"
+features = ["v2_44"]
 ~~~
 
 __The APIs aren't stable yet. Watch the Announcements box above for breaking changes to the crates!__
 
-Import the `gtk` crate and its traits:
+Import the `gtk` and `gio` crates and their traits:
 
 ~~~rust
 extern crate gtk;
+extern crate gio;
 
 use gtk::prelude::*;
+use gio::prelude::*;
 ~~~
 
 Create an application, etc.
@@ -62,11 +68,11 @@ Create an application, etc.
 use gtk::{Application, ApplicationWindow, Button};
 
 fn main() {
-    let application = Application::new("com.github.gtk-rs.examples.basic", Default::default()))
+    let application = Application::new("com.github.gtk-rs.examples.basic", Default::default())
         .expect("failed to initialize GTK application");
 
     application.connect_activate(|app| {
-        let window = ApplicationWindow::new();
+        let window = ApplicationWindow::new(app);
         window.set_title("First GTK+ Program");
         window.set_default_size(350, 70);
 
