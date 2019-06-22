@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Guillaume Gomez
-title: New release: more complete, safer
+title: New release - more complete, safer
 categories: [front, crates, release]
 date: 2019-06-22 14:00:00 +0000
 ---
