@@ -30,8 +30,9 @@ The __gtk__ crate expects __GTK+__, __GLib__ and __Cairo__ development files to 
 ## Windows
 
 On Windows Rust can use either the MSVC toolchain or the GNU toolchain. The latter is easier to
-install, but the former provides a better overall experience and allows interfacing with other
-Windows libraries.
+install, but the former provides a better overall experience and allows interfacing with Windows
+libraries that are incompatible with the GNU toolchain and allows for example usage of the
+Visual Studio debugger.
 
 ### MSVC toolchain
 
@@ -55,12 +56,6 @@ gtk-theme-name=win32
 ```
 
 #### Possible problems
-
-##### `unresolved external symbol gtk_font_chooser_level_get_type`
-
-This is [a bug](https://github.com/gtk-rs/gtk/issues/794) in version 0.6 of gtk-rs with versions of
-GTK prior to 3.22.30; either use gtk-rs from Git directly or backport [the fix](https://github.com/gtk-rs/gtk/pull/804)
-into the copy of gtk-rs in your Cargo registry.
 
 ##### `process didn't exit successfully (exit code: 0xc0000139, STATUS_ENTRYPOINT_NOT_FOUND)`
 
