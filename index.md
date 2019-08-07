@@ -68,7 +68,7 @@ Create an application, etc.
 use gtk::{Application, ApplicationWindow, Button};
 
 fn main() {
-    let application = Application::new("com.github.gtk-rs.examples.basic", Default::default())
+    let application = Application::new(Some("com.github.gtk-rs.examples.basic"), Default::default())
         .expect("failed to initialize GTK application");
 
     application.connect_activate(|app| {
