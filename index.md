@@ -100,7 +100,9 @@ features = ["v3_16"]
 ~~~
 
 ## Projects using gtk-rs
+* [Banner Viewer](https://gitlab.gnome.org/World/design/banner-viewer)
 * [BrewStillery](https://gitlab.com/MonkeyLog/BrewStillery)
+* [Contrast](https://gitlab.gnome.org/World/design/contrast)
 * [Epicwar Downloader](https://github.com/ab0v3g4me/epicwar-downloader)
 * [Font Finder](https://github.com/mmstick/fontfinder)
 * [Fractal](https://gitlab.gnome.org/danigm/fractal)
@@ -108,9 +110,11 @@ features = ["v3_16"]
 * [Gattii](https://gitlab.com/susurrus/gattii)
 * [glide](https://github.com/philn/glide)
 * [gpsami](https://github.com/hfiguiere/gpsami)
+* [Icon Library](https://gitlab.gnome.org/World/design/icon-library)
 * [Marmoset](https://github.com/sprang/marmoset)
 * [mcmmtk](https://github.com/pwil3058/mcmmtk)
 * [media-toc](https://github.com/fengalin/media-toc)
+* [neovim-gtk](https://github.com/daa84/neovim-gtk)
 * [noaa-apt](https://github.com/martinber/noaa-apt)
 * [pcatk](https://github.com/pwil3058/pcatk)
 * [PNMixer-rs](https://github.com/hasufell/pnmixer-rust)
