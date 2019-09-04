@@ -8,14 +8,11 @@ There are multiple ways to contact directly `Gtk-rs` developers:
 
 # IRC
 
-In here you have the choice between two channels on two different servers:
+Channel #rust on **irc.gimp.org** server.
 
- * #gtk-rs on irc.mozilla.org
- * #rust on irc.gimp.org
+# Matrix
 
-# Gitter
-
-You can find us on gitter at this address: [gitter.im/gtk-rs/gtk](https://gitter.im/gtk-rs/gtk).
+You can connect using: **#gimpnet#gnome:matrix.org**.
 
 # Github
 
