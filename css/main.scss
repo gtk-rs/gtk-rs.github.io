@@ -62,3 +62,16 @@ div.footer > div {
     text-align: center;
     min-height: 5px;
 }
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+th {
+    text-align: center;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 2px 8px;
+}

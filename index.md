@@ -5,7 +5,7 @@ layout: wide
 <div class="intro-col-wrapper">
   <div class="intro-col intro-col-1" markdown="1">
 
-### [Rust] bindings for [GTK+ 3][GTK], [Cairo], [GtkSourceView] and other [GLib]-compatible libraries
+## [Rust] bindings for [GTK+ 3][GTK], [Cairo], [GtkSourceView] and other [GLib]-compatible libraries
 
 [![GTK screenshot](gtk.png)](gtk.png)
 
@@ -33,11 +33,26 @@ layout: wide
   </div>
 </div>
 
+| Crate | Minimum supported version |
+|-------|---------------------------|
+| [atk](https://crates.io/crates/atk) | 2.30 |
+| [cairo](https://crates.io/crates/cairo) | 1.14 |
+| [gdk](https://crates.io/crates/gdk) | 3.16 |
+| [gdk-pixbuf](https://crates.io/crates/gdk-pixbuf) | 2.32 |
+| [gio](https://crates.io/crates/gio) | 2.44 |
+| [glib](https://crates.io/crates/glib) | 2.44 |
+| [gtk](https://crates.io/crates/gtk) | 3.16 |
+| [pango](https://crates.io/crates/pango) | 1.38 |
+| [pangocairo](https://crates.io/crates/pangocairo) | 1.0 |
+| [sourceview](https://crates.io/crates/sourceview) | 3.0 |
+
+<div style="display:block;margin-top:16px"></div>
+
 ## Using
 
-Prepare your system: [Requirements](http://gtk-rs.org/docs-src/requirements.html)
+First, prepare your system by taking a look at the [requirements](http://gtk-rs.org/docs-src/requirements.html).
 
-Include `gtk` and `gio` in your `Cargo.toml` and set the minimal GTK version required by your project:
+Then include `gtk` and `gio` in your `Cargo.toml` and set the minimal GTK version required by your project:
 {% assign gtk = site.data.crates | where: "name", "gtk" %}
 
 ~~~toml
@@ -68,8 +83,10 @@ Create an application, etc.
 use gtk::{Application, ApplicationWindow, Button};
 
 fn main() {
-    let application = Application::new(Some("com.github.gtk-rs.examples.basic"), Default::default())
-        .expect("failed to initialize GTK application");
+    let application = Application::new(
+        Some("com.github.gtk-rs.examples.basic"),
+        Default::default(),
+    ).expect("failed to initialize GTK application");
 
     application.connect_activate(|app| {
         let window = ApplicationWindow::new(app);
