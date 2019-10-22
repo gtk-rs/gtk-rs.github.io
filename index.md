@@ -141,6 +141,8 @@ features = ["v3_16"]
 * [process-viewer](https://github.com/GuillaumeGomez/process-viewer)
 * [relm](https://github.com/antoyo/relm)
 * [rrun](https://github.com/buster/rrun)
+* [Shortwave](https://gitlab.gnome.org/World/Shortwave)
+* [Social](https://gitlab.gnome.org/World/Social)
 * [SolidOak](https://github.com/oakes/SolidOak)
 * [systemd-manager](https://github.com/mmstick/systemd-manager)
 * [Tau](https://gitlab.gnome.org/World/Tau)
