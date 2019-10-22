@@ -36,7 +36,7 @@ layout: wide
 | Crate | Minimum supported version |
 |-------|---------------------------|
 | [atk](https://crates.io/crates/atk) | 2.30 |
-| [cairo](https://crates.io/crates/cairo) | 1.14 |
+| [cairo](https://crates.io/crates/cairo-rs) | 1.14 |
 | [gdk](https://crates.io/crates/gdk) | 3.16 |
 | [gdk-pixbuf](https://crates.io/crates/gdk-pixbuf) | 2.32 |
 | [gio](https://crates.io/crates/gio) | 2.44 |
