@@ -65,7 +65,7 @@ version = "{{ gio[0].max_version }}"
 features = ["v2_44"]
 ~~~
 
-__The APIs aren't stable yet. Watch the Announcements box above for breaking changes to the crates!__
+__The code is stable and feature complete, but the APIs might change in the future.__
 
 Import the `gtk` and `gio` crates and their traits:
 
