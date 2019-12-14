@@ -126,6 +126,7 @@ features = ["v3_16"]
 * [Garta](https://github.com/zaari/garta)
 * [Gattii](https://gitlab.com/susurrus/gattii)
 * [GNvim](https://github.com/vhakulinen/gnvim)
+* [gled](https://gitlab.com/pentagonum/gled)
 * [glide](https://github.com/philn/glide)
 * [gpsami](https://github.com/hfiguiere/gpsami)
 * [Icon Library](https://gitlab.gnome.org/World/design/icon-library)
