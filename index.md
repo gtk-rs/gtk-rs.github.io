@@ -145,7 +145,7 @@ features = ["v3_16"]
 * [Shortwave](https://gitlab.gnome.org/World/Shortwave)
 * [Social](https://gitlab.gnome.org/World/Social)
 * [SolidOak](https://github.com/oakes/SolidOak)
-* [systemd-manager](https://github.com/mmstick/systemd-manager)
+* [systemd-manager](https://gitlab.com/mmstick/systemd-manager)
 * [Tau](https://gitlab.gnome.org/World/Tau)
 * [tv-renamer](https://github.com/mmstick/tv-renamer)
 * [Way Cooler](https://github.com/way-cooler)
