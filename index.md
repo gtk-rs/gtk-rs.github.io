@@ -122,7 +122,7 @@ features = ["v3_16"]
 * [Contrast](https://gitlab.gnome.org/World/design/contrast)
 * [Epicwar Downloader](https://github.com/ab0v3g4me/epicwar-downloader)
 * [Font Finder](https://github.com/mmstick/fontfinder)
-* [Fractal](https://gitlab.gnome.org/danigm/fractal)
+* [Fractal](https://gitlab.gnome.org/GNOME/fractal)
 * [Garta](https://github.com/zaari/garta)
 * [Gattii](https://gitlab.com/susurrus/gattii)
 * [GNvim](https://github.com/vhakulinen/gnvim)
