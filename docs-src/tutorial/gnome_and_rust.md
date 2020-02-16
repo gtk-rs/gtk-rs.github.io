@@ -6,13 +6,13 @@ layout: default
 
 Currently, the `Gtk-rs` organization provides the bindings for the following libraries:
 
- * Gtk
- * Gdk
- * Gdk-pixbuf
- * Cairo
- * Glib
- * Gio
- * Pango
+ * Gtk (the widget toolkit)
+ * Gdk (low-level functions provided by the underlying windowing and graphics systems)
+ * Gdk-pixbuf (image loading and manipulation)
+ * Cairo (vector graphic API)
+ * Glib (data structures and utilities for dealing with them)
+ * Gio (file system abstractions)
+ * Pango (layout engine, text and font handling)
 
 The goal is to provide a safe abstraction using Rust paradigms.
 
