@@ -12,7 +12,7 @@ Channel #rust on **irc.gimp.org** server.
 
 # Matrix
 
-You can connect using: **#gimpnet#gnome:matrix.org**.
+You can connect using: **#_gimpnet_#rust:gnome.org **.
 
 # Github
 
