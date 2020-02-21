@@ -50,7 +50,7 @@ layout: wide
 
 ## Using
 
-First, prepare your system by taking a look at the [requirements](http://gtk-rs.org/docs-src/requirements.html).
+First, prepare your system by taking a look at the [GTK installation page](https://www.gtk.org/docs/installations/).
 
 Then include `gtk` and `gio` in your `Cargo.toml` and set the minimal GTK version required by your project:
 {% assign gtk = site.data.crates | where: "name", "gtk" %}

@@ -3,7 +3,9 @@ layout: default
 ---
 # Gtk-rs documentation
 
-## [Requirements](requirements.html)
+## Requirements
+
+First, prepare your system by taking a look at the [GTK installation page](https://www.gtk.org/docs/installations/).
 
 ## Crate API docs
 
