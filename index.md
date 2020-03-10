@@ -119,6 +119,7 @@ features = ["v3_16"]
 ## Projects using gtk-rs
 * [Banner Viewer](https://gitlab.gnome.org/World/design/banner-viewer)
 * [BrewStillery](https://gitlab.com/MonkeyLog/BrewStillery)
+* [Cigale](https://github.com/emmanueltouzery/cigale)
 * [Contrast](https://gitlab.gnome.org/World/design/contrast)
 * [Epicwar Downloader](https://github.com/ab0v3g4me/epicwar-downloader)
 * [Font Finder](https://github.com/mmstick/fontfinder)
