@@ -1,7 +1,7 @@
 ---
 layout: post
 author: GuillaumeGomez
-title: gtk-rs organization is now looking for sponsors
+title: Sponsoring gtk-rs development
 categories: [front, crates]
 date: 2020-04-02 18:00:00 +0000
 ---
