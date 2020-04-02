@@ -24,6 +24,37 @@
     }
 }
 
+#support-button {
+    position: absolute;
+    right: 6px;
+    top: 11px;
+    border-radius: 7px;
+    background-color: #fff;
+    padding: 4px;
+    text-decoration: none;
+    width: initial;
+    color: #000;
+    cursor: pointer;
+    border: 1px solid #ddd;
+
+    &:hover {
+        background-color: #e3ffff;
+    }
+
+    > svg {
+        fill: #ff0b9e;
+        vertical-align: middle;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+@include media-query($title-on-palm) {
+    #support-button {
+        right: 85px;
+    }
+}
+
 .site-nav {
     float: right;
     line-height: 56px;
@@ -42,7 +73,7 @@
         }
     }
 
-    @include media-query($on-palm) {
+    @include media-query($title-on-palm) {
         position: absolute;
         top: 9px;
         right: 30px;
@@ -50,6 +81,7 @@
         border: 1px solid $grey-color-light;
         border-radius: 5px;
         text-align: right;
+        z-index: 1; // to go over the "support us" button
 
         .menu-icon {
             display: block;
