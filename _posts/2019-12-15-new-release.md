@@ -379,5 +379,4 @@ Thanks to all of our contributors for their (awesome!) work on this release:
  * [@silwol](https://github.com/silwol)
  * [@timbodeit](https://github.com/timbodeit)
  * [@velyan](https://github.com/velyan)
-
-[@sfanxiang]: https://github.com/sfanxiang
+ * [@sfanxiang]: https://github.com/sfanxiang
