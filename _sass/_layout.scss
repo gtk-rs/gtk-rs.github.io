@@ -313,15 +313,60 @@
     }
 }
 
-.blog {
-    background-color: #F7F5D7;
+.blog, .crates, .sponsors {
     border-radius: 5px;
     padding: 7px;
 }
 
+.crates, .sponsors {
+    margin-bottom: 7px;
+}
+
 .crates {
     background-color: #E6F5F9;
-    border-radius: 5px;
-    padding: 7px;
-    margin-bottom: 7px;
+}
+
+.sponsors {
+    text-align: center;
+    background-color: #fff0de;
+
+    > div {
+        display: inline-flex;
+
+        > svg {
+            height: 25px;
+        }
+    }
+}
+
+.blog {
+    background-color: #F7F5D7;
+}
+
+.thanks-sponsors {
+    padding-top: 15px;
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.sponsor-tiers {
+    margin-bottom: 20px;
+
+    > a {
+        display: block;
+        max-width: 75px;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 5px;
+        text-decoration: none;
+
+        > img {
+            border-radius: 50%;
+        }
+
+        &:hover {
+            background-color: #e5f4ff;
+        }
+    }
 }
