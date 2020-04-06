@@ -4,7 +4,6 @@
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -13,7 +12,7 @@
 
 .site-title {
     font-size: 26px;
-    line-height: 56px;
+    line-height: $header-line-height;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
@@ -153,20 +152,17 @@
 }
 
 .intro-col-1 {
-    width: -webkit-calc(60% - (#{$spacing-unit} / 2));
-    width:         calc(60% - (#{$spacing-unit} / 2));
+    width: calc(60% - (#{$spacing-unit} / 2));
 }
 
 .intro-col-2 {
-    width: -webkit-calc(40% - (#{$spacing-unit} / 2));
-    width:         calc(40% - (#{$spacing-unit} / 2));
+    width: calc(40% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
     .intro-col {
         float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
+        width: calc(100% - (#{$spacing-unit} / 2));
     }
 }
 
@@ -183,38 +179,42 @@
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: calc(35% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width: calc(20% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    width: calc(45% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
     .footer-col-1,
     .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
+        width: calc(50% - (#{$spacing-unit} / 2));
     }
 
     .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
+        width: calc(100% - (#{$spacing-unit} / 2));
+    }
+
+    .page-content {
+        /* 88px is the footer size */
+        min-height: calc(100vh - #{$header-line-height} - #{$header-borders} - (#{$content-padding} * 2) - 88px);
     }
 }
 
 @include media-query($on-palm) {
     .footer-col {
         float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
+        width: calc(100% - (#{$spacing-unit} / 2));
+    }
+
+    .page-content {
+        /* 126px is the footer size */
+        min-height: calc(100vh - #{$header-line-height} - #{$header-borders} - (#{$content-padding} * 2) - 126px);
     }
 }
 
@@ -224,7 +224,23 @@
  * Page content
  */
 .page-content {
-    padding: 10px 0;
+    padding: $content-padding 0;
+    /* 51px is the footer size */
+    min-height: calc(100vh - #{$header-line-height} - #{$header-borders} - (#{$content-padding} * 2) - 51px);
+}
+
+@include media-query($on-laptop) {
+    .page-content {
+        /* 88px is the footer size */
+        min-height: calc(100vh - #{$header-line-height} - #{$header-borders} - (#{$content-padding} * 2) - 88px);
+    }
+}
+
+@include media-query($on-palm) {
+    .page-content {
+        /* 126px is the footer size */
+        min-height: calc(100vh - #{$header-line-height} - #{$header-borders} - (#{$content-padding} * 2) - 126px);
+    }
 }
 
 .page-heading {
