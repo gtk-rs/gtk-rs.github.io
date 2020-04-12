@@ -1,11 +1,11 @@
 [
   {
     "name": "cairo-rs",
-    "max_version": "0.8.0"
+    "max_version": "0.8.1"
   },
   {
     "name": "gdk",
-    "max_version": "0.12.0"
+    "max_version": "0.12.1"
   },
   {
     "name": "gdk-pixbuf",
@@ -13,15 +13,15 @@
   },
   {
     "name": "gio",
-    "max_version": "0.8.0"
+    "max_version": "0.8.1"
   },
   {
     "name": "glib",
-    "max_version": "0.9.0"
+    "max_version": "0.9.3"
   },
   {
     "name": "gtk",
-    "max_version": "0.8.0"
+    "max_version": "0.8.1"
   },
   {
     "name": "pango",
@@ -32,4 +32,3 @@
     "max_version": "0.8.0"
   }
 ]
-
