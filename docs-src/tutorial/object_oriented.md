@@ -10,11 +10,11 @@ Each GTK class is split into a struct named after that class, and a trait with t
 
 ## Basic inheritance
 
-Any struct not only implements it's `Ext` trait, but also all traits of its super classes. That way you can call methods of super classes directly on a struct.
+Any struct not only implements its `Ext` trait, but also all traits of its super classes. That way you can call methods of super classes directly on a struct.
 
 The [`IsA`](http://gtk-rs.org/docs/glib/object/trait.IsA.html) trait is used to model the subtype relation of classes between structs. Every struct implements `IsA<SuperClass>` for each of its parent classes (and its implemented interfaces). For example [FlowBox](http://gtk-rs.org/docs/gtk/struct.FlowBox.html) implements `IsA<Buildable>`, `IsA<Container>`, `IsA<Orientable>`, `IsA<Widget>`.
 
-Passing classes as arguments it pretty straightforward. The only rule is that when accepting a class as function argument, take a generic `IsA<ClassThatIWant>` instead: [`fn add<P: IsA<Widget>>(&self, widget: &P)`](http://gtk-rs.org/docs/gtk/trait.ContainerExt.html#tymethod.add). Now the method can be not only called with structs of that type, but also with structs of any subtype (in this case, any Widget).
+Passing classes as arguments is pretty straightforward. The only rule is that when accepting a class as function argument, take a generic `IsA<ClassThatIWant>` instead: [`fn add<P: IsA<Widget>>(&self, widget: &P)`](http://gtk-rs.org/docs/gtk/trait.ContainerExt.html#tymethod.add). Now the method can be not only called with structs of that type, but also with structs of any subtype (in this case, any Widget).
 
 ## Upcasting
 
