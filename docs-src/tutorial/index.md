@@ -17,7 +17,7 @@ In this part we'll go deeper into the mechanisms of the `Gtk-rs` crates. If you'
 
  * [Specifying version](version).
  * [Callbacks and closures](closures).
- * [Upcast and downcast](upcast_downcast).
+ * [Object-oriented Rust](object_oriented).
  * [Glade](glade).
  * [Cross compiling from linux to windows](cross).
  * [Cross compiling to different arches on linux](cross-linux-arch).
