@@ -6,7 +6,7 @@ layout: default
 
 Since there is an inheritance system in Gtk, it's only logical to have one as well in `Gtk-rs`. Normally, most people won't need this, but understanding how things work can help navigating the documentation a lot.
 
-Each GTK class is split into a struct named after that class, and a trait with the same name and the suffix `Ext`. All methods except the constructor(s) are not in the struct, but in that trait. **Notice 1:** some methods are hidden in a `…ExtManual` trait, as seen in [WidgetExtManual](http://gtk-rs.org/docs/gtk/prelude/trait.WidgetExtManual.html). **Notice 2:** The same principle applies to GTK interfaces as well (have a look at the [Orientable](http://gtk-rs.org/docs/gtk/struct.Orientable.html) interface for an example).
+Each GTK class is split into a struct named after that class, and a trait with the same name and the suffix `Ext`. All methods except the constructor(s) are not in the struct, but in that trait. Some methods are hidden in a `…ExtManual` trait, as seen in [WidgetExtManual](http://gtk-rs.org/docs/gtk/prelude/trait.WidgetExtManual.html). The same principle applies to GTK interfaces as well (have a look at the [Orientable](http://gtk-rs.org/docs/gtk/struct.Orientable.html) interface for an example). There are a few exceptional classes that don't follow this general pattern: one reason for this is that final classes don't need an extension trait and thus can have their methods defined on the struct itself.
 
 ## Basic inheritance
 
