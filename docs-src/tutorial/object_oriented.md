@@ -2,13 +2,23 @@
 layout: default
 ---
 
-# Upcast and downcast
+# Object-oriented Rust
 
-Since there is an inheritance system in Gtk, it's only logical to have one as well in `Gtk-rs`. Normally, most people won't need this, but it's always nice to understand how things work.
+Since there is an inheritance system in Gtk, it's only logical to have one as well in `Gtk-rs`. Normally, most people won't need this, but understanding how things work can help navigating the documentation a lot.
+
+Each GTK class is split into a struct named after that class, and a trait with the same name and the suffix `Ext`, see for example [WidgetExt](http://gtk-rs.org/docs/gtk/prelude/trait.WidgetExt.html). All methods except the constructor(s) are not in the struct, but in that trait. In addition, some other methods can be found in a `…ExtManual` trait, as seen in [WidgetExtManual](http://gtk-rs.org/docs/gtk/prelude/trait.WidgetExtManual.html). This happens for implementation reasons currently. The same principle applies to GTK interfaces as well (have a look at the [Orientable](http://gtk-rs.org/docs/gtk/struct.Orientable.html) interface for an example). There are a few exceptional classes that don't follow this general pattern: one reason for this is that final classes don't need an extension trait because there can't be any subclasses of them, and thus can have their methods defined on the struct itself.
+
+## Basic inheritance
+
+Any struct not only implements its `Ext` trait, but also all traits of its super classes. That way you can call methods of super classes directly on a struct.
+
+The [`IsA`](http://gtk-rs.org/docs/glib/object/trait.IsA.html) trait is used to model the subtype relation of classes between structs. Every struct implements `IsA<SuperClass>` for each of its parent classes (and its implemented interfaces). For example [FlowBox](http://gtk-rs.org/docs/gtk/struct.FlowBox.html) implements `IsA<Buildable>`, `IsA<Container>`, `IsA<Orientable>`, `IsA<Widget>`.
+
+Passing classes as arguments is pretty straightforward. The only rule is that when accepting a class as function argument, take a generic `IsA<ClassThatIWant>` instead: [`fn add<P: IsA<Widget>>(&self, widget: &P)`](http://gtk-rs.org/docs/gtk/trait.ContainerExt.html#tymethod.add). Now the method can be not only called with structs of that type, but also with structs of any subtype (in this case, any Widget).
 
 ## Upcasting
 
-This is actually quite simple:
+Upcasting should rarely be necessary due to the subtyping, but sometimes you need a "proper" `Widget` struct (instead of a `WidgetExt` implementor or an `IsA<Widget>`). This is actually quite simple to achieve:
 
 ```rust
 let button = gtk::Button::new_with_label("Click me!");
