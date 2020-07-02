@@ -140,6 +140,7 @@ features = ["v3_16"]
 * [glide](https://github.com/philn/glide)
 * [gpsami](https://gitlab.gnome.org/hub/gpsami)
 * [Icon Library](https://gitlab.gnome.org/World/design/icon-library)
+* [Iridium](https://github.com/matze/iridium)
 * [lognplot](https://github.com/windelbouwman/lognplot)
 * [Marmoset](https://github.com/sprang/marmoset)
 * [mcmmtk](https://github.com/pwil3058/mcmmtk)
