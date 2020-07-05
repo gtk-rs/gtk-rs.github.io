@@ -47,7 +47,7 @@ So basically, you just need to import a parent's trait to be able to use its met
 use gtk::WidgetExt;
 
 // we create a button
-let button = gtk::Button::new_with_label("Click me!");
+let button = gtk::Button::with_label("Click me!");
 
 // we use the method from the widget
 button.show_all();
