@@ -21,7 +21,7 @@ Passing classes as arguments is pretty straightforward. The only rule is that wh
 Upcasting should rarely be necessary due to the subtyping, but sometimes you need a "proper" `Widget` struct (instead of a `WidgetExt` implementor or an `IsA<Widget>`). This is actually quite simple to achieve:
 
 ```rust
-let button = gtk::Button::new_with_label("Click me!");
+let button = gtk::Button::with_label("Click me!");
 let widget = button.upcast::<gtk::Widget>();
 ```
 
@@ -57,7 +57,7 @@ fn is_a<W: IsA<gtk::Object> + IsA<gtk::Widget> + Clone,
 Then let's test it:
 
 ```rust
-let button = gtk::Button::new_with_label("Click me!");
+let button = gtk::Button::with_label("Click me!");
 
 assert_eq!(is_a::<_, gtk::Container>(&button), true);
 assert_eq!(is_a::<_, gtk::Label>(&button), false);

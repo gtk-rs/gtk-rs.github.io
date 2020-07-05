@@ -103,7 +103,7 @@ fn main() {
         window.set_title("First GTK+ Program");
         window.set_default_size(350, 70);
 
-        let button = Button::new_with_label("Click me!");
+        let button = Button::with_label("Click me!");
         button.connect_clicked(|_| {
             println!("Clicked!");
         });

@@ -30,7 +30,7 @@ It now becomes:
 ```rust
 use gtk::{Button, ButtonExt};
 
-let button = Button::new_with_label("Click me!");
+let button = Button::with_label("Click me!");
 button.connect_clicked(|but| {
     but.set_label("I've been clicked!");
 });
@@ -45,7 +45,7 @@ use gtk::{Box, Button, ButtonExt, ContainerExt, WidgetExt};
 let container = Box::new(gtk::Orientation::Vertical, 5);
 // the label which will be modified inside the closure.
 let label = gtk::Label::new("");
-let button = Button::new_with_label("Click me!");
+let button = Button::with_label("Click me!");
 button.connect_clicked(move |_| {
     label.set_label("Button has been clicked!");
 });
@@ -69,7 +69,7 @@ use gtk::{Box, Button, ButtonExt, ContainerExt, WidgetExt};
 let container = Box::new(gtk::Orientation::Vertical, 5);
 // the label which will be modified inside the closure.
 let label = gtk::Label::new("");
-let button = Button::new_with_label("Click me!");
+let button = Button::with_label("Click me!");
 // We clone label so we can send it into the closure.
 let label_clone = label.clone();
 button.connect_clicked(move |_| {
@@ -96,7 +96,7 @@ use std::collections::HashMap;
 use std::rc::Rc;
 
 let windows: Rc<RefCell<HashMap<usize, Window>>> = Rc::new(RefCell::new(HashMap::new()));
-let button = Button::new_with_label("Click me!");
+let button = Button::with_label("Click me!");
 // We copy the reference to the cell containing the hashmap.
 let windows_clone = windows.clone();
 button.connect_clicked(move |_| {
