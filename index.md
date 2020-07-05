@@ -48,6 +48,7 @@ layout: wide
 | [cairo](https://crates.io/crates/cairo-rs) | 1.14 |
 | [gdk](https://crates.io/crates/gdk) | 3.16 |
 | [gdk-pixbuf](https://crates.io/crates/gdk-pixbuf) | 2.32 |
+| [gdk-x11](https://crates.io/crates/gdkx11) | 3.14 |
 | [gio](https://crates.io/crates/gio) | 2.44 |
 | [glib](https://crates.io/crates/glib) | 2.44 |
 | [gtk](https://crates.io/crates/gtk) | 3.16 |

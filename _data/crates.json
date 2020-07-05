@@ -12,6 +12,10 @@
     "max_version": "0.9.0"
   },
   {
+    "name": "gdk-x11",
+    "max_version": "0.9.0"
+  },
+  {
     "name": "gio",
     "max_version": "0.9.0"
   },
