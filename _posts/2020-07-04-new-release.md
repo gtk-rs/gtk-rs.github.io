@@ -46,7 +46,8 @@ crate and provides a couple of proc-macros
     `bitflags` crate. Same as above this can then be used e.g. in a
     `glib::Value`.
 
-Check the [documentation](https://gtk-rs.org/docs/glib-macro/) for details about the above.
+Check the [documentation](https://gtk-rs.org/docs/glib_macros/index.html) for
+details about the above.
 
 #### GdkX11
 
