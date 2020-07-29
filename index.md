@@ -140,6 +140,7 @@ features = ["v3_16"]
 * [gled](https://gitlab.com/pentagonum/gled)
 * [glide](https://github.com/philn/glide)
 * [gpsami](https://gitlab.gnome.org/hub/gpsami)
+* [gtktranslate](https://github.com/skylinecc/gtktranslate)
 * [Icon Library](https://gitlab.gnome.org/World/design/icon-library)
 * [Iridium](https://github.com/matze/iridium)
 * [lognplot](https://github.com/windelbouwman/lognplot)
