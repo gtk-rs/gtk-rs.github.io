@@ -22,7 +22,7 @@ First, prepare your system by taking a look at the [GTK installation page](https
  - [**pangocairo**](../docs/pangocairo/)
  - [**sourceview**](../docs/sourceview/)
 
-## [The GTK+ Project documentation](http://www.gtk.org/documentation.php)
+## [The GTK+ Project documentation](https://www.gtk.org/docs/)
 
 ## Versions
 
