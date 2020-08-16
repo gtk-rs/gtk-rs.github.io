@@ -10,7 +10,14 @@ No sponsors in this tier yet.
 
 ## Gold tier
 
-No sponsors in this tier yet.
+<div class="sponsor-tiers">
+    <a href="https://www.embark-studios.com/">
+        <div>
+            <img alt="Embark Studios" src="/images/embark.png">
+        </div>
+        Embark Studios
+    </a>
+</div>
 
 ## Silver tier
 
