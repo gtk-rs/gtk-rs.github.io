@@ -314,6 +314,10 @@ Another `gir` run:
 > gir
 ```
 
+There is also a third option you can encounter called [NOT GENERATED FUNCTION]. If you see this in your own project, it means you have global functions.
+To generate the code for all of them, add "YourGirName.*" to the generate = [ ] array. You also need to re-export them, so add 
+`pub use self::auto::functions::*;` to your lib.rs file.
+
 (Again, if you do it on another library and it fails and you can't figure out why, don't hesitate to reach us!)
 
 We now have a `src/auto/language.rs` file. We need to include all `auto` files in our library. To do so, let's update the `src/lib.rs` file as follows:
