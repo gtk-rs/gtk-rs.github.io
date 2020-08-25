@@ -544,7 +544,7 @@ pub use prelude::*;
 ```
 
 ### Cannot find macro
-If gir generation fails because it can't find one of the listed macros, it means you’ll have to implement them yourself. Depending on which macro is missing, you can add the following to your lib.rs file:
+If compilation of the generated bindings fails because it can't find one of the listed macros, it means you’ll have to implement them yourself. Depending on which macro is missing, you can add the following to your `lib.rs` file:
 
 /// No-op.
 macro_rules! skip_assert_initialized {
