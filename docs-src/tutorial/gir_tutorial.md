@@ -564,7 +564,8 @@ macro_rules! assert_initialized_main_thread {
     };
 }
 
-One complication here is that the assert_initialized_main_thread macro depends on the exact library. If it's GTK-based then the above macro is likely correct, unless the library has its own initialization function (which would need to be handled in addition to GTK here). For non-GTK-based libraries this macro would do nothing if there's no library initialization function, and otherwise it handles that function.
+One complication here is that the `assert_initialized_main_thread!` macro depends on the exact library. If it's GTK-based then the above macro is likely correct, unless the library has its own initialization function. If it has its own initialization function it would need to be handled in addition to GTK's here in the same way.
+For non-GTK-based libraries this macro would handle the initialization function of that library in the same way, or if there is none would simply do nothing.
 
 ### Other gir options
 
