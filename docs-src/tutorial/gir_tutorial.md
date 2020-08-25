@@ -549,18 +549,18 @@ In case a function is badly generated, you don't **always** need to reimplement 
 
 ### Optional features of your project
 
-If your project depends on a certain feature of a create, there are two ways you can handle this.
+If your project depends on a certain feature of a create, there are two ways you can handle this with your Cargo.toml.
 
-#### A Always enable it
-If you always want to enable this feature, just add `features = ["feature_name"]` to the crate providing the feature.
-
-#### B Enable it with a feature
+#### A: Enable it with a feature
 You can give users of your wrapper the option to enable the feature or leave it disabled. To do that, add
 
 ```toml
 [features]
 my_feature_name = ["crate_providing_feature/feature_name"]
 ```
+
+#### B: Always enable it
+If you always want to enable this feature, just add `features = ["feature_name"]` to the info about the crate providing the feature.
 
 ## Words of the end
 
