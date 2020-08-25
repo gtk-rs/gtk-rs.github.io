@@ -543,6 +543,29 @@ pub mod prelude;
 pub use prelude::*;
 ```
 
+### Cannot find macro
+If gir generation fails because it can't find one of the listed macros, it means you’ll have to implement them yourself. Depending on which macro is missing, you can add the following to your lib.rs file:
+
+/// No-op.
+macro_rules! skip_assert_initialized {
+    () => {};
+}
+
+/// Asserts that this is the main thread and either `gdk::init` or `gtk::init` has been called.
+macro_rules! assert_initialized_main_thread {
+    () => {
+        if !::gtk::is_initialized_main_thread() {
+            if ::gtk::is_initialized() {
+                panic!("GTK may only be used from the main thread.");
+            } else {
+                panic!("GTK has not been initialized. Call `gtk::init` first.");
+            }
+        }
+    };
+}
+
+One complication here is that the assert_initialized_main_thread macro depends on the exact library. If it's GTK-based then the above macro is likely correct, unless the library has its own initialization function (which would need to be handled in addition to GTK here). For non-GTK-based libraries this macro would do nothing if there's no library initialization function, and otherwise it handles that function.
+
 ### Other gir options
 
 In case a function is badly generated, you don't **always** need to reimplement it. Sometimes, it's just an error in the gir files that you can override in your `Gir.toml` file. I recommend you to take a look at the [gir README file](https://github.com/gtk-rs/gir#the-api-mode-toml-config) to see all available options.
