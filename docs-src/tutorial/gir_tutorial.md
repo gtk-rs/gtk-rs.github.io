@@ -560,7 +560,10 @@ my_feature_name = ["crate_providing_feature/feature_name"]
 ```
 
 #### B: Always enable it
-If you always want to enable this feature, just add `features = ["feature_name"]` to the info about the crate providing the feature.
+If you always want to enable this feature, just add `features = ["feature_name"]` to the info about the crate providing the feature. For example if your crate always depends on at least version 3.22 of the `gtk` crate, add the following:
+
+```toml
+gtk = { version = "0.9", features = ["v3_22"] }
 
 ## Words of the end
 
