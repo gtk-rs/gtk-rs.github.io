@@ -150,6 +150,7 @@ features = ["v3_16"]
 * [neovim-gtk](https://github.com/daa84/neovim-gtk)
 * [noaa-apt](https://github.com/martinber/noaa-apt)
 * [pcatk](https://github.com/pwil3058/pcatk)
+* [Pika Backup](https://gitlab.gnome.org/World/pika-backup)
 * [PNMixer-rs](https://github.com/hasufell/pnmixer-rust)
 * [Podcasts](https://gitlab.gnome.org/World/podcasts)
 * [Popsicle](https://github.com/pop-os/popsicle/)
