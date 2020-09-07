@@ -130,6 +130,7 @@ features = ["v3_16"]
 * [Banner Viewer](https://gitlab.gnome.org/World/design/banner-viewer)
 * [BrewStillery](https://gitlab.com/MonkeyLog/BrewStillery)
 * [Cigale](https://github.com/emmanueltouzery/cigale)
+* [color_blinder_gtk](https://gitlab.com/dns2utf8/color_blinder_gtk)
 * [Contrast](https://gitlab.gnome.org/World/design/contrast)
 * [Epicwar Downloader](https://github.com/ab0v3g4me/epicwar-downloader)
 * [Font Finder](https://github.com/mmstick/fontfinder)
@@ -166,4 +167,4 @@ features = ["v3_16"]
 * [Way Cooler](https://github.com/way-cooler)
 * [Whatschanging](https://github.com/mothsART/whatschanging)
 
-If you want yours to be added to this list, please create a [Pull Request](https://github.com/gtk-rs/gtk-rs.github.io/compare?expand=1) for it!
+If you want yours to be added to this list, please create a [Pull Request](https://github.com/gtk-rs/gtk-rs.github.io/edit/master/index.md) for it!
