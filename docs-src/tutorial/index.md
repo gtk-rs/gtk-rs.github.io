@@ -19,8 +19,8 @@ In this part we'll go deeper into the mechanisms of the `Gtk-rs` crates. If you'
  * [Callbacks and closures](closures).
  * [Object-oriented Rust](object_oriented).
  * [Glade](glade).
- * [Cross compiling from linux to windows](cross).
- * [Cross compiling to different arches on linux](cross-linux-arch).
+ * [Cross compiling from Linux to Windows](cross).
+ * [Cross compiling to different arches on Linux](cross-linux-arch).
 
 ## Generating GNOME crate Rust API using `gir`
 
