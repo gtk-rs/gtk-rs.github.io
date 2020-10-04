@@ -12,7 +12,7 @@ layout: wide
 [Rust]: https://www.rust-lang.org/
 [GLib]: https://developer.gnome.org/glib/stable/
 [GTK]: https://developer.gnome.org/gtk3/stable/
-[Cairo]: http://cairographics.org/documentation/
+[Cairo]: https://cairographics.org/documentation/
 [GtkSourceView]: https://wiki.gnome.org/Projects/GtkSourceView
 
   </div>

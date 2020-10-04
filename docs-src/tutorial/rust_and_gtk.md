@@ -6,7 +6,7 @@ layout: default
 
 Before going any further, if you don't know Rust at all, we recommend you to read the official [Rust Book](https://doc.rust-lang.org/book/).
 
-Then we recommend you to learn a bit about [Cargo](http://doc.crates.io/index.html) and check the [GTK requirements](https://www.gtk.org/docs/installations/).
+Then we recommend you to learn a bit about [Cargo](https://doc.crates.io/index.html) and check the [GTK requirements](https://www.gtk.org/docs/installations/).
 
 All done? Perfect!
 

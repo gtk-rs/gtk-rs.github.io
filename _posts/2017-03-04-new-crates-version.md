@@ -16,7 +16,7 @@ Now, instead of having to write:
 ```rust
 let about_dialog = AboutDialog::new();
 
-about_dialog.set_website(Some("http://gtk-rs.org/blog/"));
+about_dialog.set_website(Some("https://gtk-rs.org/blog/"));
 about_dialog.set_website(None);
 ```
 
@@ -25,7 +25,7 @@ You can write:
 ```rust
 let about_dialog = AboutDialog::new();
 
-about_dialog.set_website("http://gtk-rs.org/blog/"); // `Some` isn't need anymore
+about_dialog.set_website("https://gtk-rs.org/blog/"); // `Some` isn't need anymore
 about_dialog.set_website(None);
 ```
 
