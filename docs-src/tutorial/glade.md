@@ -72,7 +72,7 @@ There isn't much to explain in here. If you don't know how to use [Glade](https:
 </interface>
 ```
 
-So in this file, we created a [`Window`](http://gtk-rs.org/docs/gtk/struct.Window.html) containing a [`Button`](http://gtk-rs.org/docs/gtk/struct.Button.html), as simple as that. It also created a [`MessageDialog`](http://gtk-rs.org/docs/gtk/struct.MessageDialog.html) containing a message and a [`Label`](http://gtk-rs.org/docs/gtk/struct.Label.html). Like I said, quite simple.
+So in this file, we created a [`Window`](https://gtk-rs.org/docs/gtk/struct.Window.html) containing a [`Button`](https://gtk-rs.org/docs/gtk/struct.Button.html), as simple as that. It also created a [`MessageDialog`](https://gtk-rs.org/docs/gtk/struct.MessageDialog.html) containing a message and a [`Label`](https://gtk-rs.org/docs/gtk/struct.Label.html). Like I said, quite simple.
 
 Now let's see how you can use this in your Rust code:
 
@@ -86,7 +86,7 @@ let builder = gtk::Builder::new_from_string(glade_src);
 gtk::main();
 ```
 
-Simple isn't it? However, just this code won't show anything. You need to call [`show_all`](http://gtk-rs.org/docs/gtk/trait.WidgetExt.html#tymethod.show_all) method on the [`Window`](http://gtk-rs.org/docs/gtk/struct.Window.html). But for that, you need to get the [`Window`](http://gtk-rs.org/docs/gtk/struct.Window.html) first:
+Simple isn't it? However, just this code won't show anything. You need to call [`show_all`](https://gtk-rs.org/docs/gtk/trait.WidgetExt.html#tymethod.show_all) method on the [`Window`](https://gtk-rs.org/docs/gtk/struct.Window.html). But for that, you need to get the [`Window`](https://gtk-rs.org/docs/gtk/struct.Window.html) first:
 
 ```rust
 // Our window id is "window1".
@@ -94,7 +94,7 @@ let window: gtk::Window = builder.get_object("window1").unwrap();
 window.show_all();
 ```
 
-And that's all. If you need to add signal handlings, you need to do the same. For example, we want to show the [`MessageDialog`](http://gtk-rs.org/docs/gtk/struct.MessageDialog.html) when the [`Button`](http://gtk-rs.org/docs/gtk/struct.Button.html) is clicked. Let's add it:
+And that's all. If you need to add signal handlings, you need to do the same. For example, we want to show the [`MessageDialog`](https://gtk-rs.org/docs/gtk/struct.MessageDialog.html) when the [`Button`](https://gtk-rs.org/docs/gtk/struct.Button.html) is clicked. Let's add it:
 
 ```rust
 let button: gtk::Button = builder.get_object("button1").unwrap();

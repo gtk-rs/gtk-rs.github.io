@@ -3,7 +3,7 @@ title: Gtk-rs
 description: > # this means to ignore newlines until "baseurl:"
   Rust bindings for GTK+ and GLib-based libraries
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://gtk-rs.org" # the base hostname & protocol for your site
+url: "https://gtk-rs.org" # the base hostname & protocol for your site
 github_username: gtk-rs
 permalink: /blog/:year/:month/:day/:title.html
 authors:

@@ -30,7 +30,7 @@ The mingw packages are in the AUR, you can either install manually or use a help
 
 If you can't find gtk precompiled dll, you can follow these steps:
 
-1. Download the 64 bit version of the latest precompiled gtk libraries from [here](http://win32builder.gnome.org/).
+1. Download the 64 bit version of the latest precompiled gtk libraries from [here](https://win32builder.gnome.org/).
 2. Unzip it in a folder. For example, to install it in `/opt/gtkwin`: `mkdir /opt/gtkwin;unzip <file.zip> -d /opt/gtkwin`.
 3. You have to set-up the library to match the installation folder:
 
@@ -151,7 +151,7 @@ edit /wherever/release/share/gtk-3.0/settings.ini
     gtk-font-name = Segoe UI 10
     gtk-xft-rgba = rgb
 
-then download the windows 10 them from http://b00merang.weebly.com/windows-10.html.
+then download the windows 10 them from [https://b00merang.weebly.com/windows-10.html](https://b00merang.weebly.com/windows-10.html).
 
     unzip Windows-10-master.zip
     mv Windows-10-master /wherever/release/share/themes/Windows10

@@ -8,7 +8,7 @@ By default, `Gtk-rs` only provides objects and functions for the Gtk 3.4 version
 
 ## Explanations
 
-If you don't know how `Cargo` features work, I suggest you to take a look at its [documentation](http://doc.crates.io/specifying-dependencies.html#choosing-features) first.
+If you don't know how `Cargo` features work, I suggest you to take a look at its [documentation](https://doc.crates.io/specifying-dependencies.html#choosing-features) first.
 
 Now let's take a look at `Gtk-rs/gtk` crate features:
 
