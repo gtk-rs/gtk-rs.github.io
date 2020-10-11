@@ -132,6 +132,7 @@ features = ["v3_16"]
 * [Cigale](https://github.com/emmanueltouzery/cigale)
 * [color_blinder_gtk](https://gitlab.com/dns2utf8/color_blinder_gtk)
 * [Contrast](https://gitlab.gnome.org/World/design/contrast)
+* [Czkawka](https://github.com/qarmin/czkawka)
 * [Epicwar Downloader](https://github.com/ab0v3g4me/epicwar-downloader)
 * [Font Finder](https://github.com/mmstick/fontfinder)
 * [Fractal](https://gitlab.gnome.org/GNOME/fractal)
