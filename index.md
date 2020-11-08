@@ -165,7 +165,6 @@ features = ["v3_16"]
 * [systemd-manager](https://gitlab.com/mmstick/systemd-manager)
 * [Tau](https://gitlab.gnome.org/World/Tau)
 * [tv-renamer](https://github.com/mmstick/tv-renamer)
-* [Way Cooler](https://github.com/way-cooler)
 * [Whatschanging](https://github.com/mothsART/whatschanging)
 
 If you want yours to be added to this list, please create a [Pull Request](https://github.com/gtk-rs/gtk-rs.github.io/edit/master/index.md) for it!
