@@ -4,7 +4,7 @@ layout: default
 
 # Preparing rust
 
-First install rust normally with rustup. The next step will install the windows toolchain.
+First install Rust normally with rustup. The next step will install the Windows toolchain.
 
     rustup target add x86_64-pc-windows-gnu
 
@@ -14,7 +14,7 @@ Then set up the target in `~/.cargo/config`.
     linker = "x86_64-w64-mingw32-gcc"
     ar = "x86_64-w64-mingw32-gcc-ar"
 
-## Mingw and gtk Installation
+## Mingw and GTK installation
 
 ### Arch Linux
 
@@ -25,55 +25,55 @@ The mingw packages are in the AUR, you can either install manually or use a help
     pacaur -S mingw-w64-pango
     pacaur -S mingw-w64-poppler
     pacaur -S mingw-w64-gtk3
+### Fedora
 
-### Ubuntu and other distributions
+Fedora provides pre-compiled Mingw and GTK packages through its repositories. Both 64 and 32 bits are available (`mingw64-*` vs `mingw32-*`), of which you probably want the 64 bits packages.
 
-If you can't find gtk precompiled dll, you can follow these steps:
+    dnf install mingw64-gcc mingw64-pango mingw64-poppler mingw-w64-gtk3
 
-1. Download the 64 bit version of the latest precompiled gtk libraries from [here](https://win32builder.gnome.org/).
-2. Unzip it in a folder. For example, to install it in `/opt/gtkwin`: `mkdir /opt/gtkwin;unzip <file.zip> -d /opt/gtkwin`.
+### Other distributions
+
+GTK doesn't offer Windows binaries for download anymore, so for distributions that don't package their own Mingw-GTK packages, cross-compiling is much harder. In general the steps are:
+
+1. Download 64 bit Mingw GTK libraries.
+2. Unzip it in a folder. For example, to install it in `/opt/gtkwin`: `mkdir -p /opt/gtkwin && unzip <file.zip> -d /opt/gtkwin`.
 3. You have to set-up the library to match the installation folder:
 
-```    
-cd /opt/gtkwin
-find -name '*.pc' | while read pc; do sed -e "s@^prefix=.*@prefix=$PWD@" -i "$pc"; done
-```
+        cd /opt/gtkwin
+        find -name '*.pc' | while read pc; do sed -e "s@^prefix=.*@prefix=$PWD@" -i "$pc"; done
+
+Finding some place to download the libraries is the challenge however, and there is no ideal solution. Three options are: (1) Getting the most versions from the Fedora RPMs, which can be downloaded [here](https://pkgs.org/search/?q=mingw64); (2) Using the ancient GTK 3.6 available [here](http://www.tarnyko.net/dl/gtk.htm); (3) Delving into GTK's own [recommendations](https://www.gtk.org/docs/installations/windows) for Windows. Be sure to check your own distribution's repository first however.
 
 ## Compiling
 
-Now create your project using gtk-rs (and relm, it's great). if you don't want a terminal window to pop up when running add the following to the top of your main.rs.
+Now create your project using gtk-rs (and relm, it's great). if you don't want a terminal window to pop up when running add the following to the top of your `main.rs`.
 
     #![windows_subsystem = "windows"]
 
-Once you get it working on linux you can compile for windows following these steps.
+Once you get it working on Linux you can compile for Windows following these steps. `PKG_CONFIG_PATH` should point to your Mingw's pkgconfig directory, while `MINGW_PREFIX` should point to Mingw's root installation. For Arch for example:
 
     export PKG_CONFIG_ALLOW_CROSS=1
-    export PKG_CONFIG_PATH=/usr/i686-w64-mingw32/lib/pkgconfig
+    export MINGW_PREFIX=/usr/x86_64-w64-mingw32
+    export PKG_CONFIG_PATH=$MINGW_PREFIX/lib/pkgconfig
     cargo build --target=x86_64-pc-windows-gnu --release
 
-For other distributions than Arch Linux you should `export PKG_CONFIG_PATH=/opt/gtkwin/lib/pkgconfig` or wherever you installed the precompiled binaries.
-
+For Fedora Mingw's prefix is `/usr/x86_64-w64-mingw32/sys-root/mingw/`. For other distributions it is `/opt/gtkwin` or wherever you installed the precompiled binaries.
 
 If you have some problems while compiling, you might want to consider rebooting since this has solved some problem on my side.
 Also, you should be careful when using Glade with gtk-rs. Make sure that the version requested by Glade is at most equal to the version installed on your system. Otherwise it will fail to execute.
 
 ## Packaging
 
-First we setup a variable to specify the installation path of Gtk. If you installed the binaries in a specific folder, you should specify it. For example if you followed this guide for Ubuntu and other distributions, you should change it to `/opt/gtkwin`.
-
-    GTK_INSTALL_PATH=/usr/x86_64-w64-mingw32
-    
-Lastly to package it up.
+We will reuse the `MINGW_PREFIX` path here to copy over relevant files to package it up:
 
     mkdir /wherever/release
     cp target/x86_64-pc-windows-gnu/release/*.exe /wherever/release
-    cp $GTK_INSTALL_PATH/bin/*.dll /wherever/release
+    cp $MINGW_PREFIX/bin/*.dll /wherever/release
     mkdir -p /wherever/release/share/glib-2.0/schemas
-    mkdir /wherever/release/share/icons
-    cp $GTK_INSTALL_PATH/share/glib-2.0/schemas/* /wherever/release/share/glib-2.0/schemas
-    cp -r $GTK_INSTALL_PATH/share/icons/* /wherever/release/share/icons
+    cp $MINGW_PREFIX/share/glib-2.0/schemas/gschemas.compiled /wherever/release/share/glib-2.0/schemas/gschemas.compiled
+    cp -r $MINGW_PREFIX/share/icons /wherever/release/share/icons
 
-After that you can zip up the contents of the /wherever/release folder and distribute it.
+After that you can zip up the contents of the `/wherever/release` folder and distribute it.
 
 ## Optional Extras
 
