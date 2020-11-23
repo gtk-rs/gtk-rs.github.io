@@ -157,6 +157,7 @@ features = ["v3_16"]
 * [Podcasts](https://gitlab.gnome.org/World/podcasts)
 * [Popsicle](https://github.com/pop-os/popsicle/)
 * [process-viewer](https://github.com/GuillaumeGomez/process-viewer)
+* [Projectpad](https://github.com/emmanueltouzery/projectpad2)
 * [relm](https://github.com/antoyo/relm)
 * [rrun](https://github.com/buster/rrun)
 * [Shortwave](https://gitlab.gnome.org/World/Shortwave)
