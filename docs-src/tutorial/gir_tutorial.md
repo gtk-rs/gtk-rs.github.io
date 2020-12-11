@@ -428,7 +428,7 @@ Everything works, yeay! Now if we take a look at our newly generated `src/auto/r
 //fn get_buffer(&self) -> /*Ignored*/Option<gtk::TextBuffer>;
 ```
 
-Some functions are commented. Why so? The reason is simple: we need to tell to `gir` that those types have been generated and that he can generates code using them. We can do it by adding the type into the "manual" list. To put it simply, when [gir] sees an item into this "manual" list, it means to it "this type has been generated somewhere else, you can use it just like the others".
+Some functions are commented. Why so? The reason is simple: we need to tell to `gir` that those types have been generated and that it can generate code using them. We can do it by adding the type into the "manual" list. To put it simply, when [gir] sees an item into this "manual" list, it means to it "this type has been generated somewhere else, you can use it just like the others".
 
 Let's update our `Gir.toml` file once again:
 
