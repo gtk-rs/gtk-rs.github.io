@@ -116,7 +116,7 @@ if gtk::init().is_err() {
     return;
 }
 let glade_src = include_str!("builder_basics.glade");
-let builder = gtk::Builder::new_from_string(glade_src);
+let builder = gtk::Builder::from_string(glade_src);
 
 let window: gtk::Window = builder.get_object("window1").unwrap();
 let button: gtk::Button = builder.get_object("button1").unwrap();
