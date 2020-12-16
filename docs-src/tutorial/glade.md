@@ -80,7 +80,7 @@ Now let's see how you can use this in your Rust code:
 // First we get the file content.
 let glade_src = include_str!("builder_basics.glade");
 // Then we call the Builder call.
-let builder = gtk::Builder::new_from_string(glade_src);
+let builder = gtk::Builder::from_string(glade_src);
 
 // We start the gtk main loop.
 gtk::main();
