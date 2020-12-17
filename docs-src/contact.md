@@ -6,7 +6,7 @@ For general support use the GNOME Discourse or IRC/Matrix.
 
 ## Discourse
 
-[discourse.gnome.org](discourse.gnome.org).
+[discourse.gnome.org](https://discourse.gnome.org).
 
 ## Matrix
 
