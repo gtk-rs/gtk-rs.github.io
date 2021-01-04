@@ -30,6 +30,14 @@ The mingw packages are in the AUR, you can either install manually or use a help
 Fedora provides pre-compiled Mingw and GTK packages through its repositories. Both 64 and 32 bits are available (`mingw64-*` vs `mingw32-*`), of which you probably want the 64 bits packages.
 
     dnf install mingw64-gcc mingw64-pango mingw64-poppler mingw64-gtk3
+### openSUSE
+### Be advised that the windows:mingw:win64 project only provides mingw64-gtk3 at version 3.22-15, you will only be able to compile programs requiring GTK features v3_22-15 and lower.
+
+openSUSE is similar to fedora with differences on the packages to install 
+
+    zypper addrepo https://download.opensuse.org/repositories/windows:mingw:win64/openSUSE_Tumbleweed/windows:mingw:win64.repo
+    zypper refresh
+    zypper in mingw64-gtk3-devel mingw64-cross-gcc
 
 ### Other distributions
 
