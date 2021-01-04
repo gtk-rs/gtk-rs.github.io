@@ -35,7 +35,13 @@ Fedora provides pre-compiled Mingw and GTK packages through its repositories. Bo
 
 openSUSE is similar to fedora with differences on the packages to install 
 
+## Tumbleweed
     zypper addrepo https://download.opensuse.org/repositories/windows:mingw:win64/openSUSE_Tumbleweed/windows:mingw:win64.repo
+## Leap 15.2
+    zypper addrepo https://download.opensuse.org/repositories/windows:mingw:win64/openSUSE_Leap_15.2/windows:mingw:win64.repo
+## Leap 15.1
+    zypper addrepo https://download.opensuse.org/repositories/windows:mingw:win64/openSUSE_Leap_15.1/windows:mingw:win64.repo
+    
     zypper refresh
     zypper in mingw64-gtk3-devel mingw64-cross-gcc
 
