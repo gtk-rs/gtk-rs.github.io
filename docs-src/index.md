@@ -21,6 +21,8 @@ First, prepare your system by taking a look at the [GTK installation page](https
  - [**pango**](../docs/pango/)
  - [**pangocairo**](../docs/pangocairo/)
  - [**sourceview**](../docs/sourceview/)
+ - [**webkit2gtk**](../webkit2gtk-rs/webkit2gtk/)
+ - [**webkit2gtk-webextension-rs**](../webkit2gtk-webextension-rs/webkit2gtk-webextension/)
 
 ## [The GTK+ Project documentation](https://www.gtk.org/docs/)
 
