@@ -33,7 +33,7 @@ marked accordingly and need someone to pick them up.
 We've realized that we can't take the documentation from an LGPL licensed
 library and just slip it into an MIT-licensed one. Consequently we had to move
 almost all doc comments into a [separate repo][doc-comments]. We will keep
-maintaining [online documentation](https://gtk-rs.org/docs-src/) and
+maintaining [online documentation](https://gtk-rs.org/docs/) and
 **@GuillaumeGomez** is working on a tool, that will allow to put the doc
 comments back locally.
 

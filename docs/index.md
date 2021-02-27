@@ -43,6 +43,6 @@ users will have it installed.
 
 ## Tutorials and examples
 
- * [Tutorials](/docs-src/tutorial).
+ * [Tutorials](/docs/tutorial).
  * [Examples repository](https://github.com/gtk-rs/examples).
  * [Projects using `gtk-rs`](/#projects-using-gtk-rs).

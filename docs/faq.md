@@ -32,7 +32,7 @@ Please open an issue on the [examples repository](https://github.com/gtk-rs/exam
 
 Open an issue on the [website](https://github.com/gtk-rs/gtk-rs.github.io) repository and please explain what you didn't understand, in which context and what you're trying to do. The more information we have, the better we'll be able to write the tutorial (if any required).
 
-Also, it's always possible to come ask us directly. Take a look at the [Contact us](/docs-src/contact) page.
+Also, it's always possible to come ask us directly. Take a look at the [Contact us](/docs/contact) page.
 
 ## Why is documentation just a copy of the C one?
 

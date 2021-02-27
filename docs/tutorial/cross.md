@@ -177,6 +177,6 @@ then download the windows 10 them from [https://b00merang.weebly.com/windows-10.
 
 <div class="footer">
 <div><a href="glade">Glade</a>.</div>
-<div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
+<div><a href="/docs/tutorial">Going back to summary</a>.</div>
 <div></div>
 </div>

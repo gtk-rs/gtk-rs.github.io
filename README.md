@@ -8,10 +8,3 @@ When authoring any changes you can try them out locally by running (requires rub
 ```shell
 > bundle exec jekyll serve -wD
 ```
-
-The `/docs/` location is served by the [docs](https://github.com/gtk-rs/docs) repository. Its contents
-should be considered disposable and eventually will be updated via CI.
-
-The documentation in [`docs-src`](docs-src) is not intended to be viewed at the `/docs-src/`
-location. Instead the generated static files (`_site/docs-src/*`) are merged into the `docs` repository,
-keeping a nice urls structure.

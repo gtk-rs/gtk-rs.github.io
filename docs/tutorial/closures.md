@@ -151,6 +151,6 @@ button.connect_clicked(clone!(windows => move |_| {
 
 <div class="footer">
 <div><a href="version">Specifying version</a>.</div>
-<div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
+<div><a href="/docs/tutorial">Going back to summary</a>.</div>
 <div><a href="object_oriented">Object-oriented Rust</a>.</div>
 </div>

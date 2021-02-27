@@ -110,7 +110,7 @@ Just like usual, with the improvements of our gir crate, we are able to generate
 
 #### Conclusion
 
-That's it for this release! Don't forget to take a look at our brand new [F.A.Q. section](https://gtk-rs.org/docs-src/faq).
+That's it for this release! Don't forget to take a look at our brand new [F.A.Q. section](https://gtk-rs.org/docs/faq).
 
 And again: thanks **a lot** to all of our contributors! This project lives thanks to their awesome work!
 

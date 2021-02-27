@@ -63,6 +63,6 @@ I think that with this, you'll be able to write anything you want without too mu
 
 <div class="footer">
 <div><a href="rust_and_gtk">Rust and <code>Gtk-rs</code></a>.</div>
-<div><a href="/docs-src/tutorial">Going back to summary</a>.</div>
+<div><a href="/docs/tutorial">Going back to summary</a>.</div>
 <div><a href="version">Specifying version</a>.</div>
 </div>
