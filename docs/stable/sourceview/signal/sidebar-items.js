@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Inhibit","Whether to propagate the signal to the default handler."]]});
