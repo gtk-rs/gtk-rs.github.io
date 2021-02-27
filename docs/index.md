@@ -9,18 +9,18 @@ First, prepare your system by taking a look at the [GTK installation page](https
 
 ## Crate API docs
 
- - [**atk**](../docs/atk/)
- - [**cairo**](../docs/cairo/)
- - [**gdk**](../docs/gdk/)
- - [**gdk-pixbuf**](../docs/gdk_pixbuf/)
- - [**gdk-x11**](../docs/gdkx11/)
- - [**gio**](../docs/gio/)
- - [**glib**](../docs/glib/)
- - [**glib-macros**](../docs/glib_macros/)
- - [**gtk**](../docs/gtk/)
- - [**pango**](../docs/pango/)
- - [**pangocairo**](../docs/pangocairo/)
- - [**sourceview**](../docs/sourceview/)
+ - [**atk**](../docs/stable/atk/)
+ - [**cairo**](../docs/stable/cairo/)
+ - [**gdk**](../docs/stable/gdk/)
+ - [**gdk-pixbuf**](../docs/stable/gdk_pixbuf/)
+ - [**gdk-x11**](../docs/stable/gdkx11/)
+ - [**gio**](../docs/stable/gio/)
+ - [**glib**](../docs/stable/glib/)
+ - [**glib-macros**](../docs/stable/glib_macros/)
+ - [**gtk**](../docs/stable/gtk/)
+ - [**pango**](../docs/stable/pango/)
+ - [**pangocairo**](../docs/stable/pangocairo/)
+ - [**sourceview**](../docs/stable/sourceview/)
 
 ## [The GTK+ Project documentation](https://www.gtk.org/docs/)
 
