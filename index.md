@@ -149,6 +149,7 @@ features = ["v3_16"]
 * [Marmoset](https://github.com/sprang/marmoset)
 * [mcmmtk](https://github.com/pwil3058/mcmmtk)
 * [media-toc](https://github.com/fengalin/media-toc)
+* [Myxer](https://github.com/Aurailus/Myxer)
 * [neovim-gtk](https://github.com/daa84/neovim-gtk)
 * [noaa-apt](https://github.com/martinber/noaa-apt)
 * [pcatk](https://github.com/pwil3058/pcatk)
