@@ -30,7 +30,7 @@ The mingw packages are in the AUR, you can either install manually or use a help
 
 Fedora provides pre-compiled Mingw and GTK packages through its repositories. Both 64 and 32 bits are available (`mingw64-*` vs `mingw32-*`), of which you probably want the 64 bits packages.
 
-    dnf install mingw64-gcc mingw64-pango mingw64-poppler mingw64-gtk3
+    dnf install mingw64-gcc mingw64-pango mingw64-poppler mingw64-gtk3 mingw64-winpthreads-static
 
 ### openSUSE
 
