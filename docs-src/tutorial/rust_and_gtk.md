@@ -50,7 +50,7 @@ Then just compile normally, `cargo` will update the dependency by itself.
 
 ## Examples
 
-Now that you know how to import `Gtk-rs` crates into your code, looking at the [examples repository](https://github.com/gtk-rs/examples/) could be a great idea!
+Now that you know how to import `Gtk-rs` crates into your code, looking at the examples directory in the [`gtk-rs` repository](https://github.com/gtk-rs/gtk-rs/) could be a great idea!
 
 <div class="footer">
 <div></div>

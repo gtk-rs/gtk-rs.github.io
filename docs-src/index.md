@@ -44,5 +44,5 @@ users will have it installed.
 ## Tutorials and examples
 
  * [Tutorials](/docs-src/tutorial).
- * [Examples repository](https://github.com/gtk-rs/examples).
+ * [Examples directory in the `gtk-rs` repository](https://github.com/gtk-rs/gtk-rs).
  * [Projects using `gtk-rs`](/#projects-using-gtk-rs).
