@@ -10,7 +10,7 @@ The previous posts were about the `Gtk-rs` libraries and issues we encountered. 
 
 ### Story of imperio
 
-At first, the `Gtk-rs` organization didn't exist. This was a project to provide `GTK+` bindings for `Rust`, started by jeremyletang. I joined him to speed up the development.
+At first, the `Gtk-rs` organization didn't exist. This was a project to provide `GTK` bindings for `Rust`, started by jeremyletang. I joined him to speed up the development.
 
 At the time, `Rust` wasn't even at its first stable version and breaking changes happened quite often. So beside working on the library itself, we had to make sure it still built with the current `Rust` version. As the project continued to grow, it became more and more difficult to add new features and update the project's code at the same time (the biggest issue was updating all of the old signals system).
 
