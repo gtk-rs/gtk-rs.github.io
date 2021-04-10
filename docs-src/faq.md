@@ -26,7 +26,7 @@ The crate is then proposed to the **Gtk-rs** members. If no one has objections o
 
 ## I want more **Gtk-rs** examples!
 
-Please open an issue on the [examples repository](https://github.com/gtk-rs/examples/).
+Please open an issue on the [`gtk-rs` repository](https://github.com/gtk-rs/gtk-rs/).
 
 ## I didn't understand something and the tutorials don't talk about.
 
