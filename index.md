@@ -5,7 +5,7 @@ layout: wide
 <div class="intro-col-wrapper">
   <div class="intro-col intro-col-1" markdown="1">
 
-## [Rust] bindings for [GTK+ 3][GTK], [Cairo], [GtkSourceView] and other [GLib]-compatible libraries
+## [Rust] bindings for [GTK 3][GTK], [Cairo], [GtkSourceView] and other [GLib]-compatible libraries
 
 [![GTK screenshot](gtk.png)](gtk.png)
 
@@ -100,7 +100,7 @@ fn main() {
 
     application.connect_activate(|app| {
         let window = ApplicationWindow::new(app);
-        window.set_title("First GTK+ Program");
+        window.set_title("First GTK Program");
         window.set_default_size(350, 70);
 
         let button = Button::with_label("Click me!");

@@ -71,7 +71,7 @@ updating the installed libraries could trigger confusing build failures.
 Explicitly selecting the version avoids sudden breakage and keeps the user
 conscious and in control of their project's requirements.
 
-*   The version features have been [reintroduced][gtk248]. The baseline GTK+ version
+*   The version features have been [reintroduced][gtk248]. The baseline GTK version
     is 3.4, you can opt into higher versions like this:
 
     ~~~toml

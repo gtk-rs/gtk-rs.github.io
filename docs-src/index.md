@@ -22,11 +22,11 @@ First, prepare your system by taking a look at the [GTK installation page](https
  - [**pangocairo**](../docs/pangocairo/)
  - [**sourceview**](../docs/sourceview/)
 
-## [The GTK+ Project documentation](https://www.gtk.org/docs/)
+## [The GTK Project documentation](https://www.gtk.org/docs/)
 
 ## Versions
 
-By default the `gtk` crate provides only GTK+ 3.14 APIs. You can access more
+By default the `gtk` crate provides only GTK 3.14 APIs. You can access more
 modern APIs by selecting one of the following features: `v3_16`, `v3_18`, `v3_20`, `v3_22`, `v3_24`, `v3_26`, `v3_28`, `v3_30`.
 
 `Cargo.toml` example:

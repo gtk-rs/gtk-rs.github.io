@@ -10,7 +10,7 @@ date: 2020-04-02 18:00:00 +0000
 Hi everyone!
 
 The [gtk-rs organization][gtk-rs] has been created in 2015. The original goal was to bring
-[GTK+][GTK+] library and other libraries from the GNOME platform to the [Rust language][Rust]. We
+[GTK][GTK] library and other libraries from the GNOME platform to the [Rust language][Rust]. We
 now provide 19 bindings and that number will certainly increase even more in the future.
 
 As this number continues to increase, our needs are increasing as well. At the same time, various
@@ -29,6 +29,6 @@ If you're using [gtk-rs][gtk-rs] and want/can support us, any donation is very w
 done [here][opencollective].
 
 [gtk-rs]: https://github.com/gtk-rs
-[GTK+]: https://www.gtk.org/
+[GTK]: https://www.gtk.org/
 [Rust]: https://www.rust-lang.org/
 [opencollective]: https://opencollective.com/gtk-rs
