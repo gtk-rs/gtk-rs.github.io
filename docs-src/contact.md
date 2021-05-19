@@ -16,12 +16,4 @@ You can connect using: **[#rust:gnome.org][]**.
 
 # Contact Gtk-rs developers
 
-However, if you want to contact the `Gtk-rs` developers directly, there are multiple ways:
-
-## IRC
-
-Channel #rust on **irc.gimp.org** server.
-
-## Github
-
-Of course, you can also just open an issue on our [repositories](https://github.com/gtk-rs) on github. However, please keep in mind that issues on `Gtk-rs` should be for bug reports or feature requests and not general support.
+However, if you want to contact the `Gtk-rs` developers directly, there are multiple ways, either you can go on matrix as shown above or you can also just open an issue on our [repositories](https://github.com/gtk-rs) on github. However, please keep in mind that issues on `gtk-rs` should be for bug reports or feature requests and not general support.
