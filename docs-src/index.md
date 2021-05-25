@@ -7,6 +7,24 @@ layout: default
 
 First, prepare your system by taking a look at the [GTK installation page](https://www.gtk.org/docs/installations/).
 
+### Setup on Windows
+
+On Windows, some Rust-specific steps are necessary:
+
+1. If you haven't already, [install rustup](https://rustup.rs/)
+2. [Install MSYS2](https://www.msys2.org/)
+3. Open a cmd prompt (not MSYS2 terminal) and run these commands:
+
+       set PATH=C:\msys64\mingw64\bin;%PATH%;C:\msys64\usr\bin
+       set PKG_CONFIG_PATH=C:\msys64\mingw64\lib\pkgconfig
+       set RUSTUP_TOOLCHAIN=stable-x86_64-pc-windows-gnu
+
+       rustup toolchain install stable-x86_64-pc-windows-gnu
+       pacman -S pkg-config mingw-w64-x86_64-gcc mingw-w64-x86_64-gtk3
+
+Now you should able to `cargo run` your Rust project.
+Note that you need to setup the environment variables as above each time you start a new terminal.
+
 ## Crate API docs
 
  - [**atk**](../docs/atk/)
