@@ -368,7 +368,9 @@ git = "https://github.com/gtk-rs/glib"
 git = "https://github.com/gtk-rs/sys" # all gtk-rs sys crates are in the sys repository
 ```
 
-And to import those crates into `src/lib.rs`:
+While you are at it, you should also change the edition to 2015 or remove the field entirely from your Cargo.toml. This is advised because gir has an [issue](https://github.com/gtk-rs/gir/issues/746) with the 2018 edition of Rust. Don't worry, the created wrapper will work with the 2018 edition just fine.
+
+And to import the `libc` and `bitflags crates into `src/lib.rs`:
 
 ```rust
 #[macro_use]
@@ -550,6 +552,7 @@ In case a function is badly generated, you don't **always** need to reimplement 
 ## Words of the end
 
 That's it, with this we should be able to generate any GNOME crate you want. Happy coding!
+You can easily publish your generated bindings and the wrapper to crates.io to allow others to use it. It is best to publish both but in separate crates so people can chose the one they want. Publishing crates is surprisingly easy. If this is your first time, you can follow the guide from the [Rust book](https://doc.rust-lang.org/cargo/reference/publishing.html). Crates.io needs additional information in your Cargo.toml. Gir will not override them when you re-generate bindings. Easy right?
 
 [gir]: https://github.com/gtk-rs/gir
 
