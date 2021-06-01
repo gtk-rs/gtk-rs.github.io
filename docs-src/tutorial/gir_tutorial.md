@@ -368,7 +368,9 @@ git = "https://github.com/gtk-rs/glib"
 git = "https://github.com/gtk-rs/sys" # all gtk-rs sys crates are in the sys repository
 ```
 
-And to import those crates into `src/lib.rs`:
+While you are at it, you should also change the edition to 2015 or remove the field entirely from your Cargo.toml. This is advised because gir has an [issue](https://github.com/gtk-rs/gir/issues/746) with the 2018 edition of Rust. Don't worry, the created wrapper will work with the 2018 edition just fine.
+
+And to import the `libc` and `bitflags crates into `src/lib.rs`:
 
 ```rust
 #[macro_use]
