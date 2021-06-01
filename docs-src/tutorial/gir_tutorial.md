@@ -547,6 +547,24 @@ pub use prelude::*;
 
 In case a function is badly generated, you don't **always** need to reimplement it. Sometimes, it's just an error in the gir files that you can override in your `Gir.toml` file. I recommend you to take a look at the [gir README file](https://github.com/gtk-rs/gir#the-api-mode-toml-config) to see all available options.
 
+### Optional features of your project
+
+If your project depends on a certain feature of a crate, there are two ways you can handle this with your `Cargo.toml`.
+
+#### A: Enable it with a feature
+You can give users of your wrapper the option to enable the feature or leave it disabled. To do that, add
+
+```toml
+[features]
+my_feature_name = ["crate_providing_feature/feature_name"]
+```
+
+#### B: Always enable it
+If you always want to enable this feature, just add `features = ["feature_name"]` to the info about the crate providing the feature. For example if your crate always depends on at least version 3.22 of the `gtk` crate, add the following:
+
+```toml
+gtk = { version = "0.9", features = ["v3_22"] }
+
 ## Words of the end
 
 That's it, with this we should be able to generate any GNOME crate you want. Happy coding!
