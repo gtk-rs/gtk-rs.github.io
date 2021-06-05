@@ -1,38 +1,38 @@
 [
   {
+    "section": "Core",
+
     "name": "cairo-rs",
-    "max_version": "0.9.0"
-  },
-  {
-    "name": "gdk",
-    "max_version": "0.13.0"
-  },
-  {
-    "name": "gdk-pixbuf",
-    "max_version": "0.9.0"
-  },
-  {
-    "name": "gdk-x11",
-    "max_version": "0.9.0"
+    "max_version": "0.14.0",
+    "repo": "gtk-rs-core"
   },
   {
     "name": "gio",
-    "max_version": "0.9.0"
+    "max_version": "0.14.0",
+    "repo": "gtk-rs-core"
   },
   {
     "name": "glib",
-    "max_version": "0.10.0"
-  },
-  {
-    "name": "gtk",
-    "max_version": "0.9.0"
+    "max_version": "0.14.0",
+    "repo": "gtk-rs-core"
   },
   {
     "name": "pango",
-    "max_version": "0.9.0"
+    "max_version": "0.14.0",
+    "repo": "gtk-rs-core"
   },
   {
-    "name": "sourceview",
-    "max_version": "0.9.0"
+    "section": "GTK 3",
+
+    "name": "gtk",
+    "max_version": "0.14.0",
+    "repo": "gtk3-rs"
+  },
+  {
+    "section": "GTK 4",
+
+    "name": "gtk4",
+    "max_version": "0.1.0",
+    "repo": "gtk4-rs"
   }
 ]

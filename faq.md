@@ -14,25 +14,17 @@ Also, please keep in mind that **Gtk-rs** members and contributors are doing it 
 
 ## How are **Gtk-rs** maintained crates selected?
 
-This entirely depends on a few criterias:
-
- * Are they a lot of users asking for it?
- * Can it be generated using [gir](https://github.com/gtk-rs/gir)?
- * Is anyone interested into maintaining it?
-
-As long as two of these criterias are fulfilled, we can move to the next step.
-
-The crate is then proposed to the **Gtk-rs** members. If no one has objections or there are no particular technical issues on writing the binding for this crate, the work can start.
+Currenlty we only add crates to the GTK-rs project that are required for the existing stack. A growing collection of other projects that are based on GTK-rs and gir can be found on the [GNOME GitLab](https://gitlab.gnome.org/World/Rust).
 
 ## I want more **Gtk-rs** examples!
 
-Please open an issue on the [`gtk-rs` repository](https://github.com/gtk-rs/gtk-rs/).
+You can find more examples in the corresponding respositories
 
-## I didn't understand something and the tutorials don't talk about.
+- [gtk-rs-core/examples](https://github.com/gtk-rs/gtk-rs-core/tree/master/examples)
+- [gtk3-rs/examples](https://github.com/gtk-rs/gtk3-rs/tree/master/examples)
+- [gtk4-rs/examples](https://github.com/gtk-rs/gtk4-rs/tree/master/examples)
 
-Open an issue on the [website](https://github.com/gtk-rs/gtk-rs.github.io) repository and please explain what you didn't understand, in which context and what you're trying to do. The more information we have, the better we'll be able to write the tutorial (if any required).
-
-Also, it's always possible to come ask us directly. Take a look at the [Contact us](/docs-src/contact) page.
+or have a look at the source code of the projects listed on our [start page](/#projects-using-gtk-rs).
 
 ## Why is documentation just a copy of the C one?
 
@@ -49,12 +41,13 @@ Currently, documentation is generated as follows:
 
 If you want to have it locally, you'll have to run this command:
 
-```
-cargo doc --features embed-lgpl-docs
+```sh
+cargo install rustdoc-stripper
+./generator.py --embed-docs
 ```
 
-Don't forget to add the version you're using currently (depending on the crate of course). For example:
+You will need rust nightly to build the docs.
 
 ```
-cargo doc --features embed-lgpl-docs v3_22_20
+cargo +nightly doc --features dox --no-deps --open
 ```

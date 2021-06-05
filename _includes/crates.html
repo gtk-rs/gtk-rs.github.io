@@ -1,0 +1,25 @@
+<table>
+<thead>
+  <tr><th>Project</th><th colspan="2">Crate</th><th>Docs</th></tr>
+</thead>
+<tbody>
+{% for crate in site.data.crates %}
+  <tr>
+    <td class="section">
+      <a href="/{{crate.repo}}">{{crate.section}}</a>
+    </td>
+    <td>
+      <a href="https://crates.io/crates/{{crate.name}}">
+        {{crate.name}}
+      </a>
+    </td>
+    <td>
+      v{{crate.max_version}}
+    </td>
+    <td class="docs">
+      <a href="/{{crate.repo}}/stable/latest/docs">🕮</a>
+    </td>
+  </tr>
+{% endfor %}
+</tbody>
+</table>

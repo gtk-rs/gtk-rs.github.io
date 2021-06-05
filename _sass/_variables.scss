@@ -1,0 +1,43 @@
+// Our variables
+$base-font-family:   Helvetica, Arial, sans-serif;
+$base-font-size:     17px;
+$small-font-size:    $base-font-size * 0.875;
+$base-line-height:   1.3;
+
+$headings-font-family:  Cantarell, Helvetica, Arial, sans-serif;
+$headings-color:        #3d3846;
+
+$spacing-unit:       25px;
+
+$text-color:         #3d3846;
+$background-color:   #f6f5f4;
+$brand-color:        #813d9c;
+
+$grey-color:         #828282;
+$grey-color-light:   lighten($grey-color, 40%);
+
+$on-palm:            675px;
+$on-laptop:          820px;
+
+$header-borders:     6px;
+$header-line-height: 56px;
+$content-padding:    10px;
+
+$header-color-1:    #241f31;
+$header-color-2:    #3d3846;
+$header-text-color: #dc8add;
+
+$box-background:    linear-gradient(150deg, #241f31, #3d3846);
+
+// Using media queries with like this:
+// @include media-query($palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
