@@ -26,7 +26,6 @@
         display: inline-block;
         height: 110px;
         width: 110px;
-        border-radius: 50%;
         background-image: url('/logo.svg');
         content: '';
         vertical-align: middle;
@@ -182,7 +181,7 @@ ul.contact {
 
     a {
         line-height: 2em;
-        display: flex;
+        display: inline-flex;
         text-decoration: none;
 
         svg {
