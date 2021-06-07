@@ -15,15 +15,23 @@
     margin: 2.5rem 1.5rem;
     display: inline-block;
 
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding-left: 120px;
-    line-height: 100px;
+    padding-left: 1rem;
 
     transition: 0.2s;
     transition-property: transform, opacity;
 
-    background-image: url('../images/gtk-rs.png');
+    &::before {
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 110px;
+        width: 110px;
+        border-radius: 50%;
+        background-image: url('/logo.svg');
+        content: '';
+        vertical-align: middle;
+        margin-right: 1.6rem;
+    }
 
     &:hover {
         opacity: 0.9;
@@ -131,49 +139,64 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
-    }
 
-    svg {
-        width: 1.2em;
-        margin-right: 0.6em;
-        display: inline-block;
-        path {
-            fill: white;
+        ul {
+            margin: 0;
         }
-    }
 
-    a {
-        color: white;
-        text-decoration: none;
-        line-height: 2em;
-        display: flex;
+        a {
+            color: white;
 
-        &:hover {
-            color: #CCC;
+            &:hover {
+                color: #CCC;
+            }
+        }
 
-            svg {
-                path {
-                    fill: #CCC;
-                }
+
+        & > a {
+            font-size: 0.8em;
+            display: inline-block;
+            text-decoration: none;
+
+            img {
+                width: auto;
+                height: 5rem;
+                display: block;
+                padding-top: 0.3em;
+                transition: opacity 0.3s;
+            }
+
+            &:hover img {
+                opacity: 0.8;
             }
         }
     }
+}
+
+ul.contact {
 
     li {
         list-style: none;
     }
 
-    .wrapper > div {
-        font-size: 0.8em;
-        line-height: 0;
-    }
 
-    img {
-        height: 5em;
-        width: auto;
-        margin-left: auto;
-        display: block;
-        padding-top: 1em;
+    a {
+        line-height: 2em;
+        display: flex;
+        text-decoration: none;
+
+        svg {
+            width: 1.2em;
+            padding-top: 1px;
+            margin-right: 0.6em;
+            path {
+                fill: currentcolor;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 
@@ -368,13 +391,13 @@ section.special {
         text-align: center;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        margin-left: 0;
     }
 
     li {
         list-style: none;
         display: inline-block;
-        flex-grow: 1;
     }
 
 
@@ -383,7 +406,7 @@ section.special {
         font-family: $headings-font-family;
         font-weight: 600;
 
-        padding: 0 0.8em;
+        padding: 0 1em;
         margin: 0.15em 0.3em;
         line-height: 3em;
         vertical-align: center;

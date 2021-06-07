@@ -6,8 +6,7 @@ layout: default
 
 For general support use the GNOME Discourse or the Matrix chat.
 
-- GNOME Discourse **[discourse.gnome.org](https://discourse.gnome.org)**
-- Matrix channel **[#rust:gnome.org](https://matrix.to/#/#rust:gnome.org)**
+{% include contact.html %}
 
 ### Contact Gtk-rs developers
 
