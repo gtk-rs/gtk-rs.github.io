@@ -7,7 +7,7 @@ layout: no-wrapper
 # Unlock the GNOME stack for Rust
 
 <p style="text-align: center; margin: 0 2em;" markdown="1">
-The GTK-rs project provides safe bindings to the [Rust] language for fundamental libraries from the GNOME stack like [GLib], [Cairo], [GTK 3][GTK] and [GTK 4][GTK].
+The *gtk-rs* project provides safe bindings to the [Rust] language for fundamental libraries from the GNOME stack like [GLib], [Cairo], [GTK 3][GTK] and [GTK 4][GTK].
 </p>
 
 [Rust]: https://www.rust-lang.org
@@ -30,7 +30,7 @@ The GTK-rs project provides safe bindings to the [Rust] language for fundamental
 
 ## Available crates
 
-The following table contains the most popular crates of GTK-rs. More information on all existing crates is available under the corresponding *Project* links.
+The following table contains the most popular crates of *gtk-rs*. More information on all existing crates is available under the corresponding *Project* links.
 
 {% include crates.html %}
 
@@ -46,7 +46,7 @@ The following table contains the most popular crates of GTK-rs. More information
 
 <div markdown="1">
 Julian Hofer is writing a book titled [*GUI development with Rust and GTK 4*][book].
-We most warmly recommend GTK-rs users to have a look at this book.
+We most warmly recommend *gtk-rs* users to have a look at this book.
 While this book is targeted at GTK 4 developers, it also covers more general
 aspects of GLib like *GObject Concepts*, *The Main Event Loop* or *GSettings*.
 
@@ -83,7 +83,7 @@ Thanks to everyone supporting us on [open collective][opencollective]! A list of
 
 [opencollective]: https://opencollective.com/gtk-rs
 
-## Projects using GTK-rs
+## Projects using gtk-rs
 
 <div class="projects-overview">
 {% capture projects %}{% include projects.md %}{% endcapture %}
