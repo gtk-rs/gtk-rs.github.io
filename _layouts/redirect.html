@@ -1,0 +1,11 @@
+ <html>
+ <head>
+  {% include head.html %}
+
+  <meta http-equiv="refresh" content="0; url={{ page.redirect }}" />
+  <link rel="canonical" href="{{ page.redirect }}" />
+ </head>
+ <body>
+  This page has moved to the <a href="{{ page.redirect }}">new location "{{ page.redirect }}"</a>.
+ </body>
+ </html>
