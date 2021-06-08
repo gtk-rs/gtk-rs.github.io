@@ -8,15 +8,15 @@ Here are some questions we answered a few times. If one is missing, don't hesita
 
 ## Why are releases so long?
 
-The *gtk-rs* organization is not just some *GNOME* libraries bindings in Rust but also an ecosystem. A change in a crate can force all other crates to be regenerated!
+The **gtk-rs** organization is not just some **GNOME** libraries bindings in Rust but also an ecosystem. A change in a crate can force all other crates to be regenerated!
 
-Also, please keep in mind that *gtk-rs* members and contributors are doing it **freely** on their **free time**. That slows things down but at least, they're done. :)
+Also, please keep in mind that **gtk-rs** members and contributors are doing it **freely** on their **free time**. That slows things down but at least, they're done. :)
 
 ## How are gtk-rs maintained crates selected?
 
-Currenlty we only add crates to the gtk-rs project that are required for the existing stack. A growing collection of other projects that are based on *gtk-rs* and gir can be found on the [GNOME GitLab](https://gitlab.gnome.org/World/Rust).
+Currenlty we only add crates to the gtk-rs project that are required for the existing stack. A growing collection of other projects that are based on **gtk-rs** and gir can be found on the [GNOME GitLab](https://gitlab.gnome.org/World/Rust).
 
-## I want more **gtk-rs** examples!
+## I want more gtk-rs examples!
 
 You can find more examples in the corresponding respositories
 
@@ -32,7 +32,7 @@ Considering the massive amount of documentation that would need to be written if
 
 ## Why isn't documentation directly into the source files and how can I have it locally?
 
-Simple answer: because of license issues. *GNOME* is under *LGPL* whereas *gtk-rs* is under *MIT*. If we included *GNOME* docs directly into the source code, we'd have to switch the license to match the *GNOME* one.
+Simple answer: because of license issues. **GNOME** is under **LGPL** whereas **gtk-rs** is under **MIT**. If we included **GNOME** docs directly into the source code, we'd have to switch the license to match the **GNOME** one.
 
 Currently, documentation is generated as follows:
 

@@ -7,7 +7,7 @@ layout: no-wrapper
 # Unlock the GNOME stack for Rust
 
 <p style="text-align: center; margin: 0 2em;" markdown="1">
-The *gtk-rs* project provides safe bindings to the [Rust] language for fundamental libraries from the GNOME stack like [GLib], [Cairo], [GTK 3][GTK] and [GTK 4][GTK].
+The **gtk-rs** project provides safe bindings to the [Rust] language for fundamental libraries from the GNOME stack like [GLib], [Cairo], [GTK 3][GTK] and [GTK 4][GTK].
 </p>
 
 [Rust]: https://www.rust-lang.org
@@ -30,9 +30,105 @@ The *gtk-rs* project provides safe bindings to the [Rust] language for fundament
 
 ## Available crates
 
-The following table contains the most popular crates of *gtk-rs*. More information on all existing crates is available under the corresponding *Project* links.
+The following table contains the most popular crates of **gtk-rs**. More information on all existing crates is available under the corresponding *Project* links.
 
+<!--
 {% include crates.html %}
+-->
+
+<table>
+<thead>
+  <tr><th>Project</th><th colspan="2">Crate</th><th>Docs</th></tr>
+</thead>
+<tbody>
+
+  <tr>
+    <td class="section">
+      <a href="/gtk-rs-core">Core</a>
+    </td>
+    <td>
+      <a href="https://crates.io/crates/cairo-rs">
+        cairo-rs
+      </a>
+    </td>
+    <td>
+      v0.9.0
+    </td>
+    <td class="docs">
+      <a href="/gtk-rs-core/stable/latest/docs/cairo">🕮</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="section">
+      <a href="/gtk-rs-core"></a>
+    </td>
+    <td>
+      <a href="https://crates.io/crates/gio">
+        gio
+      </a>
+    </td>
+    <td>
+      v0.9.0
+    </td>
+    <td class="docs">
+      <a href="/gtk-rs-core/stable/latest/docs/gio">🕮</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="section">
+      <a href="/gtk-rs-core"></a>
+    </td>
+    <td>
+      <a href="https://crates.io/crates/glib">
+        glib
+      </a>
+    </td>
+    <td>
+      v0.10.0
+    </td>
+    <td class="docs">
+      <a href="/gtk-rs-core/stable/latest/docs/glib">🕮</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="section">
+      <a href="/gtk-rs-core"></a>
+    </td>
+    <td>
+      <a href="https://crates.io/crates/pango">
+        pango
+      </a>
+    </td>
+    <td>
+      v0.9.0
+    </td>
+    <td class="docs">
+      <a href="/gtk-rs-core/stable/latest/docs/pango">🕮</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="section">
+      <a href="/gtk3-rs">GTK 3</a>
+    </td>
+    <td>
+      <a href="https://crates.io/crates/gtk">
+        gtk
+      </a>
+    </td>
+    <td>
+      v0.9.0
+    </td>
+    <td class="docs">
+      <a href="/docs/gtk/">🕮</a>
+    </td>
+  </tr>
+
+</tbody>
+</table>
 
 </section>
 
@@ -46,9 +142,9 @@ The following table contains the most popular crates of *gtk-rs*. More informati
 
 <div markdown="1">
 Julian Hofer is writing a book titled [*GUI development with Rust and GTK 4*][book].
-We most warmly recommend *gtk-rs* users to have a look at this book.
+We most warmly recommend **gtk-rs** users to have a look at this book.
 While this book is targeted at GTK 4 developers, it also covers more general
-aspects of GLib like *GObject Concepts*, *The Main Event Loop* or *GSettings*.
+aspects of GLib like **GObject Concepts**, **The Main Event Loop** or **GSettings**.
 
 - **Online Book:** [GUI development with Rust and GTK 4][book]
 
