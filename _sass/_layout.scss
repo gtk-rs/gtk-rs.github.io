@@ -180,14 +180,16 @@ ul.contact {
 
 
     a {
-        line-height: 2em;
-        display: inline-flex;
+        line-height: 2.2em;
         text-decoration: none;
+        display: inline-block;
+        vertical-align: middle;
 
         svg {
             width: 1.2em;
-            padding-top: 1px;
+            padding-bottom: 3px;
             margin-right: 0.6em;
+            vertical-align: middle;
             path {
                 fill: currentcolor;
             }
