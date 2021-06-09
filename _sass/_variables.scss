@@ -7,17 +7,12 @@ $base-line-height:   1.3;
 $headings-font-family:  Cantarell, Helvetica, Arial, sans-serif;
 $headings-color:        #3d3846;
 
-$spacing-unit:       25px;
-
 $text-color:         #3d3846;
 $background-color:   #f6f5f4;
 $brand-color:        #813d9c;
 
 $grey-color:         #828282;
 $grey-color-light:   lighten($grey-color, 40%);
-
-$on-palm:            675px;
-$on-laptop:          820px;
 
 $header-borders:     6px;
 $header-line-height: 56px;
@@ -29,11 +24,19 @@ $header-text-color: #dc8add;
 
 $box-background:    linear-gradient(150deg, #241f31, #3d3846);
 
+$on-mobile: 600px;
+
+body {
+    --content-width: 800px;
+    --spacing-unit: 26px;
+    --spacing-unit-half: calc(var(--spacing-unit) / 2);
+}
+
 // Using media queries with like this:
 // @include media-query($palm) {
 //     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
+//         padding-right: var(--spacing-unit-half);
+//         padding-left: var(--spacing-unit-half);
 //     }
 // }
 @mixin media-query($device) {

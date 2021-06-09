@@ -49,71 +49,41 @@
 .site-nav {
     float: right;
 
-    .trigger {
+    ul {
         display: flex;
         justify-content: flex-end;
+        flex-wrap: wrap;
+
+        margin: 0;
         margin-right: 1.5rem;
-    }
 
-    .menu-icon {
-        display: none;
-    }
+        li {
+            list-style: none;
+            display: inline-block;
 
-    .page-link {
-        color: $header-text-color;
-        line-height: 3em;
-        margin: 0 1rem;
-        font-weight: bold;
-        transition: 0.3s;
-        transition-property: color;
-        border-radius: 7px;
-    }
+            a {
+                color: $header-text-color;
+                line-height: 3em;
+                margin: 0 1rem;
+                font-weight: bold;
+                transition: 0.3s;
+                transition-property: color;
+                border-radius: 7px;
 
-    .page-link:hover {
-        color: white;
-    }
-
-    @include media-query($on-laptop) {
-        position: absolute;
-        top: 1.5em;
-        right: 1.5em;
-        border: 1px solid white;
-        border-radius: 5px;
-        background: $box-background;
-
-        .page-link {
-            float: none;
-            display: block;
-            padding: 0 1.5em;
-        }
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: white;
+                &:hover {
+                    color: white;
                 }
             }
         }
+    }
 
-        .trigger {
-            clear: both;
-            display: none;
-        }
+    @include media-query($on-mobile) {
+        float: none;
+        margin-bottom: -1rem;
 
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
+        ul {
+            justify-content: center;
+            margin-right: 0;
         }
     }
 }
@@ -219,7 +189,7 @@ section.special {
     list-style: none;
 
     > li {
-        margin-bottom: $spacing-unit;
+        margin-bottom: var(--spacing-unit);
     }
 }
 
@@ -271,17 +241,13 @@ section.special {
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit;
+    margin-bottom: var(--spacing-unit);
 }
 
 .post-title {
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
 }
 
 /**

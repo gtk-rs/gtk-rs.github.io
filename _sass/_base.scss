@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: var(--spacing-unit-half);
 }
 
 
@@ -72,7 +72,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+    margin-left: var(--spacing-unit);
 }
 
 li {
@@ -166,7 +166,7 @@ td.docs {
 blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
+    padding-left: var(--spacing-unit-half);
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
@@ -212,13 +212,9 @@ code {
  * Wrapper
  */
 .wrapper {
-    padding-left: calc(50vw - 400px);
-    padding-right: calc(50vw - 400px);
-
-    @include media-query($on-laptop) {
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
+    --padding: calc(50vw - (var(--content-width) / 2) + var(--spacing-unit-half));
+    padding-left: max(var(--padding), var(--spacing-unit-half));
+    padding-right: max(var(--padding), var(--spacing-unit-half));
 }
 
 section {
