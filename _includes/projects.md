@@ -10,6 +10,7 @@
 * [Fractal](https://gitlab.gnome.org/GNOME/fractal)
 * [Garta](https://github.com/zaari/garta)
 * [Gattii](https://gitlab.com/susurrus/gattii)
+* [Gfret](https://gitlab.com/jeang3nie/gfret)
 * [GNvim](https://github.com/vhakulinen/gnvim)
 * [gled](https://gitlab.com/pentagonum/gled)
 * [glide](https://github.com/philn/glide)
