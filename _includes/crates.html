@@ -1,4 +1,4 @@
-<table>
+<table class="crates">
 <thead>
   <tr><th>Project</th><th colspan="2">Crate</th><th>Docs</th></tr>
 </thead>
@@ -17,7 +17,9 @@
       v{{crate.max_version}}
     </td>
     <td class="docs">
-      <a href="/{{crate.repo}}/stable/latest/docs/{{ crate.name | replace: "-rs", "" }}">🕮</a>
+      <a href="/{{crate.repo}}/stable/latest/docs/{{ crate.name | replace: "-rs", "" }}">
+        {% include docs.svg %}
+      </a>
     </td>
   </tr>
 {% endfor %}

@@ -382,3 +382,34 @@ section.special {
         overflow: hidden;
     }
 }
+
+table.crates {
+    .section {
+        font-weight: bold;
+        text-align: right;
+    }
+
+    td.docs {
+        text-align: center;
+
+        svg {
+            height: 0.85em;
+            width: auto;
+
+            path {
+                fill: currentcolor;
+            }
+        }
+
+        a {
+            display: inline-block;
+        }
+
+        a:hover {
+            transform: scale(1.3);
+            transition-property: transform;
+            transition: 0.2s;
+        }
+
+    }
+}
