@@ -17,6 +17,7 @@
 * [gpsami](https://gitlab.gnome.org/hub/gpsami)
 * [gtktranslate](https://github.com/skylinecc/gtktranslate)
 * [Icon Library](https://gitlab.gnome.org/World/design/icon-library)
+* [Image Roll](https://github.com/weclaw1/image-roll)
 * [Iridium](https://github.com/matze/iridium)
 * [lognplot](https://github.com/windelbouwman/lognplot)
 * [Marmoset](https://github.com/sprang/marmoset)
