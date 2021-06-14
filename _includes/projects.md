@@ -23,6 +23,7 @@
 * [noaa-apt](https://github.com/martinber/noaa-apt)
 * [pcatk](https://github.com/pwil3058/pcatk)
 * [Pika Backup](https://gitlab.gnome.org/World/pika-backup)
+* [Pizarra](https://gitlab.com/categulario/pizarra-gtk)
 * [Podcasts](https://gitlab.gnome.org/World/podcasts)
 * [Popsicle](https://github.com/pop-os/popsicle/)
 * [process-viewer](https://github.com/GuillaumeGomez/process-viewer)
