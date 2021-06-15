@@ -27,9 +27,21 @@ $box-background:    linear-gradient(150deg, #241f31, #3d3846);
 $on-mobile: 600px;
 
 body {
-    --content-width: 800px;
+    --content-width: 760px;
     --spacing-unit: 26px;
     --spacing-unit-half: calc(var(--spacing-unit) / 2);
+}
+
+@font-face {
+    font-family: Cantarell;
+    font-weight: bold;
+    src: url("/font/Cantarell-Bold.woff");
+}
+
+@font-face {
+    font-family: Cantarell;
+    font-weight: 800;
+    src: url("/font/Cantarell-ExtraBold.woff");
 }
 
 // Using media queries with like this:
