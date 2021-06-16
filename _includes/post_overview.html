@@ -1,8 +1,10 @@
-<div class="post-overview">
+<ul class="box-list post-overview">
 {% for post in site.categories.front limit:3 %}
-  <a href="{{ post.url | prepend: site.baseurl }}">
+  <li>
+    <a href="{{ post.url | prepend: site.baseurl }}">
       <span class="post-meta">{{ post.date | date: "%-d %b %Y" }}</span>
       <div>{{ post.title }}</div>
-  </a>
+    </a>
+  </li>
 {% endfor %}
-</div>
+</ul>
