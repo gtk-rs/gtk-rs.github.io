@@ -1,5 +1,12 @@
 [
   {
+    "name": "Authenticator",
+    "url": "https://gitlab.gnome.org/World/Authenticator",
+    "featured": true,
+    "app_id": "com.belmoussaoui.Authenticator",
+    "description": "Generate Two-Factor Codes."
+  },
+  {
     "name": "Banner Viewer",
     "url": "https://gitlab.gnome.org/World/design/banner-viewer"
   },
@@ -29,7 +36,10 @@
   },
   {
     "name": "Fractal",
-    "url": "https://gitlab.gnome.org/GNOME/fractal"
+    "url": "https://gitlab.gnome.org/GNOME/fractal",
+    "featured": true,
+    "app_id": "org.gnome.Fractal",
+    "description": "Matrix group messaging app."
   },
   {
     "name": "Gfret",
@@ -97,7 +107,10 @@
   },
   {
     "name": "Pika Backup",
-    "url": "https://gitlab.gnome.org/World/pika-backup"
+    "url": "https://gitlab.gnome.org/World/pika-backup",
+    "featured": true,
+    "app_id": "org.gnome.World.PikaBackup",
+    "description": "Simple backups based on borg."
   },
   {
     "name": "Pizarra",
@@ -125,7 +138,10 @@
   },
   {
     "name": "Shortwave",
-    "url": "https://gitlab.gnome.org/World/Shortwave"
+    "url": "https://gitlab.gnome.org/World/Shortwave",
+    "featured": true,
+    "app_id": "de.haeckerfelix.Shortwave",
+    "description": "Listen to internet radio."
   },
   {
     "name": "Social",

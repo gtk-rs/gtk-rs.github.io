@@ -452,3 +452,58 @@ table.crates {
 
     }
 }
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+details {
+    margin-top: var(--spacing-unit);
+    text-align: center;
+
+    &:not([open]) summary {
+        @extend .box-design;
+    }
+
+    &:not([open]) > :not(summary) {
+        opacity: 0;
+    }
+
+    &[open] > :not(summary) {
+        opacity: 1;
+        animation-name: fade-in;
+        animation-duration: 0.6s;
+    }
+
+    &[open] summary::before {
+        /* ▼ */
+        content: '\25BC\FE0E';
+        font-size: 1.2em;
+    }
+
+    summary {
+        line-height: 1.6em;
+        display: inline-block;
+        text-align: center;
+        scolor: $brand-color;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: $headings-font-family;
+        padding: 1em 1.6em;
+        margin-bottom: 0.5em;
+
+        &::before {
+            font-size: 0.9em;
+            /* ▶︎ */
+            content: '\25B6\FE0E';
+            margin-right: 0.6rem;
+            vertical-align: top;
+        }
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
+}
+

@@ -55,6 +55,11 @@ More bindings can be found as part of the [GNOME GitLab Rust Group](https://gitl
 
 All these bindings are generated on the basis of GObject introspection (GIR). The book [Generate Rust bindings for GIR based libraries](/gir/book/) provides the documentation for the tools that gtk-rs provides to generate such bindings.
 
+## Apps built with gtk-rs
+
+{% include featured_projects.html %}
+
+{% include projects.html %}
 
 ## Sponsors
 
@@ -78,9 +83,3 @@ Thanks to everyone supporting us on [open collective][opencollective]! A list of
 </ul>
 
 [opencollective]: https://opencollective.com/gtk-rs
-
-## Projects using gtk-rs
-
-{% include projects.html %}
-
-If you want your app to be added to this list, please create a [Pull Request](https://github.com/gtk-rs/gtk-rs.github.io/edit/master/_data/projects.json) for it.
