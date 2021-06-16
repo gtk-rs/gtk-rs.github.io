@@ -70,8 +70,7 @@
                 line-height: 3em;
                 margin: 0 1rem;
                 font-weight: bold;
-                transition: 0.3s;
-                transition-property: color;
+                transition: color 0.3s;
                 border-radius: 7px;
 
                 &:hover {
@@ -186,8 +185,8 @@ ul.contact {
     margin-right: calc(-50vw + (100% / 2));
 
     margin-top: 2.5rem;
-    padding-top: 0.1rem;
-    padding-bottom: 2rem;
+    padding-top: 1px;
+    padding-bottom: 3.5rem;
 
     > * {
         max-width: var(--content-width);
@@ -212,34 +211,57 @@ ul.contact {
     }
 }
 
-.post-overview {
+.box-list {
     text-align: center;
     padding: 0.7rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
+    margin: 0;
+    padding-top: 0;
 
-    a, a:visited {
-        @extend .box-design;
-        max-width: 10em;
-        margin: 1.3em 0.8em 0;
-        vertical-align: top;
-        padding: 0.8em 0.6em 1em;
+    li {
+        display: flex;
+        align-items: stretch;
 
-        font-weight: bold;
-        font-family: $headings-font-family;
+        a, a:visited {
+            @extend .box-design;
+            max-width: 13em;
+            margin: 0.7em 0.8em;
+            vertical-align: top;
+            padding: 1em 0.6em 1.2em;
 
-        .post-meta {
-            color: $header-text-color;
+            font-weight: bold;
+            font-family: $headings-font-family;
+
             font-size: $small-font-size;
-        }
 
-        * {
-            display: inline-block;
-            margin: 0.3em 0;
+            strong, .post-meta {
+                color: $header-text-color;
+                font-size: $base-font-size;
+                display: block;
+                margin-bottom: 0.6em;
+            }
+
         }
     }
+
+}
+
+.box-list.post-overview {
+    margin-top: 1.2em;
+
+    a {
+        font-size: $base-font-size;
+        max-width: 10em;
+    }
+
+    .post-meta {
+        font-size: $small-font-size;
+    }
+
+
 }
 
 .post-meta {
@@ -274,8 +296,7 @@ ul.contact {
  */
 
 .box-design {
-    transition: 0.5s;
-    transition-property: opacity;
+    transition: opacity 0.5s;
     background: $box-background;
     border-radius: 7px;
     color: white;
@@ -285,7 +306,7 @@ ul.contact {
         text-decoration: none;
         opacity: 0.9;
         color: white;
-        transition: 0.2s;
+        transition: opacity 0.2s;
     }
 }
 
@@ -305,7 +326,7 @@ p.center {
 
 .badgets {
     text-align: center;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     img {
         border-radius: 5px;
     }
@@ -426,8 +447,7 @@ table.crates {
 
         a:hover {
             transform: scale(1.3);
-            transition-property: transform;
-            transition: 0.2s;
+            transition: transform 0.2s;
         }
 
     }
