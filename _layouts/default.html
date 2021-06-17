@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+  {% include layout_head.html %}
 
-  <body>
+  <body {% if page.centered %}class="centered"{% endif %}>
 
-    {% include header.html %}
+    {% include layout_header.html %}
 
     <div class="page-content">
       <div class="wrapper">
@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    {% include footer.html %}
+    {% include layout_footer.html %}
 
   </body>
 

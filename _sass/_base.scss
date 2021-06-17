@@ -17,10 +17,10 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    font-weight: 300;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
 }
 
 strong {
@@ -101,7 +101,7 @@ table {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
+    font-weight: bold;
     font-family: $headings-font-family;
     color: $headings-color;
 }
@@ -194,15 +194,9 @@ code {
  * Wrapper
  */
 .wrapper {
-    --padding: calc(50vw - (var(--content-width) / 2) + var(--spacing-unit-half));
-    padding-left: max(var(--padding), var(--spacing-unit-half));
-    padding-right: max(var(--padding), var(--spacing-unit-half));
-}
-
-section {
-    padding-top: 0.1rem;
-    padding-bottom: 2rem;
-    @extend .wrapper;
+    max-width: var(--content-width);
+    margin: auto;
+    padding: 0 var(--spacing-unit);
 }
 
 /**
