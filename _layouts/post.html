@@ -4,8 +4,21 @@ layout: default
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%-d %b %Y" }}{% if site.authors[page.author] %} • {{ site.authors[page.author] }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <nav>
+      <ul>
+        <li>
+          {% if page.next.url %}
+          <a href="{{ page.next.url }}" class="arrow left"><span>{{ page.next.title }}</span></a></li>
+          {% endif %}
+        </li>
+        <li><a href="/blog" class="blog-title">gtk-rs blog</a></li>
+        {% if page.previous.url %}
+          <li><a href="{{ page.previous.url }}" class="arrow"><span class="right">{{ page.previous.title }}</span></a></li>
+        {% endif %}
+      </ul>
+    </nav>
+        <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%-d %b %Y" }}<span style="padding: 0 0.6em;">–</span>{{ page.author }}</p>
   </header>
 
   <article class="post-content">

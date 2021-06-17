@@ -50,6 +50,13 @@ body {
 }
 
 @font-face {
+    font-family: "Roboto Mono";
+    font-weight: bold;
+    font-family: italic;
+    src: url("/font/Roboto-Mono-Medium-Italic.woff2");
+}
+
+@font-face {
     font-family: Cantarell;
     font-weight: bold;
     src: url("/font/Cantarell-Bold.woff");

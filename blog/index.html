@@ -5,9 +5,9 @@ title: Blog
 
   <h1>
     Blog
-    <a href="{{ "feed.xml" | prepend: site.baseurl }}">
+    <a href="{{ "/blog/feed.xml" }}">
       <span class="icon">
-        <svg viewBox="0 0 16 16">
+        <svg viewBox="0 0 16 16" style="margin-left: 0.4em; width: 0.7em; height: auto;">
           <rect width="16" height="16" x="0" y="0" rx="3" ry="3"/>
           <g>
             <circle class="inverse" cx="4" cy="12" r="1.5"/>
@@ -22,8 +22,11 @@ title: Blog
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%-d %b %Y" }}</span>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a class="post-link" href="{{ post.url }}">
+          <h2>{{ post.title }}</h2>
+          <span class="post-meta">{{ post.date | date: "%-d %b %Y" }}</span>
+          <p>{{ post.excerpt | strip_html }}</p>
+        </a>
       </li>
     {% endfor %}
   </ul>
