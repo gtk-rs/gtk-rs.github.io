@@ -70,6 +70,10 @@
     "url": "https://gitlab.gnome.org/World/design/icon-library"
   },
   {
+    "name": "Identity",
+    "url": "https://gitlab.gnome.org/YaLTeR/identity"
+  },
+  {
     "name": "Image Roll",
     "url": "https://github.com/weclaw1/image-roll"
   },
@@ -150,5 +154,9 @@
   {
     "name": "Tau",
     "url": "https://gitlab.gnome.org/World/Tau"
+  },
+  {
+    "name": "Video Trimmer",
+    "url": "https://gitlab.gnome.org/YaLTeR/video-trimmer"
   }
 ]
