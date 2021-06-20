@@ -286,6 +286,12 @@ code {
         }
     }
 
+    @media screen and (max-width: 600px) {
+        > button {
+            display: none;
+        }
+    }
+
     .slide-prev {
         left: 0;
     }
@@ -304,11 +310,11 @@ code {
     }
 
     > .slide-wrapper {
-        width: 752px;
-        max-width: 100%;
-        margin: auto;
+        width: 100%;
         height: 100%;
+        margin: auto;
         position: relative;
+        font-size: 0;
 
         > a {
             width: 100%;
@@ -334,12 +340,20 @@ code {
                 user-select: none;
             }
 
-            figure > figcaption {
-                font-family: Cantarell, Helvetica, Arial, sans-serif;
-                font-size: 17px;
+            img {
+                margin: auto;
+            }
 
-                > strong {
-                    color: #813d9c;
+            figure {
+                margin: 0;
+
+                > figcaption {
+                    font-family: Cantarell, Helvetica, Arial, sans-serif;
+                    font-size: 17px;
+
+                    > strong {
+                        color: #813d9c;
+                    }
                 }
             }
         }
