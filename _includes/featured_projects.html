@@ -1,0 +1,17 @@
+<div class="featured-apps">
+{% assign featured_projects = site.data.projects | where: "featured", true %}
+{% assign n = featured_projects | size %}
+    <button class="slide-prev" aria-label="previous" type="button" onclick="goTo(-1)"></button>
+    <div class="slide-wrapper transition">
+    {% for project in featured_projects %}
+    <a href="https://flathub.org/apps/details/{{ project.app_id }}" onclick="return checkClick();">
+        <figure>
+            <img src="/images/screenshot-{{ project.app_id }}.png" />
+            <figcaption><strong>{{ project.name }}</strong> – {{ project.description }}</figcaption>
+        </figure>
+    </a>
+    {% endfor %}
+    </div>
+    <button class="slide-next" aria-label="next" type="button" onclick="goTo(1)"></button>
+</div>
+<script type="text/javascript" src="/js/load-carousel.js"></script>
