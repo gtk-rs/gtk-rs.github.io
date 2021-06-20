@@ -1,10 +1,10 @@
 // Our variables
-$base-font-family:   Helvetica, Arial, sans-serif;
-$base-font-size:     17px;
-$small-font-size:    $base-font-size * 0.875;
+$base-font-family:   Roboto, sans-serif;
+$base-font-size:     18px;
+$small-font-size:    16px;
 $base-line-height:   1.3;
 
-$headings-font-family:  Cantarell, Helvetica, Arial, sans-serif;
+$headings-font-family:  Cantarell, sans-serif;
 $headings-color:        #3d3846;
 
 $text-color:         #3d3846;
@@ -27,9 +27,26 @@ $box-background:    linear-gradient(150deg, #241f31, #3d3846);
 $on-mobile: 600px;
 
 body {
-    --content-width: 760px;
+    --content-width: 670px;
     --spacing-unit: 26px;
     --spacing-unit-half: calc(var(--spacing-unit) / 2);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("/font/Roboto.woff2");
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: bold;
+    src: url("/font/Roboto-Bold.woff2");
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    font-weight: bold;
+    src: url("/font/Roboto-Mono-Medium.woff2");
 }
 
 @font-face {
