@@ -18,11 +18,13 @@ The **gtk-rs** project provides safe bindings to the [Rust] language for fundame
 [![Open Collective backers and sponsors](https://img.shields.io/opencollective/all/gtk-rs?color=%2399c9ff&label=Support%20us%20on%20open%20collective&logo=open-collective&logoColor=white&style=for-the-badge&labelColor=%233385ff)](https://opencollective.com/gtk-rs)
 {: class="badgets"}
 
+
 ## Available crates
 
 The following table contains the most popular crates of **gtk-rs**. More information on all existing crates is available under the corresponding links in the **Project** column in the table below.
 
 {% include crates_legacy.html %}
+
 
 <div class="special" markdown="1">
 
@@ -38,6 +40,21 @@ Julian Hofer is writing a book titled [GUI development with Rust and GTK&nbsp;4]
 
 </div>
 </div>
+
+
+## The gtk-rs ecosystem
+
+By now, a number of additional bindings for GObject based libraries exist. While not part of the gtk-rs project, many of them are developed in close collaboration. Notable other projects within the gtk-rs ecosystem are
+
+- [**gstreamer-rs** Open source multimedia framework](https://gitlab.freedesktop.org/gstreamer/gstreamer-rs)
+- [**libhandy-rs** Building blocks for modern adaptive GNOME applications (GTK&nbsp;3)](https://gitlab.gnome.org/World/Rust/libhandy-rs)
+- [**libadwaita-rs** Building blocks for modern GNOME applications (GTK&nbsp;4)](https://gitlab.gnome.org/World/Rust/libadwaita-rs)
+{: class="box-list"}
+
+More bindings can be found as part of the [GNOME GitLab Rust Group](https://gitlab.gnome.org/World/Rust).
+
+All these bindings are generated on the basis of GObject introspection (GIR). The book [Generate Rust bindings for GIR based libraries](/gir/book/) provides the documentation for the tools that gtk-rs provides to generate such bindings.
+
 
 ## Sponsors
 
