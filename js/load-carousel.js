@@ -7,9 +7,7 @@ let container = carousel.children[1];
 let slideWidth = container.children[0].offsetWidth;
 let currentInView = Math.floor(Math.random(0) * (container.children.length - 1));
 
-container.classList.remove("transition");
-showCurrentInView();
-container.classList.add("transition");
+showCurrentInView(true);
 
 function cancelTimeout() {
   if (timeoutId !== null) {
@@ -41,7 +39,22 @@ function endMove(e) {
     e.preventDefault();
     container.classList.add("transition");
     const x = e.clientX || e.changedTouches[0].clientX;
-    currentInView = Math.round((x - start) * -1 / slideWidth);
+    let tmp = (x - start) * -1 / slideWidth;
+    if (tmp >= currentInView + 0.3) {
+      tmp = Math.round(tmp);
+      if (tmp === currentInView) {
+        currentInView = tmp + 1;
+      } else {
+        currentInView = tmp;
+      }
+    } else if (tmp <= currentInView - 0.3) {
+      tmp = Math.round(tmp);
+      if (tmp === currentInView) {
+        currentInView = tmp - 1;
+      } else {
+        currentInView = tmp;
+      }
+    }
     if (currentInView < 0) {
       currentInView = 0;
     } else if (currentInView >= container.children.length) {
@@ -66,6 +79,7 @@ window.ondragstart = () => {
 };
 window.addEventListener('resize', () => {
   slideWidth = container.children[0].offsetWidth;
+  showCurrentInView(true);
 });
 
 /* This function is used to prevent the link click when we're dragging the images. */
@@ -76,8 +90,14 @@ function checkClick() {
   disableNextLink = false;
 }
 
-function showCurrentInView() {
+function showCurrentInView(disableCss = false) {
+  if (disableCss === true) {
+    container.classList.remove("transition");
+  }
   container.style.transform = `translateX(-${currentInView * slideWidth}px)`;
+  if (disableCss === true) {
+    container.classList.add("transition");
+  }
 }
 
 function goTo(add, shouldCancelTimeout = true) {
