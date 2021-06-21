@@ -211,11 +211,136 @@ ul.contact {
 }
 
 .post-list {
-    margin-left: 0;
+    margin: 2em 0;
     list-style: none;
 
     > li {
-        margin-bottom: var(--spacing-unit);
+        margin: 0;
+        padding: 1em 0;
+
+        & > a {
+            margin-bottom: var(--spacing-unit);
+            background: linear-gradient(180deg, darken($background-color, 4%), $background-color);
+            margin: 0;
+            padding: 1.5em 2em;
+            display: block;
+            border-radius: 7px 7px 0 0;
+            color: $text-color;
+
+            h2 {
+                margin: 0;
+                margin-bottom: 0.2em;
+                font-size: 20px;
+                color: $brand-color;
+            }
+
+            .post-meta {
+                display: block;
+                text-align: left;
+                padding: 0.2rem 0 0.6rem;
+            }
+
+            &:hover {
+                text-decoration: none;
+                background: linear-gradient(180deg, darken($background-color, 5%), darken($background-color, 1%));
+
+                h2 {
+                    text-decoration: underline;
+                }
+
+            }
+
+            & > *:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+.post header nav {
+    ul {
+        justify-content: space-between;
+        display: flex;
+        margin: 1.5em 0 1em;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            min-width: 60px;
+
+            .blog-title {
+                line-height: 47px;
+            }
+
+            a {
+                padding: 15px;
+                margin: 0;
+                line-height: 50px;
+                font-family: Cantarell;
+                font-weight: bold;
+                font-size: 1.2em;
+                color: $text-color;
+                opacity: 0.6;
+                transition: opacity 0.3s;
+                position: relative;
+
+                span {
+                    @include media-query($on-mobile) {
+                        display: none;
+                    }
+                    display: inline-block;
+
+                    max-width: 0;
+                    transition: max-width 0.2s;
+
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    font-family: $headings-font-family;
+                    font-size: $small-font-size;
+                    background-color: $background-color;
+
+                    position: absolute;
+                    z-index: 1;
+                    --margin: 50px;
+                    left: var(--margin);
+                    margin-top: -1px;
+                }
+
+                span.right {
+                    right: var(--margin);
+                    left: initial;
+                }
+
+                &.arrow::after {
+                    position: relative;
+                    z-index: 2;
+                    display: inline-block;
+                    content: '→';
+                    font-weight: bold;
+                    font-family: slick;
+                    font-size: 34px;
+                }
+
+                &.arrow.left::after {
+                    content: '←';
+                }
+
+                &:hover{
+                    text-decoration: none;
+                    opacity: 1;
+
+                    span {
+                        color: $text-color;
+                        max-width: 210px;
+                        padding: 0 5px;
+                    }
+
+                }
+            }
+        }
     }
 }
 
@@ -279,24 +404,12 @@ ul.contact {
     text-align: center;
 }
 
-.post-link {
-    font-family: $headings-font-family;
-    font-weight: bold;
-    display: block;
-    font-size: 20px;
-}
 
 /**
  * Posts
  */
 .post-header {
     margin-bottom: var(--spacing-unit);
-}
-
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
 }
 
 /**
