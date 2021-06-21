@@ -185,7 +185,7 @@ ul.contact {
     margin-right: calc(-50vw + (100% / 2));
 
     margin-top: 2.5rem;
-    padding-top: 1px;
+    padding-top: 3rem;
     padding-bottom: 3.5rem;
 
     > * {
@@ -194,6 +194,14 @@ ul.contact {
         margin-right: auto;
         padding-left: calc(var(--spacing-unit) + 7px);
         padding-right: calc(var(--spacing-unit) + 7px);
+    }
+
+    h2:first-child {
+        margin-top: 0;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
     }
 }
 
@@ -218,7 +226,7 @@ ul.contact {
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    margin: 0;
+    margin: 0 0 0.7em;
     padding-top: 0;
 
     li {
@@ -228,7 +236,7 @@ ul.contact {
         a, a:visited {
             @extend .box-design;
             max-width: 13em;
-            margin: 0.7em 0.8em;
+            margin: 10px;
             vertical-align: top;
             padding: 1em 0.6em 1.2em;
 
@@ -254,7 +262,7 @@ ul.contact {
 
     a {
         font-size: $base-font-size;
-        max-width: 10em;
+        max-width: 165px;
     }
 
     .post-meta {
@@ -316,7 +324,7 @@ ul.contact {
 }
 
 p.center {
-    margin: 0 2em;
+    margin: 0 1em;
     text-align: center;
 
     @include media-query($on-mobile) {
@@ -326,7 +334,7 @@ p.center {
 
 .badgets {
     text-align: center;
-    margin-top: 0.5rem;
+    margin: 0;
     img {
         border-radius: 5px;
     }
@@ -459,8 +467,8 @@ table.crates {
 }
 
 details {
-    margin-top: var(--spacing-unit);
     text-align: center;
+    margin-top: 2.5em;
 
     &:not([open]) summary {
         @extend .box-design;
