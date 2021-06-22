@@ -24,7 +24,7 @@ The **gtk-rs** project provides safe bindings to the [Rust] language for fundame
 
 The following table contains the most popular crates of **gtk-rs**. More information on all existing crates is available under the corresponding links in the **Project** column in the table below.
 
-{% include crates_legacy.html %}
+{% include crates.html %}
 
 
 <div class="special" markdown="1">
