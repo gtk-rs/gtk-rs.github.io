@@ -357,10 +357,11 @@ ul.contact {
     li {
         display: flex;
         align-items: stretch;
+        flex-basis: 13.5em;
 
         a, a:visited {
             @extend .box-design;
-            max-width: 13em;
+            width: 100%;
             margin: 10px;
             vertical-align: top;
             padding: 1em 0.6em 1.2em;
@@ -385,9 +386,13 @@ ul.contact {
 .box-list.post-overview {
     margin-top: 1.2em;
 
+    li {
+        flex-basis: 210px;
+    }
+
     a {
         font-size: $base-font-size;
-        max-width: 165px;
+        width: 100%;
     }
 
     .post-meta {
