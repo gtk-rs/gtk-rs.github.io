@@ -247,7 +247,7 @@ For the interested ones, here is the list of the merged pull requests:
  * [glib: Mark various Variant getter functions correctly as (transfer fu…](https://github.com/gtk-rs/gtk-rs-core/pull/59)
  * [glib: Fix leaks in FromGlibContainer impls for GString](https://github.com/gtk-rs/gtk-rs-core/pull/60)
  * [glib: Implement main context acquire guard type](https://github.com/gtk-rs/gtk-rs-core/pull/72)
- * [glib: bind freeze\_notify and freeze\_thaw](https://github.com/gtk-rs/gtk-rs-core/pull/78)
+ * [glib: bind freeze\_notify and thaw_notify](https://github.com/gtk-rs/gtk-rs-core/pull/78)
  * [Add missing doc aliases](https://github.com/gtk-rs/gtk-rs-core/pull/83)
  * [Add doc alias check](https://github.com/gtk-rs/gtk-rs-core/pull/86)
  * [Add missing doc aliases on variants](https://github.com/gtk-rs/gtk-rs-core/pull/91)
