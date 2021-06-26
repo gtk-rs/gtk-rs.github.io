@@ -29,6 +29,9 @@ body {
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     overflow-x: hidden;
+
+    /* prevent long function namens from breaking the design */
+    word-wrap: break-word;
 }
 
 strong {
