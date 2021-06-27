@@ -92,7 +92,7 @@ in the `prelude`, so importing it will give you access to them:
 use gtk::prelude::*;
 
 // ...
-let x = cairo::something();
+let x = pango::something();
 let y = gdk::something();
 ```
 
