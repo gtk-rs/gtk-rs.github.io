@@ -85,7 +85,19 @@ to be able to use them. Now, you only need to import GTK and then you can do:
 use gtk::{cairo, gdk};
 ```
 
-The `-sys` crates are also re-exported under the name `ffi`:
+And that's it! It'll make your management of dependencies much simpler. To be noted, relevant traits
+are also re-exported in the `prelude`, so importing it will give you access to them:
+
+```rust
+use gtk::gdk;
+use gtk::prelude::*;
+
+// ...
+// This uses the `gdk::prelude::WindowExtManual` trait, through the prelude.
+let w = gdk::Window::default_root_window();
+```
+
+Last note about the re-exports: the `-sys` crates are also re-exported under the name `ffi`:
 
 ```rust
 use gtk::ffi;
