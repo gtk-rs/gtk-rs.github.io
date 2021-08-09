@@ -32,7 +32,7 @@
     "section": "GTK 4",
 
     "name": "gtk4",
-    "max_version": "0.1.0",
+    "max_version": "0.2.0",
     "repo": "gtk4-rs"
   }
 ]
