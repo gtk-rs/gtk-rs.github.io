@@ -156,6 +156,10 @@
     "url": "https://gitlab.gnome.org/World/Tau"
   },
   {
+    "name": "Telegrand",
+    "url": "https://github.com/melix99/telegrand"
+  },
+  {
     "name": "Video Trimmer",
     "url": "https://gitlab.gnome.org/YaLTeR/video-trimmer"
   }
