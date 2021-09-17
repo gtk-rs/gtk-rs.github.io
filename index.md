@@ -68,17 +68,24 @@ Thanks to everyone supporting us on [open collective][opencollective]! A list of
 
 <ul class="sponsors">
     <li>
-        <a href="https://opencollective.com/alistair">
-            <img alt="Alistair" src="/images/alistair.png">
-            <div>Alistair</div>
-            <div class="metal bronze">Bronze Sponsor</div>
-        </a>
-    </li>
-    <li>
         <a href="https://www.embark-studios.com/">
             <img alt="Embark Studios" src="/images/embark.png">
             <div>Embark Studios</div>
             <div class="metal gold">Gold Sponsor</div>
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/trustmypaper">
+            <img alt="Trust My Paper" src="/images/trustmypaper.png">
+            <div>Trust My Paper</div>
+            <div class="metal bronze">Bronze Sponsor</div>
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/alistair">
+            <img alt="Alistair" src="/images/alistair.png">
+            <div>Alistair</div>
+            <div class="metal bronze">Bronze Sponsor</div>
         </a>
     </li>
 </ul>
