@@ -141,6 +141,10 @@
     "url": "https://github.com/antoyo/relm"
   },
   {
+    "name": "ScreenSelector.so",
+    "url": "https://linkmauve.fr/dev/screen-selector/"
+  },
+  {
     "name": "Shortwave",
     "url": "https://gitlab.gnome.org/World/Shortwave",
     "featured": true,
