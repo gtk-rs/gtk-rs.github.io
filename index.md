@@ -75,9 +75,9 @@ Thanks to everyone supporting us on [open collective][opencollective]! A list of
         </a>
     </li>
     <li>
-        <a href="https://opencollective.com/trustmypaper">
-            <img alt="Trust My Paper" src="/images/trustmypaper.png">
-            <div>Trust My Paper</div>
+        <a href="https://opencollective.com/targeted-organic-traffic">
+            <img alt="Targeted Organic Traffic" src="/images/targeted-organic-traffic.png">
+            <div>Targeted Organic Traffic</div>
             <div class="metal bronze">Bronze Sponsor</div>
         </a>
     </li>
