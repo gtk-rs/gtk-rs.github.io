@@ -473,21 +473,27 @@ p.center {
 
 ul.sponsors {
     text-align: center;
-    margin: 0;
+    margin: 2em 1em 3em;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 10em);
+    column-gap: 1.5em;
+    row-gap: 3em;
 
     li {
-        display: inline-block;
-        margin: 1em;
+        display: block;
         font-family: $headings-font-family;
 
         a {
             @extend .box-design;
-            max-width: 10em;
             text-align: center;
             text-decoration: none;
             vertical-align: top;
-            min-height: 8em;
             font-weight: bold;
+            position: relative;
+            display: block;
+            height: 100%;
+            padding-bottom: 1.6em;
 
             > div {
                 padding: 1em;
@@ -498,13 +504,20 @@ ul.sponsors {
                 border-radius: 50%;
                 width: 5em;
                 margin: 1em auto 0;
-                border: 3px solid white;
+                filter: drop-shadow(0 1.3px 1.6px rgba(0,0,0,.55))
+                        drop-shadow(0 6.4px 11.2px rgba(0,0,0,.34));
             }
 
             .metal {
                 border-radius: inherit;
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
+
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 1.3em;
             }
 
             .gold {
