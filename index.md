@@ -47,9 +47,10 @@ Julian Hofer is writing a book titled [GUI development with Rust and GTK&nbsp;4]
 
 By now, a number of additional bindings for GObject based libraries exist. While not part of the gtk-rs project, many of them are developed in close collaboration. Notable other projects within the gtk-rs ecosystem are
 
-- [**gstreamer-rs** Open source multimedia framework](https://gitlab.freedesktop.org/gstreamer/gstreamer-rs)
-- [**libhandy-rs** Building blocks for modern adaptive GNOME applications (GTK&nbsp;3)](https://gitlab.gnome.org/World/Rust/libhandy-rs)
-- [**libadwaita-rs** Building blocks for modern GNOME applications (GTK&nbsp;4)](https://gitlab.gnome.org/World/Rust/libadwaita-rs)
+- [**GStreamer** Open source multimedia framework](https://crates.io/crates/gstreamer)
+- [**Adwaita** Building blocks for modern GNOME applications](https://crates.io/crates/libadwaita)
+- [**SourceView 5** A library extending GtkTextView with features typical for a source code editor](https://crates.io/crates/sourceview5)
+- [**Relm 4** An idiomatic GUI library inspired by Elm and based on gtk4-rs](https://crates.io/crates/relm4)
 {: class="box-list"}
 
 More bindings can be found as part of the [GNOME GitLab Rust Group](https://gitlab.gnome.org/World/Rust).
