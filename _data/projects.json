@@ -136,6 +136,11 @@
     "name": "Projectpad",
     "url": "https://github.com/emmanueltouzery/projectpad2"
   },
+  { 
+    "name": "Pt",
+    "url": "https://github.com/polachok/pt",
+    "description": "Simple terminal"
+  },
   {
     "name": "relm",
     "url": "https://github.com/antoyo/relm"
