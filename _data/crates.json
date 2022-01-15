@@ -3,36 +3,36 @@
     "section": "Core",
 
     "name": "cairo-rs",
-    "max_version": "0.14.0",
+    "max_version": "0.15.1",
     "repo": "gtk-rs-core"
   },
   {
     "name": "gio",
-    "max_version": "0.14.0",
+    "max_version": "0.15.1",
     "repo": "gtk-rs-core"
   },
   {
     "name": "glib",
-    "max_version": "0.14.0",
+    "max_version": "0.15.1",
     "repo": "gtk-rs-core"
   },
   {
     "name": "pango",
-    "max_version": "0.14.0",
+    "max_version": "0.15.1",
     "repo": "gtk-rs-core"
   },
   {
     "section": "GTK 3",
 
     "name": "gtk",
-    "max_version": "0.14.0",
+    "max_version": "0.15.1",
     "repo": "gtk3-rs"
   },
   {
     "section": "GTK 4",
 
     "name": "gtk4",
-    "max_version": "0.2.0",
+    "max_version": "0.4.1",
     "repo": "gtk4-rs"
   }
 ]
