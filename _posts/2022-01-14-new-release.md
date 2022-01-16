@@ -221,6 +221,8 @@ Other than the classic [gtk-rs][gtk-rs] crates, we have also worked on ensuring 
  - [libshumate-rs](https://world.pages.gitlab.gnome.org/Rust/libshumate-rs/): released an alpha for the GTK4 Map widgetery library
  - [sourceview4-rs](https://world.pages.gitlab.gnome.org/Rust/sourceview4-rs/)/[libhandy-rs](https://world.pages.gitlab.gnome.org/Rust/libhandy-rs/)/[libdazzle-rs](https://world.pages.gitlab.gnome.org/Rust/libdazzle-rs/)/[gspell-rs](https://world.pages.gitlab.gnome.org/Rust/gspell-rs/)/[poppler-rs](https://world.pages.gitlab.gnome.org/Rust/poppler-rs/)
  - [libflatpak-rs](https://world.pages.gitlab.gnome.org/Rust/libflatpak-rs/): first release of the libflatpak bindings
+ 
+Also, version 0.4 of [Relm4](https://github.com/AaronErhardt/Relm4), an idiomatic GUI library based on gtk4-rs, was released with many new features and improvements.
 
 ### Changes
 
