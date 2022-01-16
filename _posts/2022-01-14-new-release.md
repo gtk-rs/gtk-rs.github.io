@@ -213,7 +213,7 @@ We also added:
 
 ## Other crates
 
-Other than the classic [gtk-rs][gtk-rs] crates, we have also worked on ensuring the ones in https://gitlab.gnome.org/World/Rust received an update:
+Other than the classic [gtk-rs][gtk-rs] crates, we have also worked on ensuring the ones in https://gitlab.gnome.org/World/Rust and the broader ecosystem received an update:
 
  - [gstreamer-rs](https://gstreamer.freedesktop.org/news/#2022-01-16T11:00:00Z): release 0.18
  - [libadwaita-rs](https://world.pages.gitlab.gnome.org/Rust/libadwaita-rs/): release 0.1 following up the release of the first stable version 1.0
@@ -221,6 +221,7 @@ Other than the classic [gtk-rs][gtk-rs] crates, we have also worked on ensuring 
  - [libshumate-rs](https://world.pages.gitlab.gnome.org/Rust/libshumate-rs/): released an alpha for the GTK4 Map widgetery library
  - [sourceview4-rs](https://world.pages.gitlab.gnome.org/Rust/sourceview4-rs/)/[libhandy-rs](https://world.pages.gitlab.gnome.org/Rust/libhandy-rs/)/[libdazzle-rs](https://world.pages.gitlab.gnome.org/Rust/libdazzle-rs/)/[gspell-rs](https://world.pages.gitlab.gnome.org/Rust/gspell-rs/)/[poppler-rs](https://world.pages.gitlab.gnome.org/Rust/poppler-rs/)
  - [libflatpak-rs](https://world.pages.gitlab.gnome.org/Rust/libflatpak-rs/): first release of the libflatpak bindings
+ - [Relm4](https://github.com/AaronErhardt/Relm4): release 0.4, with many new features and improvements
 
 ### Changes
 
