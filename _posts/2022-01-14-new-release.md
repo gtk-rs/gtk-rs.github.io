@@ -58,7 +58,7 @@ By using the derive macro, structured data can be handled automatically instead 
 
 Various types that are usually stack-allocated in C were previously heap-allocated in the Rust bindings. With this release, these values are also stack-allocated when used from Rust unless explicitly heap-allocated, e.g. by explicitly placing them into a `Box`.
 
-Examples for this are all the [`graphene`](https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/graphene/index.html) types (vectors, matrices, etc), which should make calculations considerably more efficient, types like [`gdk::Rectangle`](https://gtk-rs.org/gtk4-rs/stable/0.15/docs/gdk4/struct.Rectangle.html) and [`gdk::RGBA`](https://gtk-rs.org/gtk4-rs/stable/0.15/docs/gdk4/struct.RGBA.html), and [`gtk::TreeIter`](https://gtk-rs.org/gtk4-rs/stable/0.15/docs/gtk4/struct.TreeIter.html).
+Examples for this are all the [`graphene`](https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/graphene/index.html) types (vectors, matrices, etc), which should make calculations considerably more efficient, types like [`gdk::Rectangle`](https://gtk-rs.org/gtk4-rs/stable/0.4/docs/gdk4/struct.Rectangle.html) and [`gdk::RGBA`](https://gtk-rs.org/gtk4-rs/stable/0.4/docs/gdk4/struct.RGBA.html), and [`gtk::TreeIter`](https://gtk-rs.org/gtk4-rs/stable/0.4/docs/gtk4/struct.TreeIter.html).
 
 Overall this brings performance of applications using the Rust bindings even closer to the same code in C.
 
