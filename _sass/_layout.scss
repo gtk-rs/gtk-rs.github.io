@@ -651,3 +651,35 @@ details {
     }
 }
 
+h1, h2, h3, h4, h5, h6 {
+    position: relative;
+}
+
+h1:hover > .anchor,
+h2:hover > .anchor,
+h3:hover > .anchor,
+h4:hover > .anchor,
+h5:hover > .anchor,
+h6:hover > .anchor {
+    display: block;
+}
+
+h1 > .anchor {
+  left: -16px;
+}
+h2 > .anchor {
+  left: -19px;
+}
+h3 > .anchor, h4 > .anchor {
+  left: -15px;
+}
+
+a.anchor {
+    position: absolute;
+    top: 0;
+    display: none;
+    color: $text-color;
+    text-decoration: none !important;
+    padding-right: 5px;
+    font-size: 0.9em;
+}

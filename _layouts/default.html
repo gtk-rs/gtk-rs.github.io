@@ -9,12 +9,11 @@
 
     <div class="page-content">
       <div class="wrapper">
-        {{ content }}
+        {% include anchor_headings.html html=content anchorBody="§" anchorClass="anchor" %}
       </div>
     </div>
 
     {% include layout_footer.html %}
-
   </body>
 
 </html>
