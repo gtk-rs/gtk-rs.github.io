@@ -15,7 +15,7 @@ Also, please keep in mind that **gtk-rs** members and contributors are doing it 
 
 ## How are gtk-rs maintained crates selected?
 
-Currenlty we only add crates to the gtk-rs project that are required for the existing stack. A growing collection of other projects that are based on **gtk-rs** and gir can be found on the [GNOME GitLab](https://gitlab.gnome.org/World/Rust).
+Currently we only add crates to the gtk-rs project that are required for the existing stack. A growing collection of other projects that are based on **gtk-rs** and gir can be found on the [GNOME GitLab](https://gitlab.gnome.org/World/Rust).
 
 ## I want more gtk-rs examples!
 
