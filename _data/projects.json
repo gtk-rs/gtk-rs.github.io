@@ -31,6 +31,12 @@
     "url": "https://github.com/qarmin/czkawka"
   },
   {
+    "name": "Epic Asset Manager",
+    "url": "https://github.com/AchetaGames/Epic-Asset-Manager",
+    "app_id": "io.github.achetagames.epic_asset_manager",
+    "description": "Frontend for Epic Games Store."
+  },
+  {
     "name": "Font Finder",
     "url": "https://github.com/mmstick/fontfinder"
   },
