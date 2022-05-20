@@ -1,5 +1,11 @@
 [
   {
+    "name": "Amberol",
+    "url": "https://gitlab.gnome.org/World/amberol",
+    "app_id": "io.bassi.Amberol",
+    "description": "A small and simple sound and music player that is well integrated with GNOME."
+  },
+  {
     "name": "Authenticator",
     "url": "https://gitlab.gnome.org/World/Authenticator",
     "featured": true,
