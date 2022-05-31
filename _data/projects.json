@@ -54,6 +54,12 @@
     "description": "Matrix group messaging app."
   },
   {
+    "name": "Furtherance",
+    "url": "https://github.com/lakoliu/Furtherance",
+    "app_id": "com.lakoliu.Furtherance",
+    "description": "Track your time without being tracked."
+  },
+  {
     "name": "Gfret",
     "url": "https://gitlab.com/jeang3nie/gfret"
   },
