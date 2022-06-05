@@ -54,6 +54,12 @@
     "description": "Matrix group messaging app."
   },
   {
+    "name": "Fragments",
+    "url": "https://gitlab.gnome.org/World/Fragments",
+    "app_id": "de.haeckerfelix.Fragments",
+    "description": "An easy to use BitTorrent client."
+  },
+  {
     "name": "Furtherance",
     "url": "https://github.com/lakoliu/Furtherance",
     "app_id": "com.lakoliu.Furtherance",
