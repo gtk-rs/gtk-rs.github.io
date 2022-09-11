@@ -76,13 +76,6 @@ Thanks to everyone supporting us on [open collective][opencollective]! A list of
         </a>
     </li>
     <li>
-        <a href="https://www.targetedwebtraffic.com/buy/buy-targeted-organic-traffic-keyword-targeted-google-organic-traffic/">
-            <img alt="Targeted Organic Traffic" src="/images/targeted-organic-traffic.png">
-            <div>Targeted Organic Traffic</div>
-            <div class="metal bronze">Bronze Sponsor</div>
-        </a>
-    </li>
-    <li>
         <a href="https://opencollective.com/alistair">
             <img alt="Alistair" src="/images/alistair.png">
             <div>Alistair</div>
