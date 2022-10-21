@@ -1,7 +1,7 @@
 ---
 layout: post
 author: 
-title: 
+title: New release
 categories: [front, crates]
 date: 2022-10-18 12:00:00 +0000
 ---
