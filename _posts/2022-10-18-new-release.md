@@ -6,7 +6,7 @@ categories: [front, crates]
 date: 2022-10-18 12:00:00 +0000
 ---
 
-It's now time for a new Gtk-rs release! As usual, a lot if improvements in a lot of places but subclasses in particular got a lot of updates. Time to dive in on some improvements. Enjoy!
+It's now time for a new Gtk-rs release! As usual, a lot of improvements in a lot of places but subclasses in particular got a lot of updates. Time to dive in on some improvements. Enjoy!
 
 ### Update of minimum supported versions
 
