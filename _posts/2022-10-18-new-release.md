@@ -185,7 +185,7 @@ When creating properties for GObject subclasses they need to be declared beforeh
 
 ```rust
 // Now
-let pspec = glib::ParamSpecUInt("name")
+let pspec = glib::ParamSpecUInt::builder("name")
     .maximum(1000)
     .construct()
     .build();
