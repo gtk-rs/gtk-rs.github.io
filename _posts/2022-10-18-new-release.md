@@ -148,13 +148,13 @@ pub trait ObjectImpl {
 }
 ```
 
-In most contexts the object itself was not actually needed, so this also simplifies the code. For the cases when the object is needed, it can be retrieved via the `instance()` method on the implementation struct
+In most contexts the object itself was not actually needed, so this also simplifies the code. For the cases when the object is needed, it can be retrieved via the `obj()` method on the implementation struct
 
 ```rust
 impl ObjectImpl for MyObject {
     fn constructed(&self) {
-        let instance = self.instance();
-        instance.do_something();
+        let obj = self.obj();
+        obj.do_something();
     }
 }
 ```
