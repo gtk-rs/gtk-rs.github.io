@@ -480,7 +480,7 @@ For the interested ones, here is the list of the merged pull requests:
  * [make use of impl T wherever possible](https://github.com/gtk-rs/gtk4-rs/pull/839)
  * [gtk: mark some of TextIter methods as nullable](https://github.com/gtk-rs/gtk4-rs/pull/840)
  * [book: Introduce template callbacks](https://github.com/gtk-rs/gtk4-rs/pull/835)
- * [gtk: mark Snapshot::to\_(node|paintable) as nullable](https://github.com/gtk-rs/gtk4-rs/pull/849)
+ * [gtk: mark Snapshot::to\_(node\|paintable) as nullable](https://github.com/gtk-rs/gtk4-rs/pull/849)
  * [Don't require Send closures for GIO-style async functions](https://github.com/gtk-rs/gtk4-rs/pull/850)
  * [Remove unnecessary `Send` bounds from GIO-style async functions](https://github.com/gtk-rs/gtk4-rs/pull/851)
  * [Trust return value nullability again for gsk](https://github.com/gtk-rs/gtk4-rs/pull/855)
