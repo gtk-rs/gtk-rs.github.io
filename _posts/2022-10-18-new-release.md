@@ -153,6 +153,7 @@ In most contexts the object itself was not actually needed, so this also simplif
 ```rust
 impl ObjectImpl for MyObject {
     fn constructed(&self) {
+        self.parent_constructed();
         let obj = self.obj();
         obj.do_something();
     }
@@ -166,6 +167,7 @@ Additionally, to make it easy to pass around the implementation struct into e.g.
 ```rust
 impl ObjectImpl for MyObject {
     fn constructed(&self) {
+        self.parent_constructed();
         // for a strong reference
         self.button.connect_clicked(glib::clone!(@to-owned self as imp => move |button| {
             imp.do_something();
