@@ -149,6 +149,11 @@
     "url": "https://gitlab.gnome.org/World/podcasts"
   },
   {
+    "name": "pod-ui",
+    "url": "https://github.com/arteme/pod-ui",
+    "description": "A modern UI for controlling Line6 POD family of devices via MIDI."
+  },
+  {
     "name": "Popsicle",
     "url": "https://github.com/pop-os/popsicle/"
   },
