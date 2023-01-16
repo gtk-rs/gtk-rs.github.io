@@ -33,7 +33,7 @@ The following table contains the most popular crates of **gtk-rs**. More informa
 
 <div class="with-logo" markdown="1">
 
-{% include book.svg %}
+[{% include book.svg %}][book]
 
 Julian Hofer is writing a book titled [GUI development with Rust and GTK&nbsp;4][book]. We recommend both new and experienced **gtk-rs** users to have a look at it. While this book is targeted at people who want to develop GTK&nbsp;4 applications, it also covers more general aspects of the GNOME stack such as **GObject Concepts**, **The Main Event Loop** and **GSettings**.
 
