@@ -6,9 +6,11 @@ categories: [front, crates]
 date: 2023-02-10 22:00:00 +0000
 ---
 
-It's now time for a new gtk-rs release! As you might've noticed, the `gtk3-rs` projects are getting less and less attention and we intend to deprecate them in one of the future releases. Therefore, we recommend to anyone who didn't upgrade to GTK4 to do it.
+It's now time for a new gtk-rs release!
 
-You can also find the CHANGELOG of the corresponding `gstreamer-rs` 0.20 release [here](https://gitlab.freedesktop.org/gstreamer/gstreamer-rs/-/blob/main/gstreamer/CHANGELOG.md#0200-2023-02-10).
+As you might've noticed, the `gtk3-rs` projects are getting less and less attention and we intend to deprecate them in one of the future releases. Therefore, we recommend to anyone who didn't upgrade to GTK4 to do it now. `gtk3-rs` will get further releases in the foreseeable future to keep up with `gtk-rs-core`, but no development effort is going to be directed towards it. This is already the de-facto situation for more than a year. Additionally, the GTK3 versions of various [externally maintained](https://gitlab.gnome.org/World/Rust) bindings will most likely not get any further releases.
+
+In addition to `gtk-rs`, various externally maintained bindings also had a new release. For `gstreamer-rs` you can find the CHANGELOG of the 0.20 release [here](https://gitlab.freedesktop.org/gstreamer/gstreamer-rs/-/blob/main/gstreamer/CHANGELOG.md#0200-2023-02-10). Most bindings [maintained as part of GNOME](https://gitlab.gnome.org/World/Rust) were also updated.
 
 On this note, time to go through the major changes of this release. Enjoy!
 
