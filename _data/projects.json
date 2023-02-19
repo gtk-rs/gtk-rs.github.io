@@ -66,6 +66,12 @@
     "description": "Track your time without being tracked."
   },
   {
+    "name": "gerb",
+    "url": "https://github.com/epilys/gerb",
+    "app_id": "com.epilys.gerb",
+    "description": "Font editor and IDE."
+  },
+  {
     "name": "Gfret",
     "url": "https://gitlab.com/jeang3nie/gfret"
   },
