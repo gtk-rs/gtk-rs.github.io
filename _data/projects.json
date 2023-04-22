@@ -96,6 +96,12 @@
     "url": "https://github.com/skylinecc/gtktranslate"
   },
   {
+    "name": "Helvum",
+    "url": "https://gitlab.freedesktop.org/pipewire/helvum",
+    "app_id": "org.pipewire.Helvum",
+    "description": "A patchbay for PipeWire."
+  },
+  {
     "name": "Icon Library",
     "url": "https://gitlab.gnome.org/World/design/icon-library"
   },
