@@ -33,6 +33,11 @@
     "url": "https://github.com/MacKarp/Cookbook"
   },
   {
+    "name": "Celeste",
+    "url": "https://github.com/hwittenborn/celeste",
+    "app_id": "com.hunterwittenborn.Celeste",
+    "description": "Sync your cloud files"
+  {
     "name": "Czkawka",
     "url": "https://github.com/qarmin/czkawka"
   },
