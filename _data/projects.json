@@ -72,6 +72,12 @@
     "description": "Track your time without being tracked."
   },
   {
+    "name": "Game Of Life",
+    "url": "https://github.com/sixpounder/game-of-life",
+    "app_id": "com.github.sixpounder.GameOfLife",
+    "description": "Play Conway's Game of Life"
+  },
+  {
     "name": "gerb",
     "url": "https://github.com/epilys/gerb",
     "app_id": "com.epilys.gerb",
