@@ -181,7 +181,7 @@ This solves one of the common problems when using `Cairo` in multi-threaded appl
 
 ### GIO bindings improvements
 
-The gio bindings saw many additions and improvements. Among other things it is now possible to implement the [`gio::Initable`](https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/gio/struct.Initable.html) interface, the [`gio::IOExtention`](https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/gio/struct.IOExtension.html) API is now available, and the [`gio::Task`](https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/gio/struct.Task.html) bindings have been reworked to address soundness issues. More improvements to the `gio::Task` bindings are necessary for them to become nice to use from Rust.
+The gio bindings saw many additions and improvements. Among other things it is now possible to implement the [`gio::Initable`](https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/gio/struct.Initable.html) interface, the [`gio::IOExtension`](https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/gio/struct.IOExtension.html) API is now available, and the [`gio::Task`](https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/gio/struct.Task.html) bindings have been reworked to address soundness issues. More improvements to the `gio::Task` bindings are necessary for them to become nice to use from Rust.
 
 ### Gdkwayland
 
@@ -416,7 +416,7 @@ For the interested ones, here is the list of the merged pull requests:
  * [book: Fix explanation in gobject memory management](https://github.com/gtk-rs/gtk4-rs/pull/589)
  * [book: Improve `todo_app` listing](https://github.com/gtk-rs/gtk4-rs/pull/583)
  * [Fixed small typo in Virtual methods example README](https://github.com/gtk-rs/gtk4-rs/pull/588)
- * [book: Use weak reference in `gobject_memory_managment`](https://github.com/gtk-rs/gtk4-rs/pull/590)
+ * [book: Use weak reference in `gobject_memory_management`](https://github.com/gtk-rs/gtk4-rs/pull/590)
  * [book: Rename listing app-id to org.gtk-rs](https://github.com/gtk-rs/gtk4-rs/pull/598)
  * [book: Finish up remainder of app-id](https://github.com/gtk-rs/gtk4-rs/pull/599)
  * [book: Mention that expressions only go in one direction](https://github.com/gtk-rs/gtk4-rs/pull/600)
@@ -568,7 +568,7 @@ All this was possible thanks to the [gtk-rs/gir](https://github.com/gtk-rs/gir) 
  * [docs: allow to set `doc_struct_name` for global functions](https://github.com/gtk-rs/gir/pull/1285)
  * [codegen: trim extra `_async` in future variants](https://github.com/gtk-rs/gir/pull/1286)
  * [writer: check return code as `gboolean`](https://github.com/gtk-rs/gir/pull/1287)
- * [docs: avoid generating docs for uneeded properties getters/setters](https://github.com/gtk-rs/gir/pull/1289)
+ * [docs: avoid generating docs for unneeded properties getters/setters](https://github.com/gtk-rs/gir/pull/1289)
  * [parser: ignore private records](https://github.com/gtk-rs/gir/pull/1293)
  * [support fundamental types](https://github.com/gtk-rs/gir/pull/1294)
  * [analysis: don't take a slice of copy types by ref](https://github.com/gtk-rs/gir/pull/1296)

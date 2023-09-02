@@ -57,7 +57,7 @@ We talked about this change for a while and decided it was the best for our user
 
 We made some changes into `cairo` type hierarchies that led to a global improvement. To sum it up very shortly (thanks to [@SimonSapin](https://github.com/SimonSapin) for providing it!):
 
- 1. Patterns: pseudo-inheritence with Deref (like surfaces already do) instead of an enum of each pattern type.
+ 1. Patterns: pseudo-inheritance with Deref (like surfaces already do) instead of an enum of each pattern type.
  2. PDF/PS/SVG: a single surface type each instead of a public module, and restrict streams to `'static` to make them sound.
  3. XBC: a struct like other surface types, instead of a trait.
  4. Inherent methods instead of various extension traits
