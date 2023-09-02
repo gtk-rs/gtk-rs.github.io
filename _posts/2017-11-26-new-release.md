@@ -8,7 +8,7 @@ date: 2017-11-26 16:00:00 +0000
 
 Hi everyone!
 
-This release was supposed to be a minor one and to be released a lot sooner. However, as the time passed, `gtk-rs` developers weren't happy with what they had. There was always that little (but still wonderful) thing missing that we absolutely wanted to have. Suddenly, huges improvements came in and breaking changes as well. And this, is exactly how you end up from some very little and quicky release to medium and huge one.
+This release was supposed to be a minor one and to be released a lot sooner. However, as the time passed, `gtk-rs` developers weren't happy with what they had. There was always that little (but still wonderful) thing missing that we absolutely wanted to have. Suddenly, huges improvements came in and breaking changes as well. And this, is exactly how you end up from some very little and quickly release to medium and huge one.
 
 So what took us so long to add? A lot of things, the list is quite long. You can check the pull requests below. Let's just focus on the main ones.
 
@@ -173,7 +173,7 @@ For the interested ones, here is the list of the (major) changes:
  * [Add version for Sha384](https://github.com/gtk-rs/glib/pull/227)
  * [For the CallbackGuard, print something to stderr and use abort() inst…](https://github.com/gtk-rs/glib/pull/225)
  * [Fix versioning](https://github.com/gtk-rs/glib/pull/221)
- * [Fix versionning](https://github.com/gtk-rs/glib/pull/220)
+ * [Fix versioning](https://github.com/gtk-rs/glib/pull/220)
  * [Fix crates version](https://github.com/gtk-rs/glib/pull/218)
  * [Add README for crates.io](https://github.com/gtk-rs/glib/pull/215)
  * [Be more precise when setting a property with invalid type](https://github.com/gtk-rs/glib/pull/214)
@@ -293,7 +293,7 @@ For the interested ones, here is the list of the (major) changes:
  * [Update authors](https://github.com/gtk-rs/gdk/pull/123)
  * [Update version](https://github.com/gtk-rs/gdk/pull/122)
  * [Separate Rectangle from cairo's](https://github.com/gtk-rs/gdk/pull/119)
- * [Reexport cairo::RectangleInt as Rectangle and use converions on it](https://github.com/gtk-rs/gdk/pull/117)
+ * [Reexport cairo::RectangleInt as Rectangle and use conversions on it](https://github.com/gtk-rs/gdk/pull/117)
  * [Add gio dependency](https://github.com/gtk-rs/gdk/pull/116)
  * [Enums](https://github.com/gtk-rs/gdk/pull/115)
  * [Bump versions](https://github.com/gtk-rs/gdk/pull/113)
@@ -438,6 +438,6 @@ Thanks to all of our contributors for their (awesome!) work for this release:
  * [@thk1](https://github.com/thk1)
  * [@lise-henry](https://github.com/lise-henry)
  * [@jeandudey](https://github.com/jeandudey)
- * [@daa84](https://github.com/daa84)
+ * [@data84](https://github.com/daa84)
  * [@Bruflot](https://github.com/Bruflot)
  * [@reddraggone9](https://github.com/reddraggone9)

@@ -140,7 +140,7 @@ pub trait ObjectImpl {
 }
 ```
 
-This caused a lot of confusion and was also redudant. Instead, starting with this release only the implementation struct is passed by reference, e.g.
+This caused a lot of confusion and was also redundant. Instead, starting with this release only the implementation struct is passed by reference, e.g.
 
 ```rust
 pub trait ObjectImpl {
@@ -375,7 +375,7 @@ For the interested ones, here is the list of the merged pull requests:
  * [Port Dockerfile to fedora rawhide and use system deps from git](https://github.com/gtk-rs/gtk-rs-core/pull/676)
  * [Implement `FusedIterator` for various custom iterators](https://github.com/gtk-rs/gtk-rs-core/pull/678)
  * [cairo: Fix user font callbacks.](https://github.com/gtk-rs/gtk-rs-core/pull/679)
- * [Add some more tests for various costum `Iterator` impls](https://github.com/gtk-rs/gtk-rs-core/pull/680)
+ * [Add some more tests for various custom `Iterator` impls](https://github.com/gtk-rs/gtk-rs-core/pull/680)
  * [Don't build gdk-pixbuf tests in the docker image](https://github.com/gtk-rs/gtk-rs-core/pull/682)
  * [gio: add AsyncInitable subclassing support](https://github.com/gtk-rs/gtk-rs-core/pull/654)
  * [gio: Use guard objects for `Application::hold()` and `mark\_busy()`](https://github.com/gtk-rs/gtk-rs-core/pull/685)

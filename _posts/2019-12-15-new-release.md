@@ -298,7 +298,7 @@ For the interested ones, here is the list of the merged pull requests:
  * [Make AccelGroup::connect() and ::connect_by_path() more usable](https://github.com/gtk-rs/gtk/pull/915)
  * [Add renaming for WidgetExt::set_name and BuildableExt::set_name](https://github.com/gtk-rs/gtk/pull/917)
  * [Derive Default for builders](https://github.com/gtk-rs/gtk/pull/919)
- * [subclass/container: widget in set_focu_child should be Nullable](https://github.com/gtk-rs/gtk/pull/922)
+ * [subclass/container: widget in set_focus_child should be Nullable](https://github.com/gtk-rs/gtk/pull/922)
  * [subclass/widget: Implement default handling for parent events](https://github.com/gtk-rs/gtk/pull/921)
 
 [pangocairo](https://github.com/gtk-rs/pangocairo):

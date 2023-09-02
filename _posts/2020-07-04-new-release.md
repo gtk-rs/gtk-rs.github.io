@@ -191,7 +191,7 @@ For the interested ones, here is the list of the merged pull requests:
  * [gdk/gdk: build: Compute and export GDK backends](https://github.com/gtk-rs/sys/pull/167)
  * [GIR files focal update](https://github.com/gtk-rs/sys/pull/164)
  * [Add correct versions for get\_type functions](https://github.com/gtk-rs/sys/pull/171)
- * [Depend on cairo-sys when selectin v3\_24\_2 feature](https://github.com/gtk-rs/sys/pull/173)
+ * [Depend on cairo-sys when selecting v3\_24\_2 feature](https://github.com/gtk-rs/sys/pull/173)
  * [Use eprintln](https://github.com/gtk-rs/sys/pull/175)
 
 [glib](https://github.com/gtk-rs/glib):
