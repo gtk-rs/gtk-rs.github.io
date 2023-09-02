@@ -47,13 +47,14 @@ rustdoc-args = ["--cfg", "docsrs"]
 features = []
 ```
 
-## gtk-rs-core
 
-## #Switch to bitflags 2.0
+## Switch to bitflags 2.0
 
 With this release we switched to version 2 of the  [bitflags](https://crates.io/crates/bitflags) crate. While we regularly update our dependencies to the latest version, this is of particular note since flag types are often used in glib and GTK API.
 
 We also re-export `bitflags` and `once_cell` from the `glib` crate so you can use them without directly depending on them.
+
+## gtk-rs-core
 
 ### New `glib::derived_properties` macro
 
