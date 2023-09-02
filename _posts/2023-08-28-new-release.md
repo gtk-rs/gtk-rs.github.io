@@ -7,7 +7,7 @@ date: 2023-08-28 20:00:00 +0000
 ---
 
 
-It time again for a new gtk-rs release!
+It is time again for a new gtk-rs release!
 
 If you have been watching our crates on crates.io closely or if you have attended GUADEC you may already have noticed that we have released new versions of the gtk-rs crates.
 
