@@ -109,7 +109,7 @@ Changed constructors:
 - `glib::FlagsClass`
 - `glib::EnumClass`
 
-### New `glib::ValueDelegate`` macro
+### New `glib::ValueDelegate` macro
 
 Let's say you want to create a wrapper around some type, but you want to retain `ToValue`, `FromValue`, and `HasParamSpec` implementations, which are especially necessary when you want to use a type as a property. This is where the `glib::ValueDelegate` macro comes in. Instead of having to manually implement the following:
 
