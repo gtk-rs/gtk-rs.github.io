@@ -201,6 +201,10 @@
     "description": "Simple terminal"
   },
   {
+    "name": "reel-hub",
+    "url": "https://github.com/ShiNoNeko47/reel_hub"
+  },
+  {
     "name": "relm",
     "url": "https://github.com/antoyo/relm"
   },
