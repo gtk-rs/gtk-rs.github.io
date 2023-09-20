@@ -98,6 +98,12 @@
     "url": "https://gitlab.gnome.org/hub/gpsami"
   },
   {
+    "name": "GstPipelineStudio",
+    "url": "https://gitlab.freedesktop.org/dabrain34/GstPipelineStudio"
+    "app_id": "org.freedesktop.dabrain34.GstPipelineStudio",
+    "description": "Draw your own GStreamer pipeline"
+  },
+  {
     "name": "gtktranslate",
     "url": "https://github.com/skylinecc/gtktranslate"
   },
