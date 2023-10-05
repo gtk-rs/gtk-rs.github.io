@@ -105,7 +105,7 @@
   },
   {
     "name": "GstPipelineStudio",
-    "url": "https://gitlab.freedesktop.org/dabrain34/GstPipelineStudio"
+    "url": "https://gitlab.freedesktop.org/dabrain34/GstPipelineStudio",
     "app_id": "org.freedesktop.dabrain34.GstPipelineStudio",
     "description": "Draw your own GStreamer pipeline"
   },
