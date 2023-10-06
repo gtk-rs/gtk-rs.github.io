@@ -3,6 +3,7 @@
     "name": "Amberol",
     "url": "https://gitlab.gnome.org/World/amberol",
     "app_id": "io.bassi.Amberol",
+    "featured": true,
     "description": "A small and simple sound and music player that is well integrated with GNOME."
   },
   {
@@ -55,7 +56,6 @@
   {
     "name": "Fractal",
     "url": "https://gitlab.gnome.org/GNOME/fractal",
-    "featured": true,
     "app_id": "org.gnome.Fractal",
     "description": "Matrix group messaging app."
   },
