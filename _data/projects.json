@@ -248,5 +248,11 @@
     "url": "https://gitlab.gnome.org/World/warp",
     "app_id": "app.drey.Warp",
     "description": "Fast and secure file transfer"
-  }
+  },
+    {
+    "name": "Zoha",
+    "url": "https://zoha.rs",
+    "app_id": "io.koosha.zoha",
+    "description": "Pulldown terminal"
+    }
 ]
