@@ -14,10 +14,6 @@
     "description": "Generate Two-Factor Codes."
   },
   {
-    "name": "Banner Viewer",
-    "url": "https://gitlab.gnome.org/World/design/banner-viewer"
-  },
-  {
     "name": "Cigale",
     "url": "https://github.com/emmanueltouzery/cigale"
   },
