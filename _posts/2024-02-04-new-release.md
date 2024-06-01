@@ -6,14 +6,133 @@ categories: [front, crates]
 date: 2024-02-04 20:00:00 +0000
 ---
 
-* Write intro here *
+Although this release happened a few months ago, we finally had time to finish this release blog post!
+
+This is a smaller release than usual, bringing some nice quality of life improvements.
+
+Enjoy!
 
 ### gtk-rs-core
 
-* Removal of glib channels
-* Removal of re-exported once_cell crate, use `std::cell::OnceCell` / `std::sync::OnceLock`
-* Re-organized traits in glib
-* Dynamic types support
+#### Removal of glib channels
+
+In this release the `glib::MainContext::channel()` function was removed, together with the corresponding sender/receiver types. In many cases this API has led to overly complicated code in applications because people tried to develop state machines via callbacks, instead of simply making use of async Rust for that purpose.
+
+Instead of using the main context channel, the new way of passing values between other threads and the main thread is by using any of the many async channel implementations. Examples for this are the [async-channel](https://docs.rs/async-channel) crate, the MPSC channels from tokio or async-std, the task/thread join handles of both, the [flume](https://docs.rs/flume) crate, ...
+
+For example, the following code:
+
+```rust
+let (sender, receiver) = glib::MainContext::channel(glib::Priority::DEFAULT);
+receiver.attach(Some(&glib::MainContext::default()), move |msg| do_things(msg));
+
+sender.send(MyMessage);
+```
+
+Could be rewritten like this with the `async-channel` crate:
+
+```rust
+let (sender, receiver) = async_channel::unbounded();
+glib::MainContext::default().spawn_local(async move {
+    while let Ok(msg) = receiver.recv().await {
+        do_things(msg);
+    }
+});
+
+sender.send_blocking(MyMessage).expect("Channel closed");
+```
+
+#### Removal of re-exported once_cell crate, use `std::cell::OnceCell` / `std::sync::OnceLock`
+
+<!-- need to write something -->
+
+#### Re-organized traits in glib
+
+<!-- need to write something -->
+
+#### Dynamic types support
+
+Let's say you want to create a plugin to add some features or to customize some application. `object_class_dynamic`, `object_interface_dynamic `, `enum_dynamic ` and `flags_dynamic ` are macro helper attributes to make your types dynamic.
+
+```Rust
+// My object types
+#[derive(Default)]
+pub struct MyType;
+
+#[glib::object_subclass]
+#[object_subclass_dynamic]
+impl ObjectSubclass for MyType { ... }
+
+// My interfaces
+pub struct MyInterface {
+    parent: glib::gobject_ffi::GTypeInterface,
+}
+
+#[glib::object_interface]
+#[object_interface_dynamic]
+unsafe impl ObjectInterface for MyInterface { ... }
+
+// My enums
+#[derive(Debug, Copy, Clone, PartialEq, Eq, glib::Enum)]
+#[enum_type(name = "MyModuleEnum")]
+#[enum_dynamic]
+enum MyModuleEnum { ... }
+
+// My flags
+#[glib::flags(name = "MyFlags")]
+#[flags_dynamic]
+enum MyFlags { ... }
+```
+
+Your plugin code has to implement the `TypePlugin` interface or to extend the `TypeModule` type in order to register or unregister your dynamic types when the module (or plugin) is loaded or unloaded.
+
+```Rust
+#[derive(Default)]
+pub struct MyModule;
+
+#[glib::object_subclass]
+impl ObjectSubclass for MyModule { ... }
+
+impl ObjectImpl for MyModule {}
+
+impl TypePluginImpl for MyModule {}
+
+impl TypeModuleImpl for MyModule {
+    fn load(&self) -> bool {
+        // registers my plugin types as dynamic types.
+        let my_module = self.obj();
+        let type_module: &glib::TypeModule = my_module.upcast_ref();
+        MyInterface::on_implementation_load(type_module)
+            && MyType::on_implementation_load(type_module)
+            && MyEnum::on_implementation_load(type_module)
+            && MyFlags::on_implementation_load(type_module)
+    }
+
+    fn unload(&self) {
+        // marks my plugin types as unregistered.
+        let my_module = self.obj();
+        let type_module: &glib::TypeModule = my_module.upcast_ref();
+        MyFlags::on_implementation_unload(type_module);
+        MyEnum::on_implementation_unload(type_module);
+        MyType::on_implementation_unload(type_module);
+        MyInterface::on_implementation_unload(type_module);
+    }
+}
+```
+
+By default dynamic types are registered when  the system loads your plugin. In some cases, it could be useful to postpone the registration of a dynamic type on the first use. This can be done by setting `lazy_registration = true`:
+
+```Rust
+// My object types
+#[derive(Default)]
+pub struct MyType;
+
+#[glib::object_subclass]
+#[object_subclass_dynamic(lazy_registration = true)]
+impl ObjectSubclass for MyType { ... }
+```
+
+For more complex cases, see the documentation [glib::object_subclass](https://docs.rs/glib/latest/glib/attr.object_subclass.html), [glib::object_interface](https://docs.rs/glib/latest/glib/attr.object_interface.html), [glib::Enum](https://docs.rs/glib/latest/glib/derive.Enum.html), [glib::flags](https://docs.rs/glib/latest/glib/attr.flags.html), [glib::subclass::type_module::TypeModuleImpl](https://docs.rs/glib/latest/glib/subclass/type_module/trait.TypeModuleImpl.html) and [glib::subclass::type_plugin::TypePluginImpl](https://docs.rs/glib/latest/glib/subclass/type_plugin/trait.TypePluginImpl.html).
 
 ### gtk4-rs
 
@@ -22,7 +141,7 @@ date: 2024-02-04 20:00:00 +0000
 
 [gtk4-rs](https://github.com/gtk-rs/gtk4-rs):
 
- * [gtk: Don't propogate unused argument](https://github.com/gtk-rs/gtk4-rs/pull/1591)
+ * [gtk: Don't propagate unused argument](https://github.com/gtk-rs/gtk4-rs/pull/1591)
  * [examples: Add example for About Dialog](https://github.com/gtk-rs/gtk4-rs/pull/1589)
  * [gtk::show\_about\_dialog: Set hide\_on\_close](https://github.com/gtk-rs/gtk4-rs/pull/1588)
  * [Regen with ffi workspacecs usage](https://github.com/gtk-rs/gtk4-rs/pull/1587)
@@ -74,7 +193,6 @@ date: 2024-02-04 20:00:00 +0000
  * [Add new Path APIs](https://github.com/gtk-rs/gtk4-rs/pull/1463)
  * [book: Extend memory management chapter](https://github.com/gtk-rs/gtk4-rs/pull/1459)
  * [Untangle docsrs attribute from features](https://github.com/gtk-rs/gtk4-rs/pull/1454)
- * [gtk4-macro: Bump quick-xml to 0.30](https://github.com/gtk-rs/gtk4-rs/pull/1453)
  * [Impl Write on text buffers](https://github.com/gtk-rs/gtk4-rs/pull/1452)
  * [gdk: Add missing Clipboard::set](https://github.com/gtk-rs/gtk4-rs/pull/1450)
  * [Use `derived_properties` macro](https://github.com/gtk-rs/gtk4-rs/pull/1434)
@@ -96,7 +214,7 @@ date: 2024-02-04 20:00:00 +0000
  * [gio: Don't wrongly cast DataInputStream byte arrays to a const pointer](https://github.com/gtk-rs/gtk-rs-core/pull/1238)
  * [Simplify pointer casts](https://github.com/gtk-rs/gtk-rs-core/pull/1233)
  * [glib: Remove deprecated paramspec constructors](https://github.com/gtk-rs/gtk-rs-core/pull/1230)
- * [Move from unmaintained winapi crate to windows-sys](https://github.com/gtk-rs/gtk-rs-core/pull/1226)
+ * [Windows-specific API bindings that use Windows types were migrated from the unmaintained `winapi` crate to `window-sys`. This might need changes for users of these APIs and require them to migrate too.](https://github.com/gtk-rs/gtk-rs-core/pull/1226)
  * [Matchinfo lifetime](https://github.com/gtk-rs/gtk-rs-core/pull/1225)
  * [Add `Cargo.lock` to git tracking](https://github.com/gtk-rs/gtk-rs-core/pull/1221)
  * [Add support of enums as dynamic types](https://github.com/gtk-rs/gtk-rs-core/pull/1220)
@@ -106,8 +224,8 @@ date: 2024-02-04 20:00:00 +0000
  * [gio: Use weak reference to ActionMap when adding action entries](https://github.com/gtk-rs/gtk-rs-core/pull/1208)
  * [Add \_full and \_local\_full methods for idle and timeout callbacks that take priority](https://github.com/gtk-rs/gtk-rs-core/pull/1207)
  * [Implement ext trait on IsA&lt;T&gt;, don't generate overridden methods](https://github.com/gtk-rs/gtk-rs-core/pull/1204)
- * [glib: Implement object class methods via a trait instead of directly …](https://github.com/gtk-rs/gtk-rs-core/pull/1203)
- * [Add `spawn_future` and `spawn_future_local` convenience functions](https://github.com/gtk-rs/gtk-rs-core/pull/1201)
+ * [glib: Implement object class methods via a trait](https://github.com/gtk-rs/gtk-rs-core/pull/1203)
+ * [New `glib::spawn_future()` and `glib::spawn_future_local()` convenience functions that directly spawn a future on the current thread default's main context, without first having to retrieve it](https://github.com/gtk-rs/gtk-rs-core/pull/1201)
  * [glib-macros: Remove unused imports from Properties doc test](https://github.com/gtk-rs/gtk-rs-core/pull/1193)
  * [glib-macros: Mark property getters as #\[must\_use\]](https://github.com/gtk-rs/gtk-rs-core/pull/1192)
  * [fix glyph string analysis methods that don't need &mut](https://github.com/gtk-rs/gtk-rs-core/pull/1188)
@@ -118,7 +236,7 @@ date: 2024-02-04 20:00:00 +0000
  * [Use associated type in memory managers](https://github.com/gtk-rs/gtk-rs-core/pull/1171)
  * [add support of module types](https://github.com/gtk-rs/gtk-rs-core/pull/1169)
  * [image: Switch to latest fedora stable](https://github.com/gtk-rs/gtk-rs-core/pull/1163)
- * [gio: Fix panics if `PollableInputStream` / `PollableOutputStream` ret…](https://github.com/gtk-rs/gtk-rs-core/pull/1159)
+ * [gio: Fix panics in `PollableInputStream` / `PollableOutputStream`](https://github.com/gtk-rs/gtk-rs-core/pull/1159)
  * [Added bindings for Gio.DBusObjectManager, Gio.DBusObjectManagerClientFlags](https://github.com/gtk-rs/gtk-rs-core/pull/1156)
  * [Disentangle docsrs and features](https://github.com/gtk-rs/gtk-rs-core/pull/1154)
  * [Add typos workflow](https://github.com/gtk-rs/gtk-rs-core/pull/1153)
@@ -126,7 +244,6 @@ date: 2024-02-04 20:00:00 +0000
  * [Add support for ext\_trait in properties macro](https://github.com/gtk-rs/gtk-rs-core/pull/1149)
  * [glib: Bind `g_unichar` APIs](https://github.com/gtk-rs/gtk-rs-core/pull/1146)
  * [Add object\_subclass example](https://github.com/gtk-rs/gtk-rs-core/pull/1145)
- * [glib: Re-introduce an event propagation specific type](https://github.com/gtk-rs/gtk-rs-core/pull/1144)
  * [Fix docs of `glib::derived_properties`](https://github.com/gtk-rs/gtk-rs-core/pull/1143)
  * [Fix panic in gio InputStream](https://github.com/gtk-rs/gtk-rs-core/pull/1140)
  * [Don't generate unit tuple in clone macro as default-return value](https://github.com/gtk-rs/gtk-rs-core/pull/1138)
@@ -152,7 +269,7 @@ All this was possible thanks to the [gtk-rs/gir](https://github.com/gtk-rs/gir) 
  * [Add trait\_name to API docs](https://github.com/gtk-rs/gir/pull/1489)
  * [Fix docsrs](https://github.com/gtk-rs/gir/pull/1487)
  * [codegen: Replace ControlFlow with Propagation](https://github.com/gtk-rs/gir/pull/1485)
- * [codgen: generate doc\_alias for static\_type](https://github.com/gtk-rs/gir/pull/1143)
+ * [codegen: generate doc\_alias for static\_type](https://github.com/gtk-rs/gir/pull/1143)
 
 Thanks to all of our contributors for their (awesome!) work on this release:
 
