@@ -3,7 +3,7 @@ layout: post
 author: gtk-rs developers
 title: New Release
 categories: [front, crates]
-date: 2024-02-04 20:00:00 +0000
+date: 2024-06-01 13:00:00 +0000
 ---
 
 Although this release happened a few months ago, we finally had time to finish this release blog post!
@@ -44,11 +44,11 @@ sender.send_blocking(MyMessage).expect("Channel closed");
 
 #### Removal of re-exported once_cell crate, use `std::cell::OnceCell` / `std::sync::OnceLock`
 
-<!-- need to write something -->
+If you need lazy initialization then `once_cell::sync::Lazy` is still useful until `LazyCell` / `LazyLock` from `std` are finalized.
 
 #### Re-organized traits in glib
 
-<!-- need to write something -->
+If you get a compiler error because of missing traits, usually the solution would be to make sure that the prelude of the crates (e.g. `gtk::prelude::*`) is imported.
 
 #### Dynamic types support
 
@@ -137,7 +137,7 @@ For more complex cases, see the documentation [glib::object_subclass](https://do
 ### gtk4-rs
 
 * GTK 4.14 APIs support
-* Support `TemplateChild<T>` usage with `glib::Properties` macro
+* Support `TemplateChild<T>` usage with `glib::Properties` macro, allowing `TemplateChild<T>` to be used as properties
 
 [gtk4-rs](https://github.com/gtk-rs/gtk4-rs):
 
