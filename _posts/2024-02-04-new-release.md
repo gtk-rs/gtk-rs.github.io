@@ -6,11 +6,17 @@ categories: [front, crates]
 date: 2024-06-01 13:00:00 +0000
 ---
 
+This is the blog post release for gtk4-rs `0.8` and gtk-rs-core `0.19`.
+
 Although this release happened a few months ago, we finally had time to finish this release blog post!
 
 This is a smaller release than usual, bringing some nice quality of life improvements.
 
 Enjoy!
+
+### gtk3
+
+Support for gtk3-rs crates was dropped. No more updates will be done on it. If you didn't yet, please migrate to gtk4-rs.
 
 ### gtk-rs-core
 
