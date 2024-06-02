@@ -297,7 +297,7 @@ For the interested ones, here is the list of the merged pull requests:
  * [dynamic type function variants for Variants and Values](https://github.com/gtk-rs/gtk-rs-core/pull/519)
  * [gtask: fix memory leak when calling g\_task\_return\_value](https://github.com/gtk-rs/gtk-rs-core/pull/527)
  * [Handle empty slices correctly](https://github.com/gtk-rs/gtk-rs-core/pull/533)
- * [cairo: Allow writing arbitrary `Surface`s as PNGs](https://github.com/gtk-rs/gtk-rs-core/pull/543)
+ * [cairo: Allow writing arbitrary `Surface`s as `PNG`s](https://github.com/gtk-rs/gtk-rs-core/pull/543)
  * [glib: add trait `StaticTypeExt` with method `type\_ensure`](https://github.com/gtk-rs/gtk-rs-core/pull/544)
  * [Add missing pango attrs](https://github.com/gtk-rs/gtk-rs-core/pull/548)
  * [Remove remaining public fields](https://github.com/gtk-rs/gtk-rs-core/pull/549)
