@@ -128,6 +128,12 @@
     "url": "https://github.com/weclaw1/image-roll"
   },
   {
+    "name": "Jogger",
+    "url": "https://codeberg.org/baarkerlounger/jogger",
+    "app_id": "xyz.slothlife.Jogger",
+    "description": "A Fitness Tracker for Gnome Mobile"
+  },
+  {
     "name": "Iridium",
     "url": "https://github.com/matze/iridium"
   },
