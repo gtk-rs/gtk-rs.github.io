@@ -211,6 +211,12 @@
     "url": "https://github.com/antoyo/relm"
   },
   {
+    "name": "RRandR",
+    "url": "https://github.com/brofi/rrandr",
+    "app_id": "com.github.brofi.rrandr",
+    "description": "A graphical interface to the RandR X Window System extension."
+  },
+  {
     "name": "ScreenSelector.so",
     "url": "https://linkmauve.fr/dev/screen-selector/"
   },
