@@ -256,5 +256,11 @@
     "url": "https://gitlab.gnome.org/World/warp",
     "app_id": "app.drey.Warp",
     "description": "Fast and secure file transfer"
+  },
+  {
+    "name": "Mission Center",
+    "url": "https://gitlab.com/mission-center-devs/mission-center",
+    "app_id": "io.missioncenter.MissionCenter",
+    "description": "Monitor system resources, apps and services"
   }
 ]
