@@ -162,6 +162,11 @@
     "url": "https://github.com/martinber/noaa-apt"
   },
   {
+    "name": "Packetry",
+    "url": "https://github.com/greatscottgadgets/packetry",
+    "description": "A fast, intuitive USB 2.0 protocol analysis application"
+  },
+  {
     "name": "pcatk",
     "url": "https://github.com/pwil3058/pcatk"
   },
