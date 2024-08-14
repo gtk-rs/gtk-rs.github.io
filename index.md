@@ -5,7 +5,7 @@ layout: default
 
 # Unlocking the GNOME stack for Rust
 
-The **gtk-rs** project provides safe bindings to the [Rust] language for fundamental libraries from the [GNOME] stack like [GLib], [Cairo], [GTK&nbsp;3][GTK] and [GTK&nbsp;4][GTK].
+The **gtk-rs** project provides safe bindings to the [Rust] language for fundamental libraries from the [GNOME] stack like [GLib], [Cairo], and [GTK&nbsp;4][GTK].
 {: class="center"}
 
 [GNOME]: https://www.gnome.org/technologies/
