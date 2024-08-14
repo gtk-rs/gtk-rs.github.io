@@ -22,7 +22,6 @@ Currently we only add crates to the gtk-rs project that are required for the exi
 You can find more examples in the corresponding repositories
 
 - [gtk-rs-core/examples](https://github.com/gtk-rs/gtk-rs-core/tree/master/examples)
-- [gtk3-rs/examples](https://github.com/gtk-rs/gtk3-rs/tree/master/examples)
 - [gtk4-rs/examples](https://github.com/gtk-rs/gtk4-rs/tree/master/examples)
 
 or have a look at the source code of the projects listed on our [start page](/#projects-using-gtk-rs).

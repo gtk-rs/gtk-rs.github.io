@@ -17,11 +17,6 @@
     "repo": "gtk-rs-core"
   },
   {
-    "section": "GTK 3",
-    "name": "gtk",
-    "repo": "gtk3-rs"
-  },
-  {
     "section": "GTK 4",
     "name": "gtk4",
     "repo": "gtk4-rs"
