@@ -67,6 +67,7 @@ All these bindings are generated on the basis of GObject introspection (GIR). Th
 
 Thanks to everyone supporting us on [open collective][opencollective]! A list of all sponsors can be seen on our [open collective page][opencollective].
 
+<!--
 <ul class="sponsors">
     <li>
         <a href="https://www.embark-studios.com/">
@@ -83,5 +84,6 @@ Thanks to everyone supporting us on [open collective][opencollective]! A list of
         </a>
     </li>
 </ul>
+-->
 
 [opencollective]: https://opencollective.com/gtk-rs
