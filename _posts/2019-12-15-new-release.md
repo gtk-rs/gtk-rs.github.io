@@ -43,9 +43,9 @@ passed into the `clicked` signal handler. See also the `Rc` documentation about
 The "subclass" cargo feature was removed from all crates and is instead enabled by default with
 this release. The GObject subclassing support matured a lot over the last months and is ready for
 wider usage. A basic example for subclassing `gtk::Application` and `gtk::ApplicationWindow` can
-be found [here](https://github.com/gtk-rs/examples/blob/master/src/bin/basic_subclass.rs), another
+be found [here](https://github.com/gtk-rs/examples/blob/main/src/bin/basic_subclass.rs), another
 example using custom `glib::Object` subclasses as part of a `gtk::ListBox` model can be found
-[here](https://github.com/gtk-rs/examples/blob/master/src/bin/listbox_model.rs) and various examples
+[here](https://github.com/gtk-rs/examples/blob/main/src/bin/listbox_model.rs) and various examples
 for creating GStreamer elements [here](https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs).
 
 While there are still subclassing bindings missing for many types, various basic types in the `gio`,
@@ -69,7 +69,7 @@ way that looks close to the equivalent synchronous code. Check
 Rust blog for more details.
 
 An example making use of this with `gio`'s asynchronous file reading support can be found
-[here](https://github.com/gtk-rs/examples/blob/master/src/bin/gio_futures_await.rs). While it is
+[here](https://github.com/gtk-rs/examples/blob/main/src/bin/gio_futures_await.rs). While it is
 not as streamlined as with native Rust crates like [async-std](https://async.rs) or
 [tokio](https://tokio.rs) because of how the `gio` API works, it nonetheless much more convenient
 to work with than the previous (but still available) callback-based approach.

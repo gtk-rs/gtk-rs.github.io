@@ -24,7 +24,7 @@ Let's see those in details.
 
 #### Atk
 
-The Atk crate is about accessibility. We thought it was a miss not having it considering how important accessibility is. Now it's fixed! You can find more information directly on the [`Atk` repository](https://github.com/gtk-rs/atk) or in the [accessibility example](https://github.com/gtk-rs/examples/blob/master/src/bin/accessibility.rs).
+The Atk crate is about accessibility. We thought it was a miss not having it considering how important accessibility is. Now it's fixed! You can find more information directly on the [`Atk` repository](https://github.com/gtk-rs/atk) or in the [accessibility example](https://github.com/gtk-rs/examples/blob/main/src/bin/accessibility.rs).
 
 #### Callbacks?
 
@@ -102,7 +102,7 @@ We moved it to `1.31.0` mainly because imports handling is much easier starting 
 
 #### subclassing support in GLib
 
-This is a strongly asked feature and we now have it in GLib. A lot of work remains to be done, but it's mostly polishing. At its current state, it can be used already. Take a look at the [listbox_model](https://github.com/gtk-rs/examples/blob/master/src/bin/listbox_model.rs) if you want to see how it works.
+This is a strongly asked feature and we now have it in GLib. A lot of work remains to be done, but it's mostly polishing. At its current state, it can be used already. Take a look at the [listbox_model](https://github.com/gtk-rs/examples/blob/main/src/bin/listbox_model.rs) if you want to see how it works.
 
 #### Even more bindings generated
 
