@@ -267,5 +267,10 @@
     "url": "https://gitlab.com/mission-center-devs/mission-center",
     "app_id": "io.missioncenter.MissionCenter",
     "description": "Monitor system resources, apps and services"
+  },
+  {
+    "name": "GnomeClu",
+    "url": "https://github.com/timcharper/GnomeClu",
+    "description": "Graphical Zebra Puzzle Logic Game, similar to Sudoku"
   }
 ]
