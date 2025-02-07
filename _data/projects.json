@@ -269,8 +269,8 @@
     "description": "Monitor system resources, apps and services"
   },
   {
-    "name": "GnomeClu",
-    "url": "https://github.com/timcharper/GnomeClu",
+    "name": "Mind Hunt",
+    "url": "https://github.com/timcharper/MindHunt",
     "description": "Graphical Zebra Puzzle Logic Game, similar to Sudoku"
   }
 ]
