@@ -267,5 +267,10 @@
     "url": "https://gitlab.com/mission-center-devs/mission-center",
     "app_id": "io.missioncenter.MissionCenter",
     "description": "Monitor system resources, apps and services"
+  },
+  {
+    "name": "Mind Hunt",
+    "url": "https://github.com/timcharper/MindHunt",
+    "description": "Graphical Zebra Puzzle Logic Game, similar to Sudoku"
   }
 ]
