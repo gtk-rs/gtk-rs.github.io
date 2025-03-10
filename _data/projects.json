@@ -222,6 +222,11 @@
     "description": "A graphical interface to the RandR X Window System extension."
   },
   {
+    "name": "rs-paint",
+    "url": "https://github.com/lucasscharenbroch/rs-paint",
+    "description": "A light-weight image editor"
+  },
+  {
     "name": "ScreenSelector.so",
     "url": "https://linkmauve.fr/dev/screen-selector/"
   },
