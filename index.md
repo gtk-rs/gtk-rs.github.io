@@ -8,7 +8,7 @@ layout: default
 The **gtk-rs** project provides safe bindings to the [Rust] language for fundamental libraries from the [GNOME] stack like [GLib], [Cairo], and [GTK&nbsp;4][GTK].
 {: class="center"}
 
-[GNOME]: https://www.gnome.org/technologies/
+[GNOME]: https://developer.gnome.org/components/
 [Rust]: https://www.rust-lang.org
 [GLib]: https://developer.gnome.org/glib
 [GTK]: https://gtk.org
