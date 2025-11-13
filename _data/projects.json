@@ -130,6 +130,12 @@
     "url": "https://github.com/windelbouwman/lognplot"
   },
   {
+    "name": "LPTK",
+    "url": "https://gitlab.com/ogarcia/lptk",
+    "app_id": "me.ogarcia.lptk",
+    "description": "Stateless password manager"
+  },
+  {
     "name": "mcmmtk",
     "url": "https://github.com/pwil3058/mcmmtk"
   },
