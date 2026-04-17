@@ -136,6 +136,12 @@
     "url": "https://github.com/windelbouwman/lognplot"
   },
   {
+    "name": "Launcher Studio",
+    "url": "https://flathub.org/en/apps/fr.arnaudmichel.launcherstudio",
+    "app_id": "fr.arnaudmichel.launcherstudio",
+    "description": "Create Linux app launchers"
+  },
+  {
     "name": "mcmmtk",
     "url": "https://github.com/pwil3058/mcmmtk"
   },
