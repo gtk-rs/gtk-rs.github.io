@@ -4,7 +4,7 @@
 
 <ul class="projects-overview">
 {% for project in site.data.projects %}
-  <li>
+<li title="{{ project.description }}">
     <a href="{{ project.url }}">{{ project.name }}</a>
   </li>
 {% endfor %}
